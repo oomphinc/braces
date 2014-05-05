@@ -1,0 +1,57 @@
+/**
+ * Theme Imports
+ *
+ * This is the master styles.scss file for our theme, which contains an annotated
+ * list of @import functions which comprise the separate stylesheets which make up
+ * specific parts of the theme.
+ */
+
+/**
+ * Theme Modules
+ *
+ * Modules, designated with an underscore prefix, don't generate any CSS output
+ * themselves but instead contain mixins and definte base variables used by other
+ * stylesheets.
+ */
+
+/**
+ * CSS Philosiphies
+ *
+ * Use rems for font sizes
+ * Use inline media queries
+ * Use inline IE styles
+ */
+
+/**
+ * CSS preprocess logic
+ */
+	@import "preprocess/_rem";
+	@import "preprocess/settings";
+	@import "preprocess/_mixins";
+	@import "preprocess/_extends";
+	@import "preprocess/_placeholders";
+
+/**
+ * Import Styles
+ */
+
+	/* Layout Styles */
+	@import "_layout";
+
+	/* Global Styles */
+	@import "_global";
+
+	/* Typography Styles */
+	@import "_typography";
+
+	/* Header Styles */
+	@import "_header";
+
+	/* Archive Post Styles */
+	@import "_archive";
+
+	/* Single Post Styles */
+	@import "_single";
+
+	/* Footer Styles */
+	@import "_footer";

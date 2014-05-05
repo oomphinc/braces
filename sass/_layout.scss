@@ -1,0 +1,45 @@
+/**
+ * @file Layout Styles
+ */
+
+
+/**
+ * Root Elements
+ */
+html {
+	font-size: $base-font-size;
+	-webkit-font-smoothing: antialiased;
+}
+
+body {
+	height: 100%;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+/**
+ * Structure Elements
+ */
+#page {
+	margin: 0 auto;
+	width: 90%;
+}
+
+#content {
+	@include clearfix();
+	#primary {
+		float: left;
+		width: 70%;
+	}
+	#secondary {
+		float: right;
+		width: 30%;
+	}
+}
+
+#footer {
+
+}

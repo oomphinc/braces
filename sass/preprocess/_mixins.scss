@@ -1,0 +1,211 @@
+/**
+ * @file Preprocess Mixins
+ * @link krasimirtsonev.com/blog/article/SASS-mixins-extends-and-placeholders-differences-use-cases
+ */
+
+/**
+ * =Table of Contents
+ *
+ * 1.0 - clearfix
+ * 2.0 - screenreaders
+ * 3.0 - zero
+ * 4.0 - zero-list
+ * 5.0 - text-decoration
+ * 6.0 - gradient
+ * 7.0 - border-radius
+ * 8.0 - mq
+ *
+ * ------------------------------------------------------------------------------- */
+
+/**
+ * Clearfix
+ * @link http://nicolasgallagher.com/micro-clearfix-hack/
+ */
+@mixin clearfix() {
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+/**
+ * Screen Readers
+ * Hide the screen reader text, but style it on action states
+ */
+@mixin screen-reader-text() {
+	clip: rect(1px 1px 1px 1px);
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+}
+
+@mixin screen-reader-text-action() {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar */
+}
+
+/**
+ * Zero
+ * Remove all padding & margins
+ */
+@mixin zero() {
+	margin: 0;
+	padding: 0;
+}
+
+/**
+ * Zero List
+ * Remove list styles
+ */
+@mixin zero-list() {
+	@include zero;
+	list-style: none;
+	li {
+		@include zero;
+		list-style: none;
+	}
+}
+
+/**
+ * Text Decorations
+ * Supply a base link color and a hover link color
+ * Remove the underline, until hover
+ *
+ * @param1 - $link_color - the initial link color
+ * @param2 - $hover_color - the links hover color
+ *
+ * @usage a {
+ * 	@include text-decoration(#fff,#000);
+ * }
+ *
+ */
+@mixin text-decoration($link_color, $hover_color) {
+	color: $link_color;
+	text-decoration: none;
+	&:hover {
+		color: $hover_color;
+		text-decoration: underline;
+	}
+}
+
+/**
+ * Gradients with the IE filter
+ */
+@mixin gradient($from, $to) {
+	background-color: $from; /* fallback/image non-cover color */
+	background-image: -moz-linear-gradient($from, $to); /* Firefox 3.6+ */
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($from), to($to)); /* Safari 4+, Chrome 1+ */
+	background-image: -webkit-linear-gradient($from, $to); /* Safari 5.1+, Chrome 10+ */
+	background-image: -o-linear-gradient($from, $to); /* Opera 11.10+ */
+	// extras from http://www.colorzilla.com/gradient-editor/
+	background: -ms-linear-gradient(top,  $from 0%,$to 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  $from 0%,$to 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=#{$from}, endColorstr=#{$to},GradientType=0 ); /* IE6-9 */
+	.ie7 &,
+	.ie8 &,
+	.ie9 & {
+		filter: none;
+	}
+}
+
+/**
+ * Border Radius
+ * Simple border-radius mixin with browser prefixes
+ *
+ * @usage .box {
+ * 	@include border-radius(10px);
+ * }
+ */
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	-o-border-radius: $radius;
+	border-radius: $radius;
+}
+
+/**
+ * Responsive Media Queries
+ * Add media query breakpoints to a mixin so we can use them inline
+ * instead of extra files. When adding break points with numbers please
+ * put in the pixel number without px and then they will automatically
+ * be converted into ems.
+ *
+ * @usage
+ * 	#page {
+ * 		width: 90%;
+ * 		@include mq(mobile) { width: 80%; }
+ * 	}
+ *
+ *	#page {
+ * 		width: 90%;
+ * 		@include min-mq(745) { width: 80%; }
+ * 	}
+ *
+ *	#page {
+ * 		width: 90%;
+ * 		@include mq(745, 900) { width: 80%; }
+ * 	}
+ *
+ * @param - $breakpoint1, $breakpoint2
+ *
+ * @required Sass 3.2
+ *
+ * @link http://css-tricks.com/media-queries-sass-3-2-and-codekit/
+ * @link http://css-tricks.com/conditional-media-query-mixins/
+ */
+@mixin mq($breakpoint1: nil, $breakpoint2: nil) {
+
+	@if type-of($breakpoint1) != number {
+		@if $breakpoint1 == large-display {
+			@media only screen and (min-width: 1281/$base-font + em) { @content; }
+		}
+		@else if $breakpoint1 == tablet {
+			@media only screen and (min-width: 641/$base-font + em) and (max-width : 1023/$base-font + em) { @content; }
+		}
+		@else if $breakpoint1 == mobile {
+			@media only screen and (max-width: 641/$base-font + em) { @content; }
+		}
+		@else if $breakpoint1 == mobile-portrait {
+			@media only screen and (max-width: 320/$base-font + em) { @content; }
+		}
+	}
+	@else {
+		$break1: $breakpoint1/$base-font;
+		$break2: $breakpoint2/$base-font;
+
+		@if $breakpoint2 == nil {
+			@media only screen and (max-width: $break1 + em) { @content; }
+		}
+		@else {
+			@media only screen and (min-width: $break1 + em) and (max-width: $break2 + em) { @content; }
+		}
+	}
+}
+
+@mixin min-mq($breakpoint: nil) {
+	$break: $breakpoint/$base-font;
+
+	@media only screen and (min-width: $break + em) {
+		@content;
+	}
+}

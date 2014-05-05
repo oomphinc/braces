@@ -1,0 +1,61 @@
+/**
+ * @file Typography Styles
+ */
+
+h1, h2, h3, h4, h5, h6 {
+	margin: $heading-margin;
+}
+
+h1,
+h1 a {
+	@include rem(font-size, 2.6);
+	&.site-title {
+		a {
+
+		}
+	}
+	&.entry-title {
+		a {
+
+		}
+	}
+	&.widget-title {
+
+	}
+}
+
+h2 {
+	@include rem(font-size, 2.4);
+	&.comments-title {
+
+	}
+}
+
+h3 {
+	@include rem(font-size, 2.2);
+	&.reply-title {
+
+	}
+}
+
+h4 {
+	@include rem(font-size, 2);
+}
+
+h5 {
+	@include rem(font-size, 1.8);
+}
+
+h6 {
+	@include rem(font-size, 1.6);
+}
+
+p {
+	line-height: $text-element-line-height;
+	.entry-summary & {
+
+	}
+	.entry-content & {
+
+	}
+}

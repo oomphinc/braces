@@ -1,0 +1,53 @@
+/**
+ * REM Mixin for all things!
+ * @link https://gist.github.com//larrybotha/4153104
+ * @usage @include rem(margin, 0, auto, 2.4, 0);
+ */
+
+$base-font-size: 10px;
+$unit-default-px: $base-font-size;
+
+@function fix8_unit_to_px($val) {
+	@if type_of($val) == 'string' {
+		@if $val == 'auto' { @return $val;}
+		@if $val == '!important' { @return $val;}
+
+		@warn "#{$val} is not a valid value";
+	} @else {
+		@if unitless($val) {
+			@if $val == 0 { @return $val }
+			@else { @return $val * $unit-default-px};
+		} @else { @return $val};
+	}
+}
+
+@function fix8_unit_to_rem($val) {
+	@if type_of($val) == 'string' {
+		@if $val == 'auto' { @return $val;}
+		@if $val == '!important' { @return $val;}
+
+		@warn "#{$val} is not a valid value";
+	} @else {
+		@if unitless($val) {
+			@if $val == 0 { @return $val }
+			@else { @return $val+rem};
+		} @else { @return $val};
+	}
+}
+
+@mixin rem($prop, $val...) {
+	$n: length($val);
+	$i: 1;
+
+	$px-list: ();
+	$rem-list: ();
+
+	@while $i <= $n {
+		$px-list: append($px-list, fix8_unit_to_px(nth($val, $i)));
+		$rem-list: append($rem-list, fix8_unit_to_rem(nth($val, $i)));
+		$i: $i + 1;
+	}
+
+	#{$prop}: $px-list;
+	#{$prop}: $rem-list;
+}
