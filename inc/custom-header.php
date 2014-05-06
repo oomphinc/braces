@@ -25,11 +25,6 @@
  * @uses braces_header_style()
  * @uses braces_admin_header_style()
  * @uses braces_admin_header_image()
- *
- * @package WordPress
- * @subpackage braces
- * @author Oomph, Inc.
- * @link http://www.oomphinc.com
  */
 function braces_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'braces_custom_header_args', array(
