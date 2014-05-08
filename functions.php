@@ -125,9 +125,9 @@ require get_template_directory() . '/inc/jetpack.php';
 require get_template_directory() . '/inc/widgets.php';
 
 /**
- * Include WordPress core functionlaity Extensions.
+ * Include WordPress core functionality Extensions.
  */
 
 /**
- * Include WordPress core functionlaity Features.
+ * Include WordPress core functionality Features.
  */
