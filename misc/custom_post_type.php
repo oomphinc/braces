@@ -13,7 +13,6 @@ class Braces_Custom_Post_Type {
 
 	function __construct() {
 		add_action( 'init', array( $this, 'action_init' ) );
-		add_action( 'admin_init', array( $this, 'action_admin_init' ) );
 	}
 
 	/**
