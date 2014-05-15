@@ -1,26 +1,20 @@
-/**
- * @file Preprocess Mixins
- * @link krasimirtsonev.com/blog/article/SASS-mixins-extends-and-placeholders-differences-use-cases
- */
+// @file Preprocess Mixins
+// @link krasimirtsonev.com/blog/article/SASS-mixins-extends-and-placeholders-differences-use-cases
 
-/**
- * =Table of Contents
- *
- * 1.0 - clearfix
- * 2.0 - screenreaders
- * 3.0 - zero
- * 4.0 - zero-list
- * 5.0 - text-decoration
- * 6.0 - gradient
- * 7.0 - border-radius
- * 8.0 - mq
- *
- * ------------------------------------------------------------------------------- */
+// =Table of Contents
+//
+// 1.0 - clearfix
+// 2.0 - screenreaders
+// 3.0 - zero
+// 4.0 - zero-list
+// 5.0 - text-decoration
+// 6.0 - gradient
+// 7.0 - border-radius
+// 8.0 - mq
 
-/**
- * Clearfix
- * @link http://nicolasgallagher.com/micro-clearfix-hack/
- */
+
+// Clearfix
+// @link http://nicolasgallagher.com/micro-clearfix-hack/
 @mixin clearfix() {
 	&:before,
 	&:after {
@@ -34,10 +28,9 @@
 	}
 }
 
-/**
- * Screen Readers
- * Hide the screen reader text, but style it on action states
- */
+
+// Screen Readers
+// Hide the screen reader text, but style it on action states
 @mixin screen-reader-text() {
 	clip: rect(1px 1px 1px 1px);
 	clip: rect(1px, 1px, 1px, 1px);
@@ -60,22 +53,20 @@
 	text-decoration: none;
 	top: 5px;
 	width: auto;
-	z-index: 100000; /* Above WP toolbar */
+	z-index: 100000; // Above WP toolbar
 }
 
-/**
- * Zero
- * Remove all padding & margins
- */
+
+// Zero
+// Remove all padding & margins
 @mixin zero() {
 	margin: 0;
 	padding: 0;
 }
 
-/**
- * Zero List
- * Remove list styles
- */
+
+// Zero List
+// Remove list styles
 @mixin zero-list() {
 	@include zero;
 	list-style: none;
@@ -85,19 +76,17 @@
 	}
 }
 
-/**
- * Text Decorations
- * Supply a base link color and a hover link color
- * Remove the underline, until hover
- *
- * @param1 - $link_color - the initial link color
- * @param2 - $hover_color - the links hover color
- *
- * @usage a {
- * 	@include text-decoration(#fff,#000);
- * }
- *
- */
+
+// Text Decorations
+// Supply a base link color and a hover link color
+// Remove the underline, until hover
+//
+// @param1 - $link_color - the initial link color
+// @param2 - $hover_color - the links hover color
+//
+// @usage a {
+// 	@include text-decoration(#fff,#000);
+// }
 @mixin text-decoration($link_color, $hover_color) {
 	color: $link_color;
 	text-decoration: none;
@@ -107,19 +96,18 @@
 	}
 }
 
-/**
- * Gradients with the IE filter
- */
+
+// Gradients with the IE filter
 @mixin gradient($from, $to) {
-	background-color: $from; /* fallback/image non-cover color */
-	background-image: -moz-linear-gradient($from, $to); /* Firefox 3.6+ */
-	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($from), to($to)); /* Safari 4+, Chrome 1+ */
-	background-image: -webkit-linear-gradient($from, $to); /* Safari 5.1+, Chrome 10+ */
-	background-image: -o-linear-gradient($from, $to); /* Opera 11.10+ */
+	background-color: $from; // fallback/image non-cover color
+	background-image: -moz-linear-gradient($from, $to); // Firefox 3.6+
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($from), to($to)); // Safari 4+, Chrome 1+
+	background-image: -webkit-linear-gradient($from, $to); // Safari 5.1+, Chrome 10+
+	background-image: -o-linear-gradient($from, $to); // Opera 11.10+
 	// extras from http://www.colorzilla.com/gradient-editor/
-	background: -ms-linear-gradient(top,  $from 0%,$to 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  $from 0%,$to 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=#{$from}, endColorstr=#{$to},GradientType=0 ); /* IE6-9 */
+	background: -ms-linear-gradient(top,  $from 0%,$to 100%); // IE10+
+	background: linear-gradient(to bottom,  $from 0%,$to 100%); // W3C
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=#{$from}, endColorstr=#{$to},GradientType=0 ); // IE6-9
 	.ie7 &,
 	.ie8 &,
 	.ie9 & {
@@ -127,14 +115,13 @@
 	}
 }
 
-/**
- * Border Radius
- * Simple border-radius mixin with browser prefixes
- *
- * @usage .box {
- * 	@include border-radius(10px);
- * }
- */
+
+// Border Radius
+// Simple border-radius mixin with browser prefixes
+//
+// @usage .box {
+// 	@include border-radius(10px);
+// }
 @mixin border-radius($radius) {
 	-webkit-border-radius: $radius;
 	-moz-border-radius: $radius;
@@ -143,36 +130,35 @@
 	border-radius: $radius;
 }
 
-/**
- * Responsive Media Queries
- * Add media query breakpoints to a mixin so we can use them inline
- * instead of extra files. When adding break points with numbers please
- * put in the pixel number without px and then they will automatically
- * be converted into ems.
- *
- * @usage
- * 	#page {
- * 		width: 90%;
- * 		@include mq(mobile) { width: 80%; }
- * 	}
- *
- *	#page {
- * 		width: 90%;
- * 		@include min-mq(745) { width: 80%; }
- * 	}
- *
- *	#page {
- * 		width: 90%;
- * 		@include mq(745, 900) { width: 80%; }
- * 	}
- *
- * @param - $breakpoint1, $breakpoint2
- *
- * @required Sass 3.2
- *
- * @link http://css-tricks.com/media-queries-sass-3-2-and-codekit/
- * @link http://css-tricks.com/conditional-media-query-mixins/
- */
+
+// Responsive Media Queries
+// Add media query breakpoints to a mixin so we can use them inline
+// instead of extra files. When adding break points with numbers please
+// put in the pixel number without px and then they will automatically
+// be converted into ems.
+//
+// @usage
+// 	#page {
+// 		width: 90%;
+// 		@include mq(mobile) { width: 80%; }
+// 	}
+//
+//	#page {
+// 		width: 90%;
+// 		@include min-mq(745) { width: 80%; }
+// 	}
+//
+//	#page {
+// 		width: 90%;
+// 		@include mq(745, 900) { width: 80%; }
+// 	}
+//
+// @param - $breakpoint1, $breakpoint2
+//
+// @required Sass 3.2
+//
+// @link http://css-tricks.com/media-queries-sass-3-2-and-codekit/
+// @link http://css-tricks.com/conditional-media-query-mixins/
 @mixin mq($breakpoint1: nil, $breakpoint2: nil) {
 
 	@if type-of($breakpoint1) != number {

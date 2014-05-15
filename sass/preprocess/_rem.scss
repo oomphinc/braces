@@ -1,8 +1,8 @@
-/**
- * REM Mixin for all things!
- * @link https://gist.github.com//larrybotha/4153104
- * @usage @include rem(margin, 0, auto, 2.4, 0);
- */
+
+// REM Mixin for all things!
+//
+// @link https://gist.github.com//larrybotha/4153104
+// @usage @include rem(margin, 0, auto, 2.4, 0);
 
 $base-font-size: 10px;
 $unit-default-px: $base-font-size;
