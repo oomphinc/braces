@@ -1,164 +1,4 @@
 /**
- * Theme Imports
- *
- * This is the master styles.scss file for our theme, which contains an annotated
- * list of @import functions which comprise the separate stylesheets which make up
- * specific parts of the theme.
- */
-/**
- * Theme Modules
- *
- * Modules, designated with an underscore prefix, don't generate any CSS output
- * themselves but instead contain mixins and definte base variables used by other
- * stylesheets.
- */
-/**
- * CSS Philosiphies
- *
- * Use rems for font sizes
- * Use inline media queries
- * Use inline IE styles
- */
-/**
- * CSS preprocess logic
- */
-/**
- * REM Mixin for all things!
- * @link https://gist.github.com//larrybotha/4153104
- * @usage @include rem(margin, 0, auto, 2.4, 0);
- */
-/**
- * @file Preprocess Configuartion Settings
- */
-/**
- * =Table of Contents
- *
- * 1.0 - Layout
- * 2.0 - Typography
- * 	2.1 Headings
- *  2.2 Text Elements
- * 3.0 - Widgets
- */
-/**
- * 1.0 Layout
- */
-/**
- * 2.0 Typography
- */
-/* 2.1 Headings */
-/* 2.2 Text Elements */
-/**
- * 3.0 Widgets
- */
-/**
- * @file Preprocess Mixins
- * @link krasimirtsonev.com/blog/article/SASS-mixins-extends-and-placeholders-differences-use-cases
- */
-/**
- * =Table of Contents
- *
- * 1.0 - clearfix
- * 2.0 - screenreaders
- * 3.0 - zero
- * 4.0 - zero-list
- * 5.0 - text-decoration
- * 6.0 - gradient
- * 7.0 - border-radius
- * 8.0 - mq
- *
- * ------------------------------------------------------------------------------- */
-/**
- * Clearfix
- * @link http://nicolasgallagher.com/micro-clearfix-hack/
- */
-/**
- * Screen Readers
- * Hide the screen reader text, but style it on action states
- */
-/**
- * Zero
- * Remove all padding & margins
- */
-/**
- * Zero List
- * Remove list styles
- */
-/**
- * Text Decorations
- * Supply a base link color and a hover link color
- * Remove the underline, until hover
- *
- * @param1 - $link_color - the initial link color
- * @param2 - $hover_color - the links hover color
- *
- * @usage a {
- * 	@include text-decoration(#fff,#000);
- * }
- *
- */
-/**
- * Gradients with the IE filter
- */
-/**
- * Border Radius
- * Simple border-radius mixin with browser prefixes
- *
- * @usage .box {
- * 	@include border-radius(10px);
- * }
- */
-/**
- * Responsive Media Queries
- * Add media query breakpoints to a mixin so we can use them inline
- * instead of extra files. When adding break points with numbers please
- * put in the pixel number without px and then they will automatically
- * be converted into ems.
- *
- * @usage
- * 	#page {
- * 		width: 90%;
- * 		@include mq(mobile) { width: 80%; }
- * 	}
- *
- *	#page {
- * 		width: 90%;
- * 		@include min-mq(745) { width: 80%; }
- * 	}
- *
- *	#page {
- * 		width: 90%;
- * 		@include mq(745, 900) { width: 80%; }
- * 	}
- *
- * @param - $breakpoint1, $breakpoint2
- *
- * @required Sass 3.2
- *
- * @link http://css-tricks.com/media-queries-sass-3-2-and-codekit/
- * @link http://css-tricks.com/conditional-media-query-mixins/
- */
-/**
- * @file Preprocess Extends
- * @link krasimirtsonev.com/blog/article/SASS-mixins-extends-and-placeholders-differences-use-cases
- */
-/**
- * =Table of Contents
- */
-/**
- * @file Preprocess Placeholders
- * @link krasimirtsonev.com/blog/article/SASS-mixins-extends-and-placeholders-differences-use-cases
- */
-/**
- * =Table of Contents
- */
-/**
- * Import Styles
- */
-/* Layout Styles */
-/**
- * @file Layout Styles
- */
-/**
  * Root Elements
  */
 html {
@@ -193,10 +33,6 @@ body {
   float: right;
   width: 30%; }
 
-/* Global Styles */
-/**
- * @file Global Styles
- */
 /**
  * Table Of Contents:
  *
@@ -645,8 +481,7 @@ a:active {
   text-decoration: none;
   top: 5px;
   width: auto;
-  z-index: 100000;
-  /* Above WP toolbar */ }
+  z-index: 100000; }
 
 /**
  * 7.0 Alignments
@@ -818,10 +653,6 @@ object {
 .gallery-columns-9 .gallery-item {
   max-width: 11.11%; }
 
-/* Typography Styles */
-/**
- * @file Typography Styles
- */
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 0.5em 0; }
 
@@ -852,20 +683,3 @@ h6 {
 
 p {
   line-height: 1.25; }
-
-/* Header Styles */
-/**
- * @file Header Styles
- */
-/* Archive Post Styles */
-/**
- * @file Archive Styles
- */
-/* Single Post Styles */
-/**
- * @file Single Styles
- */
-/* Footer Styles */
-/**
- * @file Footer Styles
- */
