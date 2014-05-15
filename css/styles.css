@@ -1,7 +1,4 @@
 /**
- * @file Layout Styles
- */
-/**
  * Root Elements
  */
 html {
@@ -36,9 +33,6 @@ body {
   float: right;
   width: 30%; }
 
-/**
- * @file Global Styles
- */
 /**
  * Table Of Contents:
  *
@@ -659,9 +653,6 @@ object {
 .gallery-columns-9 .gallery-item {
   max-width: 11.11%; }
 
-/**
- * @file Typography Styles
- */
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 0.5em 0; }
 
@@ -692,16 +683,3 @@ h6 {
 
 p {
   line-height: 1.25; }
-
-/**
- * @file Header Styles
- */
-/**
- * @file Archive Styles
- */
-/**
- * @file Single Styles
- */
-/**
- * @file Footer Styles
- */
