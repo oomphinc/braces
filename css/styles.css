@@ -1,28 +1,4 @@
 /**
- * Theme Imports
- *
- * This is the master styles.scss file for our theme, which contains an annotated
- * list of @import functions which comprise the separate stylesheets which make up
- * specific parts of the theme.
- */
-/**
- * Theme Modules
- *
- * Modules, designated with an underscore prefix, don't generate any CSS output
- * themselves but instead contain mixins and definte base variables used by other
- * stylesheets.
- */
-/**
- * CSS Philosiphies
- *
- * Use rems for font sizes
- * Use inline media queries
- * Use inline IE styles
- */
-/**
- * CSS preprocess logic
- */
-/**
  * REM Mixin for all things!
  * @link https://gist.github.com//larrybotha/4153104
  * @usage @include rem(margin, 0, auto, 2.4, 0);
@@ -152,10 +128,6 @@
  * =Table of Contents
  */
 /**
- * Import Styles
- */
-/* Layout Styles */
-/**
  * @file Layout Styles
  */
 /**
@@ -193,7 +165,6 @@ body {
   float: right;
   width: 30%; }
 
-/* Global Styles */
 /**
  * @file Global Styles
  */
@@ -818,7 +789,6 @@ object {
 .gallery-columns-9 .gallery-item {
   max-width: 11.11%; }
 
-/* Typography Styles */
 /**
  * @file Typography Styles
  */
@@ -853,19 +823,15 @@ h6 {
 p {
   line-height: 1.25; }
 
-/* Header Styles */
 /**
  * @file Header Styles
  */
-/* Archive Post Styles */
 /**
  * @file Archive Styles
  */
-/* Single Post Styles */
 /**
  * @file Single Styles
  */
-/* Footer Styles */
 /**
  * @file Footer Styles
  */
