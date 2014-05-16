@@ -110,9 +110,7 @@ button,
 input,
 select,
 textarea {
-	color: $base-color;
-	font-family: $base-font-stack;
-	line-height: $base-line-height;
+
 	@include rem(font-size, 1.6);
 }
 h1, h2, h3, h4, h5, h6 {
@@ -484,7 +482,7 @@ a:active {
  * 9.0 Widgets
  */
 .widget {
-	margin: $widget-margin;
+
 }
 
 /* Make sure select elements fit in widgets */

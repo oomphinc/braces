@@ -149,9 +149,6 @@ button,
 input,
 select,
 textarea {
-  color: #404040;
-  font-family: sans-serif;
-  line-height: 1;
   font-size: 16px;
   font-size: 1.6rem; }
 
@@ -530,9 +527,6 @@ a:active {
 /**
  * 9.0 Widgets
  */
-.widget {
-  margin: 0 0 1.5em; }
-
 /* Make sure select elements fit in widgets */
 .widget select {
   max-width: 100%; }
@@ -653,9 +647,6 @@ object {
 .gallery-columns-9 .gallery-item {
   max-width: 11.11%; }
 
-h1, h2, h3, h4, h5, h6 {
-  margin: 0 0 0.5em 0; }
-
 h1,
 h1 a {
   font-size: 26px;
@@ -680,6 +671,3 @@ h5 {
 h6 {
   font-size: 16px;
   font-size: 1.6rem; }
-
-p {
-  line-height: 1.25; }
