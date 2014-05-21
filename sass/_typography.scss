@@ -1,8 +1,6 @@
-// @file Typography Styles
+// @file typography Styles
 
-h1, h2, h3, h4, h5, h6 {
-	margin: $heading-margin;
-}
+h1, h2, h3, h4, h5, h6 {}
 
 h1,
 h1 a {
@@ -49,7 +47,7 @@ h6 {
 }
 
 p {
-	line-height: $text-element-line-height;
+
 	.entry-summary & {
 
 	}

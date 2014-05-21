@@ -4,13 +4,12 @@
 // =Table of Contents
 //
 // 1.0 - clearfix
-// 2.0 - screenreaders
-// 3.0 - zero
-// 4.0 - zero-list
-// 5.0 - text-decoration
-// 6.0 - gradient
-// 7.0 - border-radius
-// 8.0 - mq
+// 2.0 - zero
+// 3.0 - zero-list
+// 4.0 - text-decoration
+// 5.0 - gradient
+// 6.0 - border-radius
+// 7.0 - mq
 
 
 // Clearfix
@@ -28,42 +27,12 @@
 	}
 }
 
-
-// Screen Readers
-// Hide the screen reader text, but style it on action states
-@mixin screen-reader-text() {
-	clip: rect(1px 1px 1px 1px);
-	clip: rect(1px, 1px, 1px, 1px);
-	position: absolute !important;
-}
-
-@mixin screen-reader-text-action() {
-	background-color: #f1f1f1;
-	border-radius: 3px;
-	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-	clip: auto !important;
-	color: #21759b;
-	display: block;
-	font-size: 14px;
-	font-weight: bold;
-	height: auto;
-	left: 5px;
-	line-height: normal;
-	padding: 15px 23px 14px;
-	text-decoration: none;
-	top: 5px;
-	width: auto;
-	z-index: 100000; // Above WP toolbar
-}
-
-
 // Zero
 // Remove all padding & margins
 @mixin zero() {
 	margin: 0;
 	padding: 0;
 }
-
 
 // Zero List
 // Remove list styles
@@ -75,7 +44,6 @@
 		list-style: none;
 	}
 }
-
 
 // Text Decorations
 // Supply a base link color and a hover link color
@@ -96,7 +64,6 @@
 	}
 }
 
-
 // Gradients with the IE filter
 @mixin gradient($from, $to) {
 	background-color: $from; // fallback/image non-cover color
@@ -115,7 +82,6 @@
 	}
 }
 
-
 // Border Radius
 // Simple border-radius mixin with browser prefixes
 //
@@ -129,7 +95,6 @@
 	-o-border-radius: $radius;
 	border-radius: $radius;
 }
-
 
 // Responsive Media Queries
 // Add media query breakpoints to a mixin so we can use them inline

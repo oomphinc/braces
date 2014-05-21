@@ -18,30 +18,30 @@
 
 // CSS preprocess logic
 	@import "preprocess/_rem";
-	@import "preprocess/settings";
 	@import "preprocess/_mixins";
 	@import "preprocess/_extends";
 	@import "preprocess/_placeholders";
+	@import "preprocess/_vars";
 
 // Import Styles
-
-	// Layout Styles
-	@import "_layout";
 
 	// Global Styles
 	@import "_global";
 
+	// Layout Styles
+	@import "_layout";
+
 	// Typography Styles
 	@import "_typography";
 
-	// Header Styles
-	@import "_header";
+	// Navigation Styles
+	@import "_navigation";
 
-	// Archive Post Styles
-	@import "_archive";
+	// Content Styles
+	@import "_content";
 
-	// Single Post Styles
-	@import "_single";
+	// Widget Styles
+	@import "_widgets";
 
-	// Footer Styles
-	@import "_footer";
+	// Content Styles
+	// @import "_print";
