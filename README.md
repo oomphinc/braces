@@ -3,7 +3,7 @@ Braces
 
 Braces is a starter theme that is meant for getting development teams up and running on WordPress projects quickly. Braces is derived from [Automattic _s project] (https://github.com/Automattic/_s). _s is truly a fantastic project and much of the core beliefs behind _s will be reflected in this project as well.
 
-However, we did make some changes to suit our business needs, which we hope you find helpful as well. Some of the main features you can find in addition are [Sass] (http://sass-lang.com) intergration, file and structure clean up, and most noticeably, the PHP syntax. Typically any new additions should have README.md docs for their explanations.
+However, we did make some changes to suit our business needs, which we hope you find helpful as well. Some of the main features you can find in addition are [Sass] (http://sass-lang.com) integration, file and structure clean up, and most noticeably, the PHP syntax. Typically any new additions should have README.md docs for their explanations.
 
 Pull requests are welcome!
 
