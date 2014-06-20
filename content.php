@@ -18,13 +18,6 @@
 		<?php } ?>
 	</header><!-- .entry-header -->
 
-	<?php if ( is_search() || is_archive() ) { // Only display Excerpts for Search ?>
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
-	<?php
-		}
-		else { ?>
 	<div class="entry-content">
 		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'braces' ) ); ?>
 		<?php
@@ -34,7 +27,6 @@
 			) );
 		?>
 	</div><!-- .entry-content -->
-	<?php } ?>
 
 	<footer class="entry-footer">
 		<div class="entry-meta">
