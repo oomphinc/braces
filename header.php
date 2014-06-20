@@ -33,7 +33,7 @@
 		</div>
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<h1 class="menu-toggle"><?php _e( 'Menu', 'braces' ); ?></h1>
+			<button class="menu-toggle"><?php _e( 'Primary Menu', 'braces' ); ?></button>
 			<div class="screen-reader-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'braces' ); ?>"><?php _e( 'Skip to content', 'braces' ); ?></a></div>
 
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
