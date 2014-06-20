@@ -62,14 +62,14 @@ add_filter( 'attachment_link', 'braces_enhanced_image_navigation', 10, 2 );
  * @return string The filtered title.
  */
 function braces_wp_title( $title, $sep ) {
-	global $page, $paged;
-
 	if ( is_feed() ) {
 		return $title;
 	}
 
+	global $page, $paged;
+
 	// Add the blog name
-	$title .= get_bloginfo( 'name' );
+	$title .= get_bloginfo( 'name', 'display' );
 
 	// Add the blog description for the home/front page.
 	$site_description = get_bloginfo( 'description', 'display' );
@@ -78,7 +78,7 @@ function braces_wp_title( $title, $sep ) {
 	}
 
 	// Add a page number if necessary:
-	if ( $paged >= 2 || $page >= 2 ) {
+	if ( ( $paged >= 2 || $page >= 2 ) && ! is_404() ) {
 		$title .= " $sep " . sprintf( __( 'Page %s', 'braces' ), max( $paged, $page ) );
 	}
 
