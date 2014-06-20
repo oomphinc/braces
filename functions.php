@@ -55,6 +55,7 @@ function braces_setup() {
 		'search-form',
 		'comment-form',
 		'gallery',
+		'caption',
 	) );
 
 	/**
