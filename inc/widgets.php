@@ -9,11 +9,14 @@
 
 /**
  * Register widgetized area and update sidebar with default widgets
+ *
+ * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
 function braces_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Sidebar', 'braces' ),
 		'id'            => 'sidebar-1',
+		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h1 class="widget-title">',
