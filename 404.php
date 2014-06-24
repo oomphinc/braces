@@ -28,7 +28,7 @@ get_header(); ?>
 
 						if ( braces_categorized_blog() ) { // Only show the widget if site has multiple categories. ?>
 					<div class="widget widget_categories">
-						<h2 class="widgettitle"><?php _e( 'Most Used Categories', 'braces' ); ?></h2>
+						<h2 class="widget-title"><?php _e( 'Most Used Categories', 'braces' ); ?></h2>
 						<ul>
 						<?php
 							wp_list_categories( array(

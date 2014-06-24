@@ -11,7 +11,7 @@
 		return;
 	}
 
-	button = container.getElementsByTagName( 'h1' )[0];
+	button = container.getElementsByTagName( 'button' )[0];
 	if ( 'undefined' === typeof button ) {
 		return;
 	}

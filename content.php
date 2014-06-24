@@ -9,7 +9,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+		<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 
 		<?php if ( 'post' == get_post_type() ) { ?>
 		<div class="entry-meta">
@@ -18,13 +18,6 @@
 		<?php } ?>
 	</header><!-- .entry-header -->
 
-	<?php if ( is_search() || is_archive() ) { // Only display Excerpts for Search ?>
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
-	<?php
-		}
-		else { ?>
 	<div class="entry-content">
 		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'braces' ) ); ?>
 		<?php
@@ -34,7 +27,6 @@
 			) );
 		?>
 	</div><!-- .entry-content -->
-	<?php } ?>
 
 	<footer class="entry-footer">
 		<div class="entry-meta">
