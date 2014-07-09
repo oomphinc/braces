@@ -2,6 +2,7 @@
 ###################
 .sass-cache/
 javascripts/*-ck.js
+*.map
 
 # Packages #
 ############
