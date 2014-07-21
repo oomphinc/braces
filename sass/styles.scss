@@ -18,10 +18,10 @@
 
 // CSS preprocess logic
 	@import "preprocess/_rem";
+	@import "preprocess/_vars";
 	@import "preprocess/_mixins";
 	@import "preprocess/_extends";
 	@import "preprocess/_placeholders";
-	@import "preprocess/_vars";
 
 // Import Styles
 
