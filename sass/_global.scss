@@ -17,6 +17,19 @@ body {
 	height: 100%;
 }
 
+button,
+input,
+select,
+textarea {
+	-webkit-appearance: none;
+	border-radius: 0;
+}
+
+a[href^=tel]{
+	color: inherit;
+	text-decoration: none;
+}
+
 /**
  * Header Elements
  */

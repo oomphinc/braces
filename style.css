@@ -252,8 +252,6 @@ textarea {
 	font-size: 100%; /* Corrects font size not being inherited in all browsers */
 	margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
 	vertical-align: baseline; /* Improves appearance and consistency in all browsers */
-	-webkit-appearance: none;
-	border-radius: 0;
 }
 button,
 input[type="button"],
@@ -478,11 +476,6 @@ a:active {
 	top: 5px;
 	width: auto;
 	z-index: 100000; /* Above WP toolbar */
-}
-
-a[href^=tel]{
-	color: inherit;
-	text-decoration: none;
 }
 
 /*--------------------------------------------------------------
