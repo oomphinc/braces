@@ -41,10 +41,7 @@ $heading-size-5: $base-font-size * 1.6;
 $heading-size-6: $base-font-size * 1.4;
 
 // Susy
-@import "susy";
-$susy: (
-  columns: 12
-);
+@import "_grids";
 
 // Media Query Breakpoints
 // Usage:: @include breakpoint($mq-1);
