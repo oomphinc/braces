@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying Archive pages.
+ * The template for displaying archive pages.
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
@@ -27,16 +27,7 @@ get_header(); ?>
 							single_tag_title();
 						}
 						elseif ( is_author() ) {
-							/* Queue the first post, that way we know
-							 * what author we're dealing with (if that is the case).
-							*/
-							the_post();
 							printf( __( 'Author: %s', 'braces' ), '<span class="vcard">' . get_the_author() . '</span>' );
-							/* Since we called the_post() above, we need to
-							 * rewind the loop back to the beginning that way
-							 * we can run the loop properly, in full.
-							 */
-							rewind_posts();
 						}
 						elseif ( is_day() ) {
 							printf( __( 'Day: %s', 'braces' ), '<span>' . get_the_date() . '</span>' );
@@ -50,6 +41,9 @@ get_header(); ?>
 						elseif ( is_tax( 'post_format', 'post-format-aside' ) ) {
 							_e( 'Asides', 'braces' );
 						}
+						elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) {
+							_e( 'Galleries', 'braces' );
+						}
 						elseif ( is_tax( 'post_format', 'post-format-image' ) ) {
 							_e( 'Images', 'braces');
 						}
@@ -62,6 +56,15 @@ get_header(); ?>
 						elseif ( is_tax( 'post_format', 'post-format-link' ) ) {
 							_e( 'Links', 'braces' );
 						}
+						elseif ( is_tax( 'post_format', 'post-format-status' ) ) {
+							_e( 'Statuses', 'braces' );
+						}
+						elseif ( is_tax( 'post_format', 'post-format-audio' ) ) {
+							_e( 'Audios', 'braces' );
+						}
+						elseif ( is_tax( 'post_format', 'post-format-chat' ) ) {
+							_e( 'Chats', 'braces' );
+						}
 						else {
 							_e( 'Archives', 'braces' );
 						}	?>
@@ -69,7 +72,7 @@ get_header(); ?>
 				<?php
 					// Show an optional term description.
 					$term_description = term_description();
-					if ( !empty( $term_description ) ) {
+					if ( ! empty( $term_description ) ) {
 						printf( '<div class="taxonomy-description">%s</div>', $term_description );
 					}
 				?>
@@ -80,7 +83,7 @@ get_header(); ?>
 					the_post();
 
 					/* Include the Post-Format-specific template for the content.
-					 * If you want to overload this in a child theme then include a file
+					 * If you want to override this in a child theme then include a file
 					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 					 */
 					get_template_part( 'content', get_post_format() );
