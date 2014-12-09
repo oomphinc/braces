@@ -12,7 +12,7 @@ gulp.task('compass', function() {
   gulp.src('sass/*.scss')
     .pipe(compass({
       config_file: 'config.rb',
-      css: 'css',
+      css: 'stylesheets',
       sass: 'sass',
       require: ['susy', 'breakpoint']
     }))
@@ -24,7 +24,7 @@ gulp.task('compass', function() {
     .on('error', function(err) {
       // Would like to catch the error here
     })
-    .pipe(gulp.dest('css'));
+    .pipe(gulp.dest('stylesheets'));
 });
 
 gulp.task('watch', function() {

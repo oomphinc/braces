@@ -15,14 +15,27 @@ Braces alters the typical WP PHP loop syntax for a more [PHP coding standards] (
 ### Sass
 Website: [http://sass-lang.com/](http://sass-lang.com/)
 
+Configuration file can be found at:
+* root > sass > styles.scss = order of files
+
 ### Gulp
 Website: [http://gulpjs.com/](http://gulpjs.com/)
+
+Configuration file can be found at:
+* root > gulpfile.js = gulp functions
+* root > package.json = module dependancy list
 
 ### Susy
 Website: [http://susy.oddbird.net/](http://susy.oddbird.net/)
 
+Configuration can be found at:
+* root > sass > _grids.scss = grid configuration
+
 ### Compass
 Website: [compass-style.org](compass-style.org)
+
+Configuration can be found at:
+* root > config.rb = compass configuration
 
 ## Support
 This theme supports modern browsers - so IE9+. If you project requires IE8 support their are options availble to help with that.
@@ -35,6 +48,14 @@ This theme supports modern browsers - so IE9+. If you project requires IE8 suppo
 
 Getting Started
 ---------------
+
+Since our theme uses Gulp, Compass, & Susy there is some initial configuartion that we have to process. Each of these will have to be installed on your system individually. In order to use these dependencies you will have to install [node.js](http://nodejs.org) on you system. This article is a great tutorial on how to get up and running quickly. [Getting started with Gulp](travismaynard.com/writing/getting-started-with-gulp)
+
+Install Directions:
+* cd into your theme directory
+* run $ npm install = this will install the module dependancies listed in the root > package.json
+* a new folder called "node_modules" will be created in your theme folder
+* run compass install susy
 
 If you want to set things up manually, download `braces` from GitHub. The first thing you want to do is copy the `braces` directory and change the name to something else - Like, say, `megatherium` -- then you'll need to do a three-step find and replace on all of the templates.
 
