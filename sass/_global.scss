@@ -1,15 +1,22 @@
 // @file global override styles
 
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
 /**
  * Root Elements
  */
 html {
+	box-sizing: border-box;
 	font-size: $base-font-size;
 	-webkit-font-smoothing: antialiased;
 }
 
 body {
 	height: 100%;
+	font-family: $font-stack-1;
+	color: $color-5;
 }
 
 html,
@@ -24,3 +31,12 @@ body {
 /**
  * Footer Elements
  */
+
+/**
+ * Media Elements
+ */
+img {
+	display: block;
+	height: auto;
+	max-width: 100%;
+}
