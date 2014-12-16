@@ -9,7 +9,7 @@ var gulp         = require('gulp'),
 
 gulp.task('styles', function() {
   gulp.src('sass/*.scss')
-    .pipe(sass({require: ['susy'], ['breakpoint'] style: 'compressed'}))
+    .pipe(sass({require: ['susy', 'breakpoint'], style: 'compressed'}))
     .pipe(plumber({
       errorHandler: function (error) {
         console.log(error.message);
