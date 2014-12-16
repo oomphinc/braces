@@ -85,7 +85,7 @@ add_action( 'after_setup_theme', 'braces_setup' );
 function braces_scripts() {
 	$stylesheet_directory = get_template_directory_uri();
 	wp_enqueue_style( 'braces', get_stylesheet_uri() );
-	wp_enqueue_style( 'braces-theme', $stylesheet_directory . '/css/styles.css', null, false, 'all' );
+	wp_enqueue_style( 'braces-theme', $stylesheet_directory . '/stylesheets/styles.css', null, false, 'all' );
 
 	wp_enqueue_script( 'braces-modernizr', $stylesheet_directory . '/javascripts/modernizr.js', array(), '20140113', true );
 	wp_enqueue_script( 'braces-navigation', $stylesheet_directory . '/javascripts/navigation.js', array(), '20120206', true );

@@ -32,10 +32,16 @@ Configuration can be found at:
 * root > sass > _grids.scss = grid configuration
 
 ### Compass
-Website: [compass-style.org](compass-style.org)
+Website: [http://compass-style.org](compass-style.org)
 
 Configuration can be found at:
 * root > config.rb = compass configuration
+
+### Breakpoint
+Website: [http://breakpoint-sass.com/](beakpoint-sass.com)
+
+Configuration can be found at:
+* root > styles.scss = breakpoint configuration
 
 ## Support
 This theme supports modern browsers - so IE9+. If you project requires IE8 support their are options availble to help with that.
