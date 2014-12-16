@@ -9,12 +9,7 @@ var gulp         = require('gulp'),
 
 gulp.task('styles', function() {
   gulp.src('sass/*.scss')
-    .pipe(compass({
-      config_file: 'config.rb',
-      css: 'stylesheets',
-      sass: 'sass',
-      require: ['susy', 'breakpoint']
-    }))
+    .pipe(sass({require: ['susy'], ['breakpoint'] style: 'compressed'}))
     .pipe(plumber({
       errorHandler: function (error) {
         console.log(error.message);
