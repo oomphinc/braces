@@ -5,10 +5,9 @@ var gulp         = require('gulp'),
 		autoprefixer = require('gulp-autoprefixer'),
 		plumber      = require('gulp-plumber'),
 		gutil        = require('gulp-util'),
-		rem          = require('gulp-pixrem'),
-		compass      = require('gulp-compass');
+		rem          = require('gulp-pixrem');
 
-gulp.task('compass', function() {
+gulp.task('styles', function() {
   gulp.src('sass/*.scss')
     .pipe(compass({
       config_file: 'config.rb',
@@ -28,8 +27,8 @@ gulp.task('compass', function() {
 });
 
 gulp.task('watch', function() {
-    gulp.watch('sass/*.scss', ['compass']);
+    gulp.watch('sass/*.scss', ['styles']);
 });
 
 // Make all tasks run and then watch for the rest
-gulp.task('default', ['compass', 'watch']);
+gulp.task('default', ['styles', 'watch']);
