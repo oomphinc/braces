@@ -12,9 +12,10 @@ html {
 }
 
 body {
+  color: #333333;
   height: 100%;
   font-family: Arial, Helvetica, sans-serif;
-  color: #333333;
+  font-size: 14px;
 }
 
 html,

@@ -14,9 +14,10 @@ html {
 }
 
 body {
+	color: $color-5;
 	height: 100%;
 	font-family: $font-stack-1;
-	color: $color-5;
+	font-size: $paragraph-size-1;
 }
 
 html,

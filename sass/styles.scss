@@ -40,6 +40,8 @@ $heading-size-4: $base-font-size * 1.8;
 $heading-size-5: $base-font-size * 1.6;
 $heading-size-6: $base-font-size * 1.4;
 
+$paragraph-size-1: $heading-size-6;
+
 // Susy
 // @link susydocs.oddbird.net
 @import "_grids";

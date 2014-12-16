@@ -2,19 +2,58 @@
 
 h1, h2, h3, h4, h5, h6 {}
 
-h1 { font-size: $heading-size-1; }
-h2 { font-size: $heading-size-2; }
-h3 { font-size: $heading-size-3; }
-h4 { font-size: $heading-size-4; }
-h5 { font-size: $heading-size-5; }
-h6 { font-size: $heading-size-6; }
+h1 {
+	font-size: $heading-size-1;
+}
 
-p {}
+h2 {
+	font-size: $heading-size-2;
+}
 
-.site-title {}
-.entry-title {}
-.widget-title {}
-.comments-title {}
-.reply-title {}
-.entry-summary {}
-.entry-content {}
+h3 {
+	font-size: $heading-size-3;
+}
+
+h4 {
+	font-size: $heading-size-4;
+}
+
+h5 {
+	font-size: $heading-size-5;
+}
+
+h6 {
+	font-size: $heading-size-6;
+}
+
+p {
+
+}
+
+.site-title {
+
+}
+
+.entry-title {
+
+}
+
+.entry-summary {
+
+}
+
+.entry-content {
+
+}
+
+.comments-title {
+
+}
+
+.reply-title {
+
+}
+
+.widget-title {
+
+}
