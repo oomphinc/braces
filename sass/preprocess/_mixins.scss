@@ -9,8 +9,6 @@
 // Text-decoration
 // Gradient
 // Border-radius
-// Media Queries
-
 
 // Clearfix
 // @link http://nicolasgallagher.com/micro-clearfix-hack/
@@ -94,69 +92,4 @@
 	-ms-border-radius: $radius;
 	-o-border-radius: $radius;
 	border-radius: $radius;
-}
-
-// Responsive Media Queries
-// Add media query breakpoints to a mixin so we can use them inline
-// instead of extra files. When adding break points with numbers please
-// put in the pixel number without px and then they will automatically
-// be converted into ems.
-//
-// @usage
-// 	#page {
-// 		width: 90%;
-// 		@include mq(mobile) { width: 80%; }
-// 	}
-//
-//	#page {
-// 		width: 90%;
-// 		@include min-mq(745) { width: 80%; }
-// 	}
-//
-//	#page {
-// 		width: 90%;
-// 		@include mq(745, 900) { width: 80%; }
-// 	}
-//
-// @param - $breakpoint1, $breakpoint2
-//
-// @required Sass 3.2
-//
-// @link http://css-tricks.com/media-queries-sass-3-2-and-codekit/
-// @link http://css-tricks.com/conditional-media-query-mixins/
-@mixin mq($breakpoint1: nil, $breakpoint2: nil) {
-
-	@if type-of($breakpoint1) != number {
-		@if $breakpoint1 == large-display {
-			@media only screen and (min-width: 1281/$base-font + em) { @content; }
-		}
-		@else if $breakpoint1 == tablet {
-			@media only screen and (min-width: 641/$base-font + em) and (max-width : 1023/$base-font + em) { @content; }
-		}
-		@else if $breakpoint1 == mobile {
-			@media only screen and (max-width: 641/$base-font + em) { @content; }
-		}
-		@else if $breakpoint1 == mobile-portrait {
-			@media only screen and (max-width: 320/$base-font + em) { @content; }
-		}
-	}
-	@else {
-		$break1: $breakpoint1/$base-font;
-		$break2: $breakpoint2/$base-font;
-
-		@if $breakpoint2 == nil {
-			@media only screen and (max-width: $break1 + em) { @content; }
-		}
-		@else {
-			@media only screen and (min-width: $break1 + em) and (max-width: $break2 + em) { @content; }
-		}
-	}
-}
-
-@mixin min-mq($breakpoint: nil) {
-	$break: $breakpoint/$base-font;
-
-	@media only screen and (min-width: $break + em) {
-		@content;
-	}
 }
