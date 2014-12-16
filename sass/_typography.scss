@@ -1,57 +1,59 @@
-// @file typography Styles
+// @file Typography Styles
 
 h1, h2, h3, h4, h5, h6 {}
 
-h1,
-h1 a {
-	@include rem(font-size, 2.6);
-	&.site-title {
-		a {
-
-		}
-	}
-	&.entry-title {
-		a {
-
-		}
-	}
-	&.widget-title {
-
-	}
+h1 {
+	font-size: $heading-size-1;
 }
 
 h2 {
-	@include rem(font-size, 2.4);
-	&.comments-title {
-
-	}
+	font-size: $heading-size-2;
 }
 
 h3 {
-	@include rem(font-size, 2.2);
-	&.reply-title {
-
-	}
+	font-size: $heading-size-3;
 }
 
 h4 {
-	@include rem(font-size, 2);
+	font-size: $heading-size-4;
 }
 
 h5 {
-	@include rem(font-size, 1.8);
+	font-size: $heading-size-5;
 }
 
 h6 {
-	@include rem(font-size, 1.6);
+	font-size: $heading-size-6;
 }
 
 p {
 
-	.entry-summary & {
+}
 
-	}
-	.entry-content & {
+.site-title {
 
-	}
+}
+
+.entry-title {
+
+}
+
+.entry-summary {
+
+}
+
+.entry-content {
+
+}
+
+.comments-title {
+
+}
+
+.reply-title {
+
+}
+
+.widget-title {
+
 }

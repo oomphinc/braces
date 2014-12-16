@@ -29,7 +29,7 @@
 function braces_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'braces_custom_header_args', array(
 		'default-image'          => '',
-		'default-text-color'     => '000',
+		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
@@ -114,7 +114,7 @@ function braces_admin_header_style() {
  * @see braces_custom_header_setup().
  */
 function braces_admin_header_image() {
-	$style        = sprintf( ' style="color:#%s;"', get_header_textcolor() );
+	$style = sprintf( ' style="color:#%s;"', get_header_textcolor() );
 	$header_image = get_header_image();
 ?>
 	<div id="headimg">

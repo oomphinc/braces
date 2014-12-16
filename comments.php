@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying Comments.
+ * The template for displaying comments.
  *
  * The area of the page that contains both current comments
  * and the comment form.
@@ -20,7 +20,7 @@ if ( post_password_required() ) {
 	return;
 } ?>
 
-	<div id="comments" class="comments-area">
+<div id="comments" class="comments-area">
 
 	<?php // You can start editing here -- including this comment! ?>
 

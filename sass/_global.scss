@@ -1,15 +1,23 @@
-// @file global override styles
+// @file Global Styles
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
 
 /**
  * Root Elements
  */
 html {
+	box-sizing: border-box;
 	font-size: $base-font-size;
 	-webkit-font-smoothing: antialiased;
 }
 
 body {
+	color: $color-5;
 	height: 100%;
+	font-family: $font-stack-1;
+	font-size: $paragraph-size-1;
 }
 
 html,
@@ -37,3 +45,12 @@ a[href^=tel]{
 /**
  * Footer Elements
  */
+
+/**
+ * Media Elements
+ */
+img {
+	display: block;
+	height: auto;
+	max-width: 100%;
+}

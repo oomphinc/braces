@@ -2,7 +2,7 @@
 /**
  * Custom template tags for this theme.
  *
- * Eventually, some of the functionality here could be replaced by core features
+ * Eventually, some of the functionality here could be replaced by core features.
  *
  * @package WordPress
  * @subpackage braces
@@ -177,7 +177,7 @@ function braces_categorized_blog() {
  */
 function braces_category_transient_flusher() {
 	// Like, beat it. Dig?
-	delete_transient( 'all_the_cool_cats' );
+	delete_transient( 'braces_categories' );
 }
 add_action( 'edit_category', 'braces_category_transient_flusher' );
 add_action( 'save_post',     'braces_category_transient_flusher' );

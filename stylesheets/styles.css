@@ -1,0 +1,151 @@
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/**
+ * Root Elements
+ */
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  color: #333333;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/**
+ * Header Elements
+ */
+/**
+ * Footer Elements
+ */
+/**
+ * Media Elements
+ */
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+/**
+ * Structure Elements
+ */
+#page {
+  margin: 0 auto;
+  width: 90%;
+}
+
+#content:before, #content:after {
+  content: " ";
+  display: table;
+}
+#content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#content #primary {
+  float: left;
+  width: 70%;
+}
+#content #secondary {
+  float: right;
+  width: 30%;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+h6 {
+  font-size: 14px;
+}
+
+/**
+ * Single Posts
+ */
+/**
+ * Single Post Comments
+ */
+/**
+ * Single Pages
+ */
+/**
+ * Post Archives
+ */
+/**
+ * Global Widget Styles
+ */
+/**
+ * Widget Archive
+ */
+/* List */
+/* Dropdown */
+/**
+ * Widget Calendar
+ */
+/**
+ * Widget Categories
+ */
+/* List */
+/* Dropdown */
+/**
+ * Widget Pages
+ */
+/**
+ * Widget Meta
+ */
+/**
+ * Widget Recent Comments
+ */
+/**
+ * Widget Recent Entries
+ */
+/**
+ * Widget RSS
+ */
+/**
+ * Widget Search
+ */
+.search-form .search-submit {
+  display: none;
+}
+
+/**
+ * Widget Text
+ */
+/**
+ * Widget Tag Cloud
+ */
+/**
+ * Widget Nav Menu
+ */
+
+/*# sourceMappingURL=styles.css.map */

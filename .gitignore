@@ -7,6 +7,7 @@ javascripts/*-ck.js
 # Packages #
 ############
 node_modules/
+*.log
 
 # OS generated files #
 ######################

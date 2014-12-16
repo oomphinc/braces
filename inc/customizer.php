@@ -1,6 +1,6 @@
 <?php
 /**
- * oomph_theme Theme Customizer
+ * braces_theme Theme Customizer
  *
  * @package WordPress
  * @subpackage braces
