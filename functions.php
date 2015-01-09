@@ -34,6 +34,13 @@ function braces_setup() {
 	//load_theme_textdomain( 'braces', get_template_directory() . '/languages' );
 
 	/**
+	 * This theme uses wp_nav_menu() in one location.
+	 */
+	register_nav_menus( array(
+		'primary' => __( 'Primary Menu', 'braces' ),
+	) );
+
+	/**
 	 * Add default posts and comments RSS feed links to head
 	 */
 	add_theme_support( 'automatic-feed-links' );
@@ -44,13 +51,6 @@ function braces_setup() {
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
 	add_theme_support( 'post-thumbnails' );
-
-	/**
-	 * This theme uses wp_nav_menu() in one location.
-	 */
-	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'braces' ),
-	) );
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
