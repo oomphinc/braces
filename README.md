@@ -31,11 +31,11 @@ Website: [http://susy.oddbird.net/](http://susy.oddbird.net/)
 Configuration can be found at:
 * root > sass > _grids.scss = grid configuration
 
-### Compass
-Website: [http://compass-style.org](compass-style.org)
+### Bundler
+Website: [http://bundler.io/](http://bundler.io/)
 
 Configuration can be found at:
-* root > config.rb = compass configuration
+* root > gemfile = bundler configuration
 
 ### Breakpoint
 Website: [http://breakpoint-sass.com/](beakpoint-sass.com)
@@ -55,13 +55,21 @@ This theme supports modern browsers - so IE9+. If you project requires IE8 suppo
 Getting Started
 ---------------
 
-Since our theme uses Gulp, Compass, & Susy there is some initial configuartion that we have to process. Each of these will have to be installed on your system individually. In order to use these dependencies you will have to install [node.js](http://nodejs.org) on you system. This article is a great tutorial on how to get up and running quickly. [Getting started with Gulp](travismaynard.com/writing/getting-started-with-gulp)
+Since our theme uses Bundler, Gulp, Susy, Breakpoint, etc. there is some initial configuartion that we have to process.
 
-Install Directions:
+Bundler will handle downloading your project dependencies. In order to use Bundler you will have to install it `$ gem install bundler` on your system. Once you have installed Bundler:
 * cd into your theme directory
+* run bundle install
+A new Gemfile.lock will be added to your directory
+
+NPM - Node Package Manager - will handle our Node dependencies. In order to use these dependencies you will have to install
+[node.js](http://nodejs.org) on you system. This article is a great tutorial on how to get up and running quickly.
+[Getting started with Gulp](travismaynard.com/writing/getting-started-with-gulp)
+
+Once you have installed Node:
 * run $ npm install = this will install the module dependancies listed in the root > package.json
 * a new folder called "node_modules" will be created in your theme folder
-* run compass install susy
+* run gulp
 
 If you want to set things up manually, download `braces` from GitHub. The first thing you want to do is copy the `braces` directory and change the name to something else - Like, say, `megatherium` -- then you'll need to do a three-step find and replace on all of the templates.
 

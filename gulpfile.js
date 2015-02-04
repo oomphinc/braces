@@ -5,17 +5,11 @@ var gulp         = require('gulp'),
 		autoprefixer = require('gulp-autoprefixer'),
 		plumber      = require('gulp-plumber'),
 		gutil        = require('gulp-util'),
-		rem          = require('gulp-pixrem'),
-		compass      = require('gulp-compass');
+		rem          = require('gulp-pixrem');
 
-gulp.task('compass', function() {
+gulp.task('styles', function() {
   gulp.src('sass/*.scss')
-    .pipe(compass({
-      config_file: 'config.rb',
-      css: 'stylesheets',
-      sass: 'sass',
-      require: ['susy', 'breakpoint']
-    }))
+    .pipe(sass({require: ['susy', 'breakpoint'], style: 'compressed'}))
     .pipe(plumber({
       errorHandler: function (error) {
         console.log(error.message);
@@ -28,8 +22,8 @@ gulp.task('compass', function() {
 });
 
 gulp.task('watch', function() {
-    gulp.watch('sass/*.scss', ['compass']);
+    gulp.watch('sass/*.scss', ['styles']);
 });
 
 // Make all tasks run and then watch for the rest
-gulp.task('default', ['compass', 'watch']);
+gulp.task('default', ['styles', 'watch']);
