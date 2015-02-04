@@ -29,6 +29,10 @@ Resource: [Getting started with Gulp](travismaynard.com/writing/getting-started-
 Website: [http://bourbon.io/](http://bourbon.io/)
 Resource: [https://github.com/thoughtbot/neat#requirements](https://github.com/thoughtbot/neat#requirements)
 
+### Neat
+Website: [http://neat.bourbon.io/](http://neat.bourbon.io/)
+Resource: [https://github.com/thoughtbot/neat#using-neat](https://github.com/thoughtbot/neat#using-neat)
+
 ## Support
 This theme supports modern browsers - so IE9+. If you project requires IE8 support their are options availble to help with that.
 
