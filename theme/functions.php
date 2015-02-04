@@ -30,8 +30,9 @@ function braces_setup() {
 	 * Translations can be filed in the /languages/ directory
 	 * If you're building a theme based on braces_theme, use a find and replace
 	 * to change 'braces' to the name of your theme in all the template files
+	 *
+	 * load_theme_textdomain( 'braces', get_template_directory() . '/languages' );
 	 */
-	//load_theme_textdomain( 'braces', get_template_directory() . '/languages' );
 
 	/**
 	 * This theme uses wp_nav_menu() in one location.
@@ -52,7 +53,7 @@ function braces_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
-	/*
+	/**
 	 * Switch default core markup for search form, comment form, and comments
 	 * to output valid HTML5.
 	 */
@@ -60,13 +61,17 @@ function braces_setup() {
 		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
 	) );
 
-	/*
+	/**
 	 * Enable support for Post Formats.
 	 * See http://codex.wordpress.org/Post_Formats
-	 */
-	add_theme_support( 'post-formats', array(
-		'aside', 'image', 'video', 'quote', 'link'
-	) );
+	 * These rarely get used so only enable if you need them.
+	 *
+	 * @author johncionci
+	 *
+	 * add_theme_support( 'post-formats', array(
+	 * 'aside', 'image', 'video', 'quote', 'link'
+	 * ) );
+	 * /
 
 	/**
 	 * Setup the WordPress core custom background feature.
@@ -85,7 +90,7 @@ add_action( 'after_setup_theme', 'braces_setup' );
 function braces_scripts() {
 	$stylesheet_directory = get_template_directory_uri();
 	wp_enqueue_style( 'braces', get_stylesheet_uri() );
-	wp_enqueue_style( 'braces-theme', $stylesheet_directory . '/stylesheets/styles.css', null, false, 'all' );
+	wp_enqueue_style( 'braces-theme', $stylesheet_directory . '/css/styles.css', null, false, 'all' );
 
 	wp_enqueue_script( 'braces-modernizr', $stylesheet_directory . '/javascripts/modernizr.js', array(), '20140113', true );
 	wp_enqueue_script( 'braces-navigation', $stylesheet_directory . '/javascripts/navigation.js', array(), '20120206', true );

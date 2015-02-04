@@ -8,8 +8,8 @@ var gulp         = require('gulp'),
 		rem          = require('gulp-pixrem');
 
 gulp.task('styles', function() {
-  gulp.src('sass/*.scss')
-    .pipe(sass({require: ['susy', 'breakpoint'], style: 'compressed'}))
+  gulp.src('../sass/*.scss')
+    .pipe(sass({style: 'compressed'}))
     .pipe(plumber({
       errorHandler: function (error) {
         console.log(error.message);
@@ -18,11 +18,11 @@ gulp.task('styles', function() {
     .on('error', function(err) {
       // Would like to catch the error here
     })
-    .pipe(gulp.dest('stylesheets'));
+    .pipe(gulp.dest('../theme/css'));
 });
 
 gulp.task('watch', function() {
-    gulp.watch('sass/*.scss', ['styles']);
+    gulp.watch('../sass/*.scss', ['styles']);
 });
 
 // Make all tasks run and then watch for the rest
