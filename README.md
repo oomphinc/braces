@@ -10,13 +10,13 @@ Pull requests are welcome!
 
 Braces alters the typical WP PHP loop syntax for a more [PHP coding standards] (http://make.wordpress.org/core/handbook/coding-standards/php/) friendly approach that uses more, well, "braces".
 
-## Technologies & Requirements
+## Requirements
 
-### Node
-Website: [node.js](http://nodejs.org)
+### Node ![Node](https://img.shields.io/badge/Node-v??+-red.svg?style=flat-square "Node")
+- Website: [node.js](http://nodejs.org)
 
 ### NPM - Node Package Manager
-Website: [https://www.npmjs.com/package/npm](https://www.npmjs.com/package/npm)
+- Website: [https://www.npmjs.com/package/npm](https://www.npmjs.com/package/npm)
 
 ### Sass
 - Website: [http://sass-lang.com/](http://sass-lang.com/)
@@ -26,24 +26,14 @@ Website: [https://www.npmjs.com/package/npm](https://www.npmjs.com/package/npm)
 - Resource: [Getting started with Gulp](travismaynard.com/writing/getting-started-with-gulp)
 
 ### Bourbon
-Website: [http://bourbon.io/](http://bourbon.io/)
-Resource: [https://github.com/thoughtbot/neat#requirements](https://github.com/thoughtbot/neat#requirements)
+- Website: [http://bourbon.io/](http://bourbon.io/)
+- Resource: [https://github.com/thoughtbot/neat#requirements](https://github.com/thoughtbot/neat#requirements)
 
 ### Neat
-Website: [http://neat.bourbon.io/](http://neat.bourbon.io/)
-Resource: [https://github.com/thoughtbot/neat#using-neat](https://github.com/thoughtbot/neat#using-neat)
+- Website: [http://neat.bourbon.io/](http://neat.bourbon.io/)
+- Resource: [https://github.com/thoughtbot/neat#using-neat](https://github.com/thoughtbot/neat#using-neat)
 
-## Support
-This theme supports modern browsers - so IE9+. If you project requires IE8 support their are options availble to help with that.
-
-[Modernizr.js](modernizr.com) is used for feature detection. It also ships with html5shiv.js which enables HTML5 elements in IE.
-
-[Respond.js](https://github.com/scottjehl/Respond) is a library that allows IE6-8 to read media queries which is essential since we are using a grid system. This should only be loaded conditionally if you are trying to support those browsers.
-
-[Pixrem](https://github.com/gummesson/gulp-pixrem) is a Gulp plugin that is used to convert REM units into pixels for IE fallbacks.
-
-Getting Started
----------------
+## Installation
 
 Once you have installed all of the dependencies:
 * run $ npm install = this will install the module dependancies listed in the build > package.json file
