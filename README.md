@@ -25,7 +25,7 @@ Braces alters the typical WP PHP loop syntax for a more [PHP coding standards] (
 - Website: [http://gulpjs.com/](http://gulpjs.com/)
 - Resource: [Getting started with Gulp](travismaynard.com/writing/getting-started-with-gulp)
 
-### Bourbon v4.0.2+
+### Bourbon v4.1.1+
 - Website: [http://bourbon.io/](http://bourbon.io/)
 - Resource: [https://github.com/thoughtbot/neat#requirements](https://github.com/thoughtbot/neat#requirements)
 
