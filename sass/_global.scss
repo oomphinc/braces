@@ -1,14 +1,9 @@
 // @file Global Styles
 
-*, *:before, *:after {
-	box-sizing: inherit;
-}
-
 /**
  * Root Elements
  */
 html {
-	box-sizing: border-box;
 	font-size: $base-font-size;
 	-webkit-font-smoothing: antialiased;
 }
