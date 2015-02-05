@@ -10,26 +10,26 @@ Pull requests are welcome!
 
 Braces alters the typical WP PHP loop syntax for a more [PHP coding standards] (http://make.wordpress.org/core/handbook/coding-standards/php/) friendly approach that uses more, well, "braces".
 
-## Requirements ![Node](https://img.shields.io/badge/node-v0.0.0%2B-red.svg?style=flat-square "Node")
+## Requirements
 
-### Node
+### Node ![Node](https://img.shields.io/badge/node-v0.0.0%2B-red.svg?style=flat-square "Node")
 - Website: [node.js](http://nodejs.org)
 
-### NPM - Node Package Manager
+### NPM - Node Package Manager ![NPM](https://img.shields.io/badge/npm-v0.0.0%2B-red.svg?style=flat-square "NPM")
 - Website: [https://www.npmjs.com/package/npm](https://www.npmjs.com/package/npm)
 
-### Sass
+### Sass ![Sass](https://img.shields.io/badge/sass-v0.0.0%2B-red.svg?style=flat-square "Sass")
 - Website: [http://sass-lang.com/](http://sass-lang.com/)
 
-### Gulp
+### Gulp ![Gulp](https://img.shields.io/badge/gulp-v0.0.0%2B-red.svg?style=flat-square "Gulp")
 - Website: [http://gulpjs.com/](http://gulpjs.com/)
 - Resource: [Getting started with Gulp](travismaynard.com/writing/getting-started-with-gulp)
 
-### Bourbon
+### Bourbon ![Bourbon](https://img.shields.io/badge/bourbon-v0.0.0%2B-red.svg?style=flat-square "Bourbon")
 - Website: [http://bourbon.io/](http://bourbon.io/)
 - Resource: [https://github.com/thoughtbot/neat#requirements](https://github.com/thoughtbot/neat#requirements)
 
-### Neat
+### Neat ![Neat](https://img.shields.io/badge/neat-v0.0.0%2B-red.svg?style=flat-square "Neat")
 - Website: [http://neat.bourbon.io/](http://neat.bourbon.io/)
 - Resource: [https://github.com/thoughtbot/neat#using-neat](https://github.com/thoughtbot/neat#using-neat)
 
