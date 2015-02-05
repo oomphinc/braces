@@ -19,11 +19,11 @@ Website: [node.js](http://nodejs.org)
 Website: [https://www.npmjs.com/package/npm](https://www.npmjs.com/package/npm)
 
 ### Sass
-Website: [http://sass-lang.com/](http://sass-lang.com/)
+- Website: [http://sass-lang.com/](http://sass-lang.com/)
 
 ### Gulp
-Website: [http://gulpjs.com/](http://gulpjs.com/)
-Resource: [Getting started with Gulp](travismaynard.com/writing/getting-started-with-gulp)
+- Website: [http://gulpjs.com/](http://gulpjs.com/)
+- Resource: [Getting started with Gulp](travismaynard.com/writing/getting-started-with-gulp)
 
 ### Bourbon
 Website: [http://bourbon.io/](http://bourbon.io/)
