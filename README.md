@@ -12,35 +12,35 @@ Braces alters the typical WP PHP loop syntax for a more [PHP coding standards] (
 
 ## Requirements
 
-### Node ![Node](https://img.shields.io/badge/node-v0.0.0%2B-red.svg?style=flat-square "Node")
+### Node ![Node](https://img.shields.io/badge/node-v0.10.26%2B-red.svg?style=flat-square "Node")
 - Website: [node.js](http://nodejs.org)
 
-### NPM - Node Package Manager ![NPM](https://img.shields.io/badge/npm-v0.0.0%2B-red.svg?style=flat-square "NPM")
+### NPM - Node Package Manager ![NPM](https://img.shields.io/badge/npm-v1.4.3%2B-red.svg?style=flat-square "NPM")
 - Website: [https://www.npmjs.com/package/npm](https://www.npmjs.com/package/npm)
 
-### Sass ![Sass](https://img.shields.io/badge/sass-v0.0.0%2B-red.svg?style=flat-square "Sass")
+### Sass ![Sass](https://img.shields.io/badge/sass-v3.4.9%2B-red.svg?style=flat-square "Sass")
 - Website: [http://sass-lang.com/](http://sass-lang.com/)
 
-### Gulp ![Gulp](https://img.shields.io/badge/gulp-v0.0.0%2B-red.svg?style=flat-square "Gulp")
+### Gulp ![Gulp](https://img.shields.io/badge/gulp-v3.8.10%2B-red.svg?style=flat-square "Gulp")
 - Website: [http://gulpjs.com/](http://gulpjs.com/)
 - Resource: [Getting started with Gulp](travismaynard.com/writing/getting-started-with-gulp)
 
-### Bourbon ![Bourbon](https://img.shields.io/badge/bourbon-v0.0.0%2B-red.svg?style=flat-square "Bourbon")
+### Bourbon ![Bourbon](https://img.shields.io/badge/bourbon-v4.0.2%2B-red.svg?style=flat-square "Bourbon")
 - Website: [http://bourbon.io/](http://bourbon.io/)
 - Resource: [https://github.com/thoughtbot/neat#requirements](https://github.com/thoughtbot/neat#requirements)
 
-### Neat ![Neat](https://img.shields.io/badge/neat-v0.0.0%2B-red.svg?style=flat-square "Neat")
+### Neat ![Neat](https://img.shields.io/badge/neat-v1.7.0%2B-red.svg?style=flat-square "Neat")
 - Website: [http://neat.bourbon.io/](http://neat.bourbon.io/)
 - Resource: [https://github.com/thoughtbot/neat#using-neat](https://github.com/thoughtbot/neat#using-neat)
 
 ## Installation
 
-Once you have installed all of the dependencies:
-* run $ npm install = this will install the module dependancies listed in the build > package.json file
-* a new folder called "node_modules" will be created in your theme folder
-* run gulp from that directory
+1 `cd` into ../theme/sass run `gem install bourbon` run `bourbon install`
+2 `cd` into ../theme/sass run `neat install`
+3 cd into `build` run `npm install`
+4 run `gulp`
 
-If you want to set things up manually, download `braces` from GitHub. The first thing you want to do is copy the `braces` directory and change the name to something else - Like, say, `megatherium` -- then you'll need to do a three-step find and replace on all of the templates.
+### Find & Replace
 
 * Search for: `* @author Oomph, Inc.` and replace with: `* @author { Your Company }`
 * Search for: `* @link http://www.oomphinc.com` and replace with: `* @link { Your URL }`
