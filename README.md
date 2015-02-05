@@ -12,7 +12,7 @@ Braces alters the typical WP PHP loop syntax for a more [PHP coding standards] (
 
 ## Requirements
 
-### Node ![Node](https://img.shields.io/badge/Node-v??+-red.svg?style=flat-square "Node")
+### Node ![Node](https://img.shields.io/badge/node-v0.0.0%2B-red.svg?style=flat-square "Node")
 - Website: [node.js](http://nodejs.org)
 
 ### NPM - Node Package Manager
