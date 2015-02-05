@@ -21,6 +21,11 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
+<script>
+	// Picture element HTML5 shiv
+	document.createElement( "picture" );
+</script>
+
 <?php wp_head(); ?>
 </head>
 

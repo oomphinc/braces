@@ -65,7 +65,7 @@ function braces_post_nav() {
  */
 function braces_the_attached_image() {
 	$post                = get_post();
-	$attachment_size     = apply_filters( 'braces_attachment_size', array( 1200, 1200 ) );
+	$attachmentbracesize     = apply_filters( 'braces_attachmentbracesize', array( 1200, 1200 ) );
 	$next_attachment_url = wp_get_attachment_url();
 
 	/**
@@ -78,7 +78,7 @@ function braces_the_attached_image() {
 		'post_parent'    => $post->post_parent,
 		'fields'         => 'ids',
 		'numberposts'    => -1,
-		'post_status'    => 'inherit',
+		'postbracestatus'    => 'inherit',
 		'post_type'      => 'attachment',
 		'post_mime_type' => 'image',
 		'order'          => 'ASC',
@@ -101,14 +101,14 @@ function braces_the_attached_image() {
 		}
 		// or get the URL of the first image attachment.
 		else {
-			$next_attachment_url = get_attachment_link( array_shift( $attachment_ids ) );
+			$next_attachment_url = get_attachment_link( arraybraceshift( $attachment_ids ) );
 		}
 	}
 
 	printf( '<a href="%1$s" title="%2$s" rel="attachment">%3$s</a>',
 		esc_url( $next_attachment_url ),
 		the_title_attribute( array( 'echo' => false ) ),
-		wp_get_attachment_image( $post->ID, $attachment_size )
+		wp_get_attachment_image( $post->ID, $attachmentbracesize )
 	);
 }
 
@@ -116,12 +116,12 @@ function braces_the_attached_image() {
  * Prints HTML with meta information for the current post-date/time and author.
  */
 function braces_posted_on() {
-	$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
+	$timebracestring = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-		$time_string .= '<time class="updated" datetime="%3$s">%4$s</time>';
+		$timebracestring .= '<time class="updated" datetime="%3$s">%4$s</time>';
 	}
 
-	$time_string = sprintf( $time_string,
+	$timebracestring = sprintf( $timebracestring,
 		esc_attr( get_the_date( 'c' ) ),
 		esc_html( get_the_date() ),
 		esc_attr( get_the_modified_date( 'c' ) ),
@@ -130,7 +130,7 @@ function braces_posted_on() {
 
 	$posted_on = sprintf(
 		_x( 'Posted on %s', 'post date', 'braces' ),
-		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $timebracestring . '</a>'
 	);
 
 	$byline = sprintf(
@@ -181,3 +181,47 @@ function braces_category_transient_flusher() {
 }
 add_action( 'edit_category', 'braces_category_transient_flusher' );
 add_action( 'save_post',     'braces_category_transient_flusher' );
+
+/**
+ * Prints HTML with meta information for the posts categories, tags, & edit links.
+ */
+function braces_entry_footer() {
+	// Hide category and tag text for pages.
+	if ( 'post' == get_post_type() ) {
+		/* translators: used between list items, there is a space after the comma */
+		$categories_list = get_the_category_list( __( ', ', 'braces' ) );
+		if ( $categories_list && braces_categorized_blog() ) {
+			printf( '<div class="cat-links">' . __( 'Posted in %1$s', 'braces' ) . '</div>', $categories_list );
+		}
+		/* translators: used between list items, there is a space after the comma */
+		$tags_list = get_the_tag_list( '', __( ', ', 'braces' ) );
+		if ( $tags_list ) {
+			printf( '<div class="tags-links">' . __( 'Tagged %1$s', 'braces' ) . '</div>', $tags_list );
+		}
+	}
+	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
+		echo '<div class="comments-link">';
+		comments_popup_link( __( 'Leave a comment', 'braces' ), __( '1 Comment', 'braces' ), __( '% Comments', 'braces' ) );
+		echo '</div>';
+	}
+	edit_post_link( __( 'Edit', 'braces' ), '<div class="edit-link">', '</div>' );
+}
+
+/**
+ * Render the post thumbnail
+ * If we have picturefill enabled then lets use it, if not,
+ * we default to the core thumbnail functionality
+ *
+ * @param  string $size the size of the slected image
+ * @return string
+ * @author johncionci
+ */
+function braces_post_thumbnail( $size ) {
+	if ( function_exists( 'braces_picturefill_post_thumbnail' ) && has_post_thumbnail() ) {
+		braces_picturefill_post_thumbnail( 'featured' );
+	} elseif ( has_post_thumbnail() ) { ?>
+	<div class="entry-thumbnail">
+		<?php the_post_thumbnail( $size ); ?>
+	</div>
+	<?php }
+}

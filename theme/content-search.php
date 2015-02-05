@@ -26,7 +26,7 @@
 
 	<footer class="entry-footer">
 		<div class="entry-meta">
-			<?php edit_post_link( __( 'Edit', 'braces' ), '<span class="edit-link">', '</span>' ); ?>
+			<?php braces_entry_footer(); ?>
 		</div><!-- .entry-meta -->
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

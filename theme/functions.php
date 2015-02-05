@@ -88,7 +88,6 @@ add_action( 'after_setup_theme', 'braces_setup' );
  * Enqueue scripts and styles
  */
 function braces_scripts() {
-	echo get_template_directory_uri();
 	$stylesheet_directory = get_template_directory_uri();
 	wp_enqueue_style( 'braces', get_stylesheet_uri() );
 	wp_enqueue_style( 'braces-theme', $stylesheet_directory . '/css/styles.css', null, false, 'all' );
