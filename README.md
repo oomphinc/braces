@@ -10,9 +10,9 @@ Pull requests are welcome!
 
 Braces alters the typical WP PHP loop syntax for a more [PHP coding standards] (http://make.wordpress.org/core/handbook/coding-standards/php/) friendly approach that uses more, well, "braces".
 
-## Requirements
+## Requirements ![Node](https://img.shields.io/badge/node-v0.0.0%2B-red.svg?style=flat-square "Node")
 
-### Node ![Node](https://img.shields.io/badge/node-v0.0.0%2B-red.svg?style=flat-square "Node")
+### Node
 - Website: [node.js](http://nodejs.org)
 
 ### NPM - Node Package Manager
