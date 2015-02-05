@@ -1,11 +1,11 @@
 // Plugins
 var gulp         = require('gulp'),
-		watch        = require('gulp-watch'),
-		sass         = require('gulp-ruby-sass'),
-		autoprefixer = require('gulp-autoprefixer'),
-		plumber      = require('gulp-plumber'),
-		gutil        = require('gulp-util'),
-		rem          = require('gulp-pixrem');
+var watch        = require('gulp-watch'),
+var sass         = require('gulp-ruby-sass'),
+var autoprefixer = require('gulp-autoprefixer'),
+var plumber      = require('gulp-plumber'),
+var gutil        = require('gulp-util'),
+var rem          = require('gulp-pixrem');
 
 gulp.task('styles', function() {
   gulp.src('../sass/*.scss')
