@@ -132,6 +132,9 @@ require get_template_directory() . '/inc/widgets.php';
  * Include WordPress core functionality Extensions.
  */
 
+/* Picturefill */
+//require get_template_directory() . '/extensions/picturefill/braces-picturefill.php';
+
 /**
  * Include WordPress core functionality Features.
  */
