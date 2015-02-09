@@ -1,5 +1,5 @@
-// Theme Imports
-//
+// @file Styles
+
 // This is the master styles.scss file for our theme, which contains an annotated
 // list of @import functions which comprise the separate stylesheets which make up
 // specific parts of the theme.
@@ -16,14 +16,17 @@
 // Use inline media queries
 // Use inline IE styles
 
-// CSS preprocess logic
-	@import "preprocess/_rem";
-	@import "preprocess/_vars";
-	@import "preprocess/_mixins";
-	@import "preprocess/_extends";
-	@import "preprocess/_placeholders";
+// Requirements
+	@import "bourbon/bourbon";
+	@import "grid_settings";
+	@import "neat/neat";
 
-// Import Styles
+	@import "_config";
+
+// CSS preprocess logic
+	@import "_mixins";
+
+// Component Styles
 
 	// Global Styles
 	@import "_global";
@@ -43,5 +46,5 @@
 	// Widget Styles
 	@import "_widgets";
 
-	// Content Styles
+	// Print Styles
 	// @import "_print";
