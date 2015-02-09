@@ -1,22 +1,19 @@
-// @file layout styles
+// @file Layout Styles
 
 /**
  * Structure Elements
  */
 #page {
-	margin: 0 auto;
-	width: 90%;
+	@include outer-container;
 }
 
 #content {
-	@include clearfix();
+	@include clearfix;
 	#primary {
-		float: left;
-		width: 70%;
+		@include span-columns(8);
 	}
 	#secondary {
-		float: right;
-		width: 30%;
+		@include span-columns(4);
 	}
 }
 

@@ -1,0 +1,33 @@
+// Variables
+
+// Font Stacks
+$font-stack-1: Arial, Helvetica, sans-serif;
+$font-stack-2: Georgia, serif;
+
+// Colors
+$color-1: #ffffff; // White
+$color-2: #000000; // Black
+$color-3: #cccccc; // Light Gray
+$color-4: #666666; // Medium Gray
+$color-5: #333333; // Dark Gray
+$color-6: #D62901; // Red
+
+// Typography
+$base-font-size: 10px;
+
+$heading-size-1: $base-font-size * 2.4;
+$heading-size-2: $base-font-size * 2.2;
+$heading-size-3: $base-font-size * 2.0;
+$heading-size-4: $base-font-size * 1.8;
+$heading-size-5: $base-font-size * 1.6;
+$heading-size-6: $base-font-size * 1.4;
+
+$paragraph-size-1: $heading-size-6;
+
+// Media Query Breakpoints
+// $mq-1: 0px 320px;
+// $mq-2: 321px 480px;
+// $mq-3: 481px 640px;
+// $mq-4: 641px 767px;
+// $mq-5: 768px 1023px;
+// $mq-6: 1024px 9999px;
