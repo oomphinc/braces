@@ -1,26 +1,36 @@
 // @file Variables
 
-//////////////////// Font Stacks ////////////////////
+//////////////////// Typography ////////////////////
+// Colors
+$color-1: #337ab7;
+$color-2: #5cb85c;
+$color-3: #5bc0de;
+$color-4: #666666;
+$color-5: #f0ad4e;
+$color-6: #d9534f;
+
+$graycale-color-1: #fff;
+$graycale-color-2: #000;
+$graycale-color-3: lighten(#000, 13.5%); // #222
+$graycale-color-4: lighten(#000, 20%);   // #333
+$graycale-color-5: lighten(#000, 33.5%); // #555
+$graycale-color-6: lighten(#000, 46.7%); // #777
+$graycale-color-7: lighten(#000, 93.5%); // #eee
+
+// Font Stacks
 $font-stack-1: Arial, Helvetica, sans-serif;
 $font-stack-2: Georgia, serif;
 
-//////////////////// Colors ////////////////////
-$color-1: #ffffff; // White
-$color-2: #000000; // Black
-$color-3: #cccccc; // Light Gray
-$color-4: #666666; // Medium Gray
-$color-5: #333333; // Dark Gray
-$color-6: #D62901; // Red
+// Font Sizes
+$base-font-size: 1;
+$base-font-pixel-size: 10px;
 
-//////////////////// Typography ////////////////////
-$base-font-size: 10px;
-
-$heading-size-1: $base-font-size * 2.4;
-$heading-size-2: $base-font-size * 2.2;
-$heading-size-3: $base-font-size * 2.0;
-$heading-size-4: $base-font-size * 1.8;
-$heading-size-5: $base-font-size * 1.6;
-$heading-size-6: $base-font-size * 1.4;
+$heading-size-1: $base-font-size * 2.4rem;
+$heading-size-2: $base-font-size * 2.2rem;
+$heading-size-3: $base-font-size * 2.0rem;
+$heading-size-4: $base-font-size * 1.8rem;
+$heading-size-5: $base-font-size * 1.6rem;
+$heading-size-6: $base-font-size * 1.4rem;
 
 $paragraph-size-1: $heading-size-6;
 
