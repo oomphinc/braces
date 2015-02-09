@@ -1,10 +1,10 @@
 // Plugins
-var gulp         = require('gulp'),
-var watch        = require('gulp-watch'),
-var sass         = require('gulp-ruby-sass'),
-var autoprefixer = require('gulp-autoprefixer'),
-var plumber      = require('gulp-plumber'),
-var gutil        = require('gulp-util'),
+var gulp         = require('gulp');
+var watch        = require('gulp-watch');
+var sass         = require('gulp-ruby-sass');
+var autoprefixer = require('gulp-autoprefixer');
+var plumber      = require('gulp-plumber');
+var gutil        = require('gulp-util');
 var rem          = require('gulp-pixrem');
 
 gulp.task('styles', function() {
