@@ -9,6 +9,15 @@
  */
 
 /**
+ * Initialize & Load VIP Plugins
+ * We check to see if we are on a VIP environment, if so, we load the required plugins from their repo.
+ * If not, we load an activation class to display notices of the required plugins.
+ * @author johncionci
+ */
+// require_once( WP_CONTENT_DIR . '/themes/vip/plugins/vip-init.php' );
+// if ( defined( 'WPCOM_IS_VIP_ENV' ) && true === WPCOM_IS_VIP_ENV ) {}
+
+/**
  * Set the content width based on the theme's design and stylesheet.
  * @link https://codex.wordpress.org/Content_Width
  */
