@@ -1,17 +1,62 @@
 // @file Typography Styles
 
-h1, h2, h3, h4, h5, h6 {}
+body,
+button,
+input,
+select,
+textarea {
+	color: $graycale-color-2;
+	font-family: $font-stack-1;
+	font-size: $paragraph-size-1;
+	line-height: 1.5;
+}
+
+a {
+	color: $color-1;
+	&:visited {
+		color: $color-3;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color-3;
+	}
+}
+
+a[href^=tel]{
+	color: inherit;
+	text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+}
 
 h1 {
 	font-size: $heading-size-1;
+	&.site-title {
+		font-size: $heading-size-1 * 1.5;
+	}
+	&.entry-title {
+
+	}
+	&.widget-title {
+
+	}
 }
 
 h2 {
 	font-size: $heading-size-2;
+	&.comments-title {
+
+	}
 }
 
 h3 {
 	font-size: $heading-size-3;
+	&.reply-title {
+
+	}
 }
 
 h4 {
@@ -27,33 +72,123 @@ h6 {
 }
 
 p {
-
+	margin-bottom: 1.5em;
 }
 
-.site-title {
-
+b, strong {
+	font-weight: bold;
 }
 
-.entry-title {
-
+dfn, cite, em, i {
+	font-style: italic;
 }
 
-.entry-summary {
-
+blockquote {
+	margin: 0 1.5em;
 }
 
-.entry-content {
-
+address {
+	margin: 0 0 1.5em;
 }
 
-.comments-title {
-
+pre {
+	background: #eee;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-size: 15px;
+	font-size: 1.5rem;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
 }
 
-.reply-title {
-
+code, kbd, tt, var {
+	font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 }
 
-.widget-title {
+abbr, acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
 
+mark, ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+
+sup,
+sub {
+	font-size: 75%;
+	height: 0;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	bottom: 1ex;
+}
+
+sub {
+	top: .5ex;
+}
+
+small {
+	font-size: 75%;
+}
+
+big {
+	font-size: 125%;
+}
+
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+ul, ol {
+	margin: 0 0 1.5em 3em;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}
+
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+
+figure {
+	margin: 0;
+}
+
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+
+th {
+	font-weight: bold;
 }

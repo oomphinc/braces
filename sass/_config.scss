@@ -1,33 +1,74 @@
-// Variables
+// @file Variables
+
+//////////////////// Typography ////////////////////
+// Colors
+$color-1: #337ab7;
+$color-2: #5cb85c;
+$color-3: #5bc0de;
+$color-4: #666666;
+$color-5: #f0ad4e;
+$color-6: #d9534f;
+
+$graycale-color-1: #fff;
+$graycale-color-2: #000;
+$graycale-color-3: lighten(#000, 13.5%); // #222
+$graycale-color-4: lighten(#000, 20%);   // #333
+$graycale-color-5: lighten(#000, 33.5%); // #555
+$graycale-color-6: lighten(#000, 46.7%); // #777
+$graycale-color-7: lighten(#000, 93.5%); // #eee
 
 // Font Stacks
 $font-stack-1: Arial, Helvetica, sans-serif;
 $font-stack-2: Georgia, serif;
 
-// Colors
-$color-1: #ffffff; // White
-$color-2: #000000; // Black
-$color-3: #cccccc; // Light Gray
-$color-4: #666666; // Medium Gray
-$color-5: #333333; // Dark Gray
-$color-6: #D62901; // Red
+// Font Sizes
+$base-font-size: 1;
+$base-font-pixel-size: 10px;
 
-// Typography
-$base-font-size: 10px;
-
-$heading-size-1: $base-font-size * 2.4;
-$heading-size-2: $base-font-size * 2.2;
-$heading-size-3: $base-font-size * 2.0;
-$heading-size-4: $base-font-size * 1.8;
-$heading-size-5: $base-font-size * 1.6;
-$heading-size-6: $base-font-size * 1.4;
+$heading-size-1: $base-font-size * 2.4rem;
+$heading-size-2: $base-font-size * 2.2rem;
+$heading-size-3: $base-font-size * 2.0rem;
+$heading-size-4: $base-font-size * 1.8rem;
+$heading-size-5: $base-font-size * 1.6rem;
+$heading-size-6: $base-font-size * 1.4rem;
 
 $paragraph-size-1: $heading-size-6;
 
-// Media Query Breakpoints
-// $mq-1: 0px 320px;
-// $mq-2: 321px 480px;
-// $mq-3: 481px 640px;
-// $mq-4: 641px 767px;
-// $mq-5: 768px 1023px;
-// $mq-6: 1024px 9999px;
+//////////////////// Forms ////////////////////
+// Button, Reset, Submit
+$form-button-box-shadow-setting: true;
+$form-button-text-shadow-setting: true;
+
+$form-button-background: #e6e6e6;
+$form-button-border-colors: #ccc #ccc #bbb;
+$form-button-border-colors-hover: #ccc #bbb #aaa;
+$form-button-border-colors-active: #aaa #bbb #bbb;
+$form-button-border-width: 1px;
+$form-button-border-radius: 3px;
+$form-button-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
+$form-button-box-shadow-hover: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
+$form-button-box-shadow-active: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
+$form-button-text-color: rgba(0, 0, 0, .8);
+$form-button-text-size: 1.2rem;
+$form-button-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+$form-button-padding: .6em 1em .4em;
+
+// Search
+$form-search-box-sizing: content-box;
+
+// Inputs, Selects, Textareas
+$form-input-color: #666;
+$form-input-border-color: #ccc;
+$form-input-border-width: 1px;
+$form-input-border-radius: 3px;
+
+$form-input-color-focus: #111;
+$form-input-padding: 3px;
+
+//////////////////// Navigation ////////////////////
+$main-navigation-box-shadow-setting: true;
+
+$main-navigation-background-color: $color-4;
+$main-navigation-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+$main-navigation-link-color: $graycale-color-1;
+$main-navigation-link-color-hover: $color-3;

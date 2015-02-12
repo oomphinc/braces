@@ -15,7 +15,11 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<p class="attribution">&copy; <?php echo date( 'Y' ); ?> <a href="http://www.oomphinc.com"><?php _e( 'Oomph, Inc.' ); ?></a></p>
+			<?php if ( defined( 'WPCOM_IS_VIP_ENV' ) && true === WPCOM_IS_VIP_ENV ) {
+				echo vip_powered_wpcom( 4 );
+			} else { ?>
+				<p class="attribution">&copy; <?php echo date( 'Y' ); ?> <a href="http://www.oomphinc.com"><?php _e( 'Oomph, Inc.', 'braces' ); ?></a></p>
+			<?php } ?>
 		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->

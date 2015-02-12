@@ -62,10 +62,10 @@ function braces_picturefill_post_thumbnail( $braces_image_size ) {
 	?>
 	<picture class="entry-thumbnail">
 		<!--[if IE 9]><video style="display: none;"><![endif]-->
-		<source srcset="<?php echo $braces_thumbnail_mobile[0]; ?>, <?php echo $braces_thumbnail_mobile_2x[0]; ?> 2x" media="<?php echo $braces_mobile_mq; ?>">
-		<source srcset="<?php echo $braces_thumbnail_tablet[0]; ?>, <?php echo $braces_thumbnail_tablet_2x[0]; ?> 2x" media="<?php echo $braces_tablet_mq; ?>">
+		<source srcset="<?php echo esc_url( $braces_thumbnail_mobile[0] ); ?>, <?php echo esc_url( $braces_thumbnail_mobile_2x[0] ); ?> 2x" media="<?php echo esc_attr( $braces_mobile_mq ); ?>">
+		<source srcset="<?php echo esc_url( $braces_thumbnail_tablet[0] ); ?>, <?php echo esc_url( $braces_thumbnail_tablet_2x[0] ); ?> 2x" media="<?php echo esc_attr( $braces_tablet_mq ); ?>">
 		<!--[if IE 9]></video><![endif]-->
-		<img srcset="<?php echo $braces_thumbnail_desktop[0]; ?>" alt="<?php echo the_title(); ?>" />
+		<img srcset="<?php echo esc_url( $braces_thumbnail_desktop[0] ); ?>" alt="<?php echo the_title(); ?>" />
 	</picture>
 <?php }
 
