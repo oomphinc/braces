@@ -35,7 +35,7 @@ Braces alters the typical WP PHP loop syntax for a more [PHP coding standards] (
 
 ## Installation
 
-1. If you dont have them already on your system, install all required gems above
+1. If you don't have them already on your system, install all required gems above
 2. `cd` into `sass` directory run `bourbon install` run `neat install`
 3. `cd` into `build` directory run `npm install`
 4. run `gulp`
