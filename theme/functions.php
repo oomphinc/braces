@@ -9,6 +9,13 @@
  */
 
 /**
+ * Global Constants
+ */
+define( 'BRACES_URL',          get_stylesheet_directory_uri() );
+define( 'BRACES_TEMPLATE_URL', get_template_directory_uri() );
+define( 'BRACES_PATH',         get_template_directory() );
+
+/**
  * Initialize & Load VIP Plugins
  * We check to see if we are on a VIP environment, if so, we load the required plugins from their repo.
  * If not, we load an activation class to display notices of the required plugins.
@@ -40,7 +47,7 @@ function braces_setup() {
 	 * If you're building a theme based on braces_theme, use a find and replace
 	 * to change 'braces' to the name of your theme in all the template files
 	 *
-	 * load_theme_textdomain( 'braces', get_template_directory() . '/languages' );
+	 * load_theme_textdomain( 'braces', BRACES_PATH . '/languages' );
 	 */
 
 	/**
@@ -97,20 +104,19 @@ add_action( 'after_setup_theme', 'braces_setup' );
  * Enqueue scripts and styles
  */
 function braces_scripts() {
-	$stylesheet_directory = get_template_directory_uri();
-	wp_enqueue_style( 'braces', get_stylesheet_uri() );
-	wp_enqueue_style( 'braces-theme', $stylesheet_directory . '/css/styles.css', null, false, 'all' );
+	wp_enqueue_style( 'braces', BRACES_TEMPLATE_URL );
+	wp_enqueue_style( 'braces-theme', BRACES_URL . '/css/styles.css', null, false, 'all' );
 
-	wp_enqueue_script( 'braces-modernizr', $stylesheet_directory . '/js/modernizr.js', array(), '20140113', true );
-	wp_enqueue_script( 'braces-navigation', $stylesheet_directory . '/js/navigation.js', array(), '20120206', true );
-	wp_enqueue_script( 'braces-skip-link-focus-fix', $stylesheet_directory . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	wp_enqueue_script( 'braces-modernizr', BRACES_URL . '/js/modernizr.js', array(), '20140113', true );
+	wp_enqueue_script( 'braces-navigation', BRACES_URL . '/js/navigation.js', array(), '20120206', true );
+	wp_enqueue_script( 'braces-skip-link-focus-fix', BRACES_URL . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
 	if ( is_singular() && wp_attachment_is_image() ) {
-		wp_enqueue_script( 'braces-keyboard-image-navigation', $stylesheet_directory . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
+		wp_enqueue_script( 'braces-keyboard-image-navigation', BRACES_URL . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'braces_scripts' );
@@ -120,29 +126,29 @@ add_action( 'wp_enqueue_scripts', 'braces_scripts' );
  */
 
 /* Custom Header */
-require get_template_directory() . '/inc/custom-header.php';
+require BRACES_PATH . '/inc/custom-header.php';
 
 /* Custom template tags for this theme. */
-require get_template_directory() . '/inc/template-tags.php';
+require BRACES_PATH . '/inc/template-tags.php';
 
 /* Custom functions that act independently of the theme templates. */
-require get_template_directory() . '/inc/extras.php';
+require BRACES_PATH . '/inc/extras.php';
 
 /* Customizer additions. */
-require get_template_directory() . '/inc/customizer.php';
+require BRACES_PATH . '/inc/customizer.php';
 
 /* Load Jetpack compatibility file. */
-require get_template_directory() . '/inc/jetpack.php';
+require BRACES_PATH . '/inc/jetpack.php';
 
 /* Load Widgets file. */
-require get_template_directory() . '/inc/widgets.php';
+require BRACES_PATH . '/inc/widgets.php';
 
 /**
  * Include WordPress core functionality Extensions.
  */
 
 /* Picturefill */
-//require get_template_directory() . '/extensions/picturefill/braces-picturefill.php';
+//require BRACES_PATH . '/extensions/picturefill/braces-picturefill.php';
 
 /**
  * Include WordPress core functionality Features.

@@ -24,6 +24,6 @@ add_action( 'customize_register', 'braces_customize_register' );
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function braces_customize_preview_js() {
-	wp_enqueue_script( 'braces_customizer', get_template_directory_uri() . '/javascripts/customizer.js', array( 'customize-preview' ), '20130508', true );
+	wp_enqueue_script( 'braces_customizer', BRACES_TEMPLATE_URL . '/javascripts/customizer.js', array( 'customize-preview' ), '20130508', true );
 }
 add_action( 'customize_preview_init', 'braces_customize_preview_js' );

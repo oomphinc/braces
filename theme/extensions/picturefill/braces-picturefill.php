@@ -32,7 +32,7 @@ add_action( 'after_setup_theme', 'braces_picturefill_add_image_sizes' );
  * Enqueue 'picturefill' scripts
  */
 function braces_picturefill_scripts() {
-	wp_enqueue_script( 'braces-picturefill', get_template_directory_uri() . '/extensions/picturefill/js/picturefill.min.js', array(), '20150204', false );
+	wp_enqueue_script( 'braces-picturefill', BRACES_TEMPLATE_URL . '/extensions/picturefill/js/picturefill.min.js', array(), '20150204', false );
 }
 add_action( 'wp_enqueue_scripts', 'braces_picturefill_scripts' );
 
