@@ -45,6 +45,7 @@ Braces alters the typical WP PHP loop syntax for a more [PHP coding standards] (
 * Search for: `* @author Oomph, Inc.` and replace with: `* @author { Your Company }`
 * Search for: `* @link http://www.oomphinc.com` and replace with: `* @link { Your URL }`
 * Search for: `braces` and replace with: `yourthemedomain`
+* Search for: `BRACES` and replace with: `YOURTHEMEDOMAIN` in uppercase letters
 
 Don't forget to update the core style.css with your own information.
 Now you're ready to go! The next step is easy to say, but harder to do: make an awesome WordPress theme. :)
