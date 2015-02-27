@@ -1,0 +1,6 @@
+[submodule "sass/bourbon"]
+	path = sass/bourbon
+	url = https://github.com/thoughtbot/bourbon.git
+[submodule "sass/neat"]
+	path = sass/neat
+	url = https://github.com/thoughtbot/neat.git
