@@ -37,10 +37,10 @@ Braces alters the typical WP PHP loop syntax for a more [PHP coding standards] (
 
 1. If you don't have them already on your system, install all required gems above
 2. `cd` into `sass` directory run `bourbon install` run `neat install`
-3. `cd` into `build` directory run `npm install`
+3. `cd` into `root` directory run `npm install`
 4. run `gulp`
 
-### Find & Replace
+### Find & Replace ( theme folder only )
 
 * Search for: `* @author Oomph, Inc.` and replace with: `* @author { Your Company }`
 * Search for: `* @link http://www.oomphinc.com` and replace with: `* @link { Your URL }`

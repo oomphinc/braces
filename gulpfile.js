@@ -8,7 +8,7 @@ var gutil        = require('gulp-util');
 var rem          = require('gulp-pixrem');
 
 gulp.task('styles', function() {
-  gulp.src('../sass/*.scss')
+  gulp.src('sass/*.scss')
     .pipe(sass({style: 'compressed'}))
     .pipe(plumber({
       errorHandler: function (error) {
@@ -18,11 +18,11 @@ gulp.task('styles', function() {
     .on('error', function(err) {
       // Would like to catch the error here
     })
-    .pipe(gulp.dest('../theme/css'));
+    .pipe(gulp.dest('theme/css'));
 });
 
 gulp.task('watch', function() {
-    gulp.watch('../sass/*.scss', ['styles']);
+    gulp.watch('sass/*.scss', ['styles']);
 });
 
 // Make all tasks run and then watch for the rest
