@@ -16,6 +16,8 @@
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
+	<?php braces_picturefill_post_thumbnail( 'featured' ); ?>
+
 	<div class="entry-content">
 		<?php the_content(); ?>
 		<?php

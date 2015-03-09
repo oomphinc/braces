@@ -18,6 +18,8 @@
 		<?php } ?>
 	</header><!-- .entry-header -->
 
+	<?php braces_picturefill_post_thumbnail( 'featured' ); ?>
+
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
 		<?php
