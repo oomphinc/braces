@@ -216,7 +216,7 @@ function braces_entry_footer() {
  * @return string
  * @author johncionci
  */
-function braces_post_thumbnail( $size ) {
+function braces_post_thumbnail( $size = '' ) {
 	if ( function_exists( 'braces_picturefill_post_thumbnail' ) && has_post_thumbnail() ) {
 		braces_picturefill_post_thumbnail( 'featured' );
 	} elseif ( has_post_thumbnail() ) { ?>

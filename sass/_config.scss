@@ -1,5 +1,12 @@
 // @file Variables
 
+//////////////////// Layout ////////////////////
+$xsmall: new-breakpoint( max-width 480px );
+$small:  new-breakpoint( max-width 767px );
+$medium: new-breakpoint( max-width 1023px );
+$large:  new-breakpoint( max-width 1279px );
+$xlarge: new-breakpoint( min-width 1280px );
+
 //////////////////// Typography ////////////////////
 // Colors
 $color-1: #337ab7;
