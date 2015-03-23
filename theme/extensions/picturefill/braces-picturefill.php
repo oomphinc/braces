@@ -58,6 +58,7 @@ function braces_picturefill_post_thumbnail( $braces_image_size ) {
 	/* @1x images */
 	$braces_mobile_mq  = '(max-width: 568px)';
 	$braces_tablet_mq  = '(max-width: 1024px)';
+	$braces_desktop_mq  = '(min-width: 1025px)';
 
 	?>
 	<picture class="entry-thumbnail">

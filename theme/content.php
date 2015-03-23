@@ -18,6 +18,8 @@
 		<?php } ?>
 	</header><!-- .entry-header -->
 
+	<?php braces_post_thumbnail(); ?>
+
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
 		<?php
