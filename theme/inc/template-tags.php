@@ -65,7 +65,7 @@ function braces_post_nav() {
  */
 function braces_the_attached_image() {
 	$post                = get_post();
-	$attachmentbracesize     = apply_filters( 'braces_attachmentbracesize', array( 1200, 1200 ) );
+	$attachment_size     = apply_filters( 'braces_attachment_size', array( 1200, 1200 ) );
 	$next_attachment_url = wp_get_attachment_url();
 
 	/**
@@ -78,7 +78,7 @@ function braces_the_attached_image() {
 		'post_parent'    => $post->post_parent,
 		'fields'         => 'ids',
 		'numberposts'    => -1,
-		'postbracestatus'    => 'inherit',
+		'post_status'    => 'inherit',
 		'post_type'      => 'attachment',
 		'post_mime_type' => 'image',
 		'order'          => 'ASC',
@@ -101,14 +101,14 @@ function braces_the_attached_image() {
 		}
 		// or get the URL of the first image attachment.
 		else {
-			$next_attachment_url = get_attachment_link( arraybraceshift( $attachment_ids ) );
+			$next_attachment_url = get_attachment_link( array_shift( $attachment_ids ) );
 		}
 	}
 
 	printf( '<a href="%1$s" title="%2$s" rel="attachment">%3$s</a>',
 		esc_url( $next_attachment_url ),
 		the_title_attribute( array( 'echo' => false ) ),
-		wp_get_attachment_image( $post->ID, $attachmentbracesize )
+		wp_get_attachment_image( $post->ID, $attachment_size )
 	);
 }
 
@@ -116,12 +116,12 @@ function braces_the_attached_image() {
  * Prints HTML with meta information for the current post-date/time and author.
  */
 function braces_posted_on() {
-	$timebracestring = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
+	$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-		$timebracestring .= '<time class="updated" datetime="%3$s">%4$s</time>';
+		$time_string .= '<time class="updated" datetime="%3$s">%4$s</time>';
 	}
 
-	$timebracestring = sprintf( $timebracestring,
+	$time_string = sprintf( $time_string,
 		esc_attr( get_the_date( 'c' ) ),
 		esc_html( get_the_date() ),
 		esc_attr( get_the_modified_date( 'c' ) ),
@@ -130,7 +130,7 @@ function braces_posted_on() {
 
 	$posted_on = sprintf(
 		_x( 'Posted on %s', 'post date', 'braces' ),
-		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $timebracestring . '</a>'
+		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
 	$byline = sprintf(
