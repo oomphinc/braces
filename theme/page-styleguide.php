@@ -52,7 +52,107 @@ get_header(); ?>
 			</section>
 
 			<section class="styleguide-section">
-				<h2>Article ( Post or Page )</h2>
+				<h2>Forms</h2>
+			</section>
+
+			<section class="styleguide-section">
+				<h2>Article - Post</h2>
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<header class="entry-header">
+						<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+					</header><!-- .entry-header -->
+
+					<?php braces_post_thumbnail(); ?>
+
+					<div class="entry-content">
+						<?php the_content(); ?>
+						<?php
+							wp_link_pages( array(
+								'before' => '<div class="page-links">' . __( 'Pages:', 'braces' ),
+								'after'  => '</div>',
+							) );
+						?>
+					</div><!-- .entry-content -->
+					<footer class="entry-footer">
+						<div class="entry-meta">
+							<?php braces_entry_footer(); ?>
+						</div><!-- .entry-meta -->
+					</footer><!-- .entry-footer -->
+				</article><!-- #post-## -->
+			</section><!-- .styleguide-section -->
+
+			<section class="styleguide-section">
+				<h2>Article - Page</h2>
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<header class="entry-header">
+						<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+					</header><!-- .entry-header -->
+
+					<?php braces_post_thumbnail(); ?>
+
+					<div class="entry-content">
+						<?php the_content(); ?>
+						<?php
+							wp_link_pages( array(
+								'before' => '<div class="page-links">' . __( 'Pages:', 'braces' ),
+								'after'  => '</div>',
+							) );
+						?>
+					</div><!-- .entry-content -->
+					<footer class="entry-footer">
+						<div class="entry-meta">
+							<?php braces_entry_footer(); ?>
+						</div><!-- .entry-meta -->
+					</footer><!-- .entry-footer -->
+				</article><!-- #post-## -->
+			</section><!-- .styleguide-section -->
+
+			<section class="styleguide-section">
+				<h2>Archive</h2>
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<header class="entry-header">
+						<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+					</header><!-- .entry-header -->
+
+					<?php braces_post_thumbnail(); ?>
+
+					<div class="entry-content">
+						<?php the_content(); ?>
+						<?php
+							wp_link_pages( array(
+								'before' => '<div class="page-links">' . __( 'Pages:', 'braces' ),
+								'after'  => '</div>',
+							) );
+						?>
+					</div><!-- .entry-content -->
+					<footer class="entry-footer">
+						<div class="entry-meta">
+							<?php braces_entry_footer(); ?>
+						</div><!-- .entry-meta -->
+					</footer><!-- .entry-footer -->
+				</article><!-- #post-## -->
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<header class="entry-header">
+						<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+					</header><!-- .entry-header -->
+
+					<?php braces_post_thumbnail(); ?>
+
+					<div class="entry-content">
+						<?php the_content(); ?>
+						<?php
+							wp_link_pages( array(
+								'before' => '<div class="page-links">' . __( 'Pages:', 'braces' ),
+								'after'  => '</div>',
+							) );
+						?>
+					</div><!-- .entry-content -->
+					<footer class="entry-footer">
+						<div class="entry-meta">
+							<?php braces_entry_footer(); ?>
+						</div><!-- .entry-meta -->
+					</footer><!-- .entry-footer -->
+				</article><!-- #post-## -->
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<header class="entry-header">
 						<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
