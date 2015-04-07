@@ -151,6 +151,7 @@ require BRACES_TEMPLATE . '/inc/widgets.php';
 
 /* Picturefill */
 //require BRACES_TEMPLATE . '/extensions/picturefill/braces-picturefill.php';
+require BRACES_TEMPLATE . '/extensions/styleguide/braces-styleguide.php';
 
 /**
  * Include WordPress core functionality Features.
