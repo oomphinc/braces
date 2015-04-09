@@ -1,0 +1,129 @@
+// @file Styleguide Styles
+
+// @todo: sassify my color variables into a loop
+
+/**
+ * Page Globals
+ */
+
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.styleguide-section {
+	margin-bottom: 2em;
+	&-title {
+		border-top: 1px solid #ccc;
+		border-bottom: 1px solid #ccc;
+		color: red;
+		margin-bottom: 1em;
+	}
+}
+
+/**
+ * Colors
+ */
+.color-block {
+	float: left;
+	margin-right: 5%;
+	width: 20%;
+	.color {
+		border: 1px solid #ccc;
+		height: 100px;
+		margin-bottom: 1em;
+		text-indent: -9999px;
+		width: 100%;
+	}
+	.color-shade {
+		border: 1px solid #ccc;
+		float: left;
+		height: 20px;
+		margin-right: 5%;
+		text-indent: -9999px;
+		width: 20%;
+	}
+}
+
+@import "_config";
+
+#color-block-1 .color {
+	background-color: $color-1;
+}
+
+#color-block-1 {
+	.color-shade-one {
+		background-color: lighten( $color-1, 20% );
+	}
+	.color-shade-two {
+		background-color: lighten( $color-1, 10% );
+	}
+	.color-shade-three {
+		background-color: darken( $color-1, 10% );
+	}
+	.color-shade-four {
+		background-color: darken( $color-1, 20% );
+	}
+}
+
+#color-block-2 .color {
+	background-color: $color-2;
+}
+
+#color-block-2 {
+	.color-shade-one {
+		background-color: lighten( $color-2, 20% );
+	}
+	.color-shade-two {
+		background-color: lighten( $color-2, 10% );
+	}
+	.color-shade-three {
+		background-color: darken( $color-2, 10% );
+	}
+	.color-shade-four {
+		background-color: darken( $color-2, 20% );
+	}
+}
+
+#color-block-3 .color {
+	background-color: $color-3;
+}
+
+#color-block-3 {
+	.color-shade-one {
+		background-color: lighten( $color-3, 20% );
+	}
+	.color-shade-two {
+		background-color: lighten( $color-3, 10% );
+	}
+	.color-shade-three {
+		background-color: darken( $color-3, 10% );
+	}
+	.color-shade-four {
+		background-color: darken( $color-3, 20% );
+	}
+}
+
+#color-block-4 .color {
+	background-color: $color-4;
+}
+
+#color-block-4 {
+	.color-shade-one {
+		background-color: lighten( $color-4, 20% );
+	}
+	.color-shade-two {
+		background-color: lighten( $color-4, 10% );
+	}
+	.color-shade-three {
+		background-color: darken( $color-4, 10% );
+	}
+	.color-shade-four {
+		background-color: darken( $color-4, 20% );
+	}
+}

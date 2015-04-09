@@ -17,13 +17,13 @@ get_header(); ?>
 
 			<section class="styleguide-section clearfix">
 				<h2 class="styleguide-section-title">Colors</h2>
-				<?php for ($i=0; $i < 4; $i++) { ?>
-					<div class="color-block clearfix">
+				<?php for ($i=1; $i < 5; $i++) { ?>
+					<div id="color-block-<?php echo $i; ?>" class="color-block clearfix">
 						<div class="color">Color</div>
-						<div class="color-shade">Color Shade</div>
-						<div class="color-shade">Color Shade</div>
-						<div class="color-shade">Color Shade</div>
-						<div class="color-shade">Color Shade</div>
+						<div class="color-shade color-shade-one">Color Shade</div>
+						<div class="color-shade color-shade-two">Color Shade</div>
+						<div class="color-shade color-shade-three">Color Shade</div>
+						<div class="color-shade color-shade-four">Color Shade</div>
 					</div>
 				<?php } ?>
 			</section>
