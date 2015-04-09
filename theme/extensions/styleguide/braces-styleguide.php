@@ -21,7 +21,7 @@ add_filter( 'template_include', 'braces_styleguide_page_template', 99 );
 
 function braces_styleguide_scripts() {
 	if ( is_page( 'styleguide' )  ) {
-		wp_enqueue_style( 'braces-styleguide', BRACES_STYLESHEET_URI . '/extensions/styleguide/braces-styleguide.css', null, false, 'all' );
+		wp_enqueue_style( 'braces-styleguide', BRACES_STYLESHEET_URI . '/extensions/styleguide/braces-styleguide.css', array( 'braces-theme' ), false, 'all' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'braces_styleguide_scripts' );
