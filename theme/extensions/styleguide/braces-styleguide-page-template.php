@@ -29,7 +29,7 @@ get_header(); ?>
 			</section>
 
 			<section class="styleguide-section clearfix">
-				<h2 class="styleguide-section-title">Hero</h2>
+				<h2 class="styleguide-section-title">Hero ( needs a standardized plugin )</h2>
 			</section>
 
 			<section class="styleguide-section clearfix">
@@ -40,8 +40,8 @@ get_header(); ?>
 				<h4>h4</h4>
 				<h5>h5</h5>
 				<h6>h6</h6>
-				<p>Pellentesque habitant morbi <strong>tristique senectus et netus et</strong> malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-				<blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
+				<p>Pellentesque habitant morbi <strong>tristique senectus et netus et</strong> malesuada <em>fames ac turpis egestas</em>. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+				<blockquote><p>Lorem ipsum dolor sit amet, <del>consectetur adipiscing elit</del>. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
 				<ul>
 					<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
 					<li>Aliquam tincidunt mauris eu risus.</li>
@@ -85,34 +85,57 @@ get_header(); ?>
 
 			<section class="styleguide-section clearfix">
 				<h2 class="styleguide-section-title">Pagination</h2>
-				<h3>Post Navigation</h3>
-				<nav class="navigation paging-navigation" role="navigation">
+				<h3>Post & Page Navigation</h3>
+				<nav class="navigation page-navigation post-navigation" role="navigation">
 					<h1 class="screen-reader-text">Post navigation</h1>
-					<ul class="nav-links">
-						<li class="nav-previous previous">
-							<a href="#" class="prev-post"><span class="meta-nav" aria-hidden="true">&larr;</span> Older posts</a>
-						</li>
-						<li class="nav-next next">
-							<a href="#" class="next-post">Newer posts <span class="meta-nav" aria-hidden="true">&rarr;</span></a>
-						</li>
-					</ul><!-- .nav-links -->
+					<div class="nav-links">
+						<div class="nav-previous">
+							<a href="http://localhost/2010/08/post-format-image/" rel="prev"><span class="meta-nav">&larr;</span> Post Format: Image</a>
+						</div>
+						<div class="nav-next">
+							<a href="http://localhost/2010/09/post-format-gallery/" rel="next">Post Format: Gallery <span class="meta-nav">&rarr;</span></a>
+						</div>
+					</div><!-- .nav-links -->
 				</nav>
+				<h3>Pager Navigation ( needs a standardized plugin )</h3>
 			</section>
 
 			<section class="styleguide-section clearfix">
-				<h2 class="styleguide-section-title">Breadcrumbs</h2>
+				<h2 class="styleguide-section-title">Breadcrumbs ( needs a standardized plugin )</h2>
 			</section>
 
 			<section class="styleguide-section clearfix">
 				<h2 class="styleguide-section-title">Buttons</h2>
+				<input name="submit" type="submit" id="submit-primary" class="submit primary" value="Primary Button">
+				<input name="submit" type="submit" id="submit-secondary" class="submit secondary" value="Secondary Button">
 			</section>
 
 			<section class="styleguide-section clearfix">
-				<h2 class="styleguide-section-title">Author Block</h2>
+				<h2 class="styleguide-section-title">Gallery ( uses test data :: post-format-gallery-tiled )</h2>
+				<?php
+					$mygalleryslug = 'post-format-gallery-tiled';
+					$args = array( 'posts_per_page' => 1, 'name' => $mygalleryslug );
+					$mygallery = get_posts( $args );
+					foreach ( $mygallery as $post ) : setup_postdata( $post );
+						the_content();
+					endforeach;
+					wp_reset_postdata();
+				?>
 			</section>
 
 			<section class="styleguide-section clearfix">
-				<h2 class="styleguide-section-title">Post Meta</h2>
+				<h2 class="styleguide-section-title">Author Block ( needs to be a braces template tag )</h2>
+				<div class="entry-author">
+					<div class="entry-author-avatar">
+						<?php echo get_avatar( 1, 96 ); ?>
+					</div><!-- .entry-author-avatar -->
+					<p class="entry-author-bio">
+						<?php the_author_meta( 'description', 1 ); ?>
+						<a class="author-link" href="<?php echo esc_url( get_author_posts_url( 1 ) ); ?>" rel="author">
+							<?php printf( __( 'View all posts by admin', 'braces' ) ); ?>
+						</a>
+					</p><!-- .entry-author-bio -->
+				</div><!-- .entry-author -->
 			</section>
 
 			<section class="styleguide-section clearfix">
