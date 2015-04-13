@@ -18,64 +18,8 @@ get_header(); ?>
 		<?php if ( have_posts() ) { ?>
 
 			<header class="page-header">
-				<h1 class="page-title">
-					<?php
-						if ( is_category() ) {
-							single_cat_title();
-						}
-						elseif ( is_tag() ) {
-							single_tag_title();
-						}
-						elseif ( is_author() ) {
-							printf( __( 'Author: %s', 'braces' ), '<span class="vcard">' . get_the_author() . '</span>' );
-						}
-						elseif ( is_day() ) {
-							printf( __( 'Day: %s', 'braces' ), '<span>' . get_the_date() . '</span>' );
-						}
-						elseif ( is_month() ) {
-							printf( __( 'Month: %s', 'braces' ), '<span>' . get_the_date( 'F Y' ) . '</span>' );
-						}
-						elseif ( is_year() ) {
-							printf( __( 'Year: %s', 'braces' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
-						}
-						elseif ( is_tax( 'post_format', 'post-format-aside' ) ) {
-							_e( 'Asides', 'braces' );
-						}
-						elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) {
-							_e( 'Galleries', 'braces' );
-						}
-						elseif ( is_tax( 'post_format', 'post-format-image' ) ) {
-							_e( 'Images', 'braces');
-						}
-						elseif ( is_tax( 'post_format', 'post-format-video' ) ) {
-							_e( 'Videos', 'braces' );
-						}
-						elseif ( is_tax( 'post_format', 'post-format-quote' ) ) {
-							_e( 'Quotes', 'braces' );
-						}
-						elseif ( is_tax( 'post_format', 'post-format-link' ) ) {
-							_e( 'Links', 'braces' );
-						}
-						elseif ( is_tax( 'post_format', 'post-format-status' ) ) {
-							_e( 'Statuses', 'braces' );
-						}
-						elseif ( is_tax( 'post_format', 'post-format-audio' ) ) {
-							_e( 'Audios', 'braces' );
-						}
-						elseif ( is_tax( 'post_format', 'post-format-chat' ) ) {
-							_e( 'Chats', 'braces' );
-						}
-						else {
-							_e( 'Archives', 'braces' );
-						}	?>
-				</h1>
-				<?php
-					// Show an optional term description.
-					$term_description = term_description();
-					if ( ! empty( $term_description ) ) {
-						printf( '<div class="taxonomy-description">%s</div>', $term_description );
-					}
-				?>
+				<h1 class="page-title"><?php braces_archive_title(); ?></h1>
+				<?php braces_archive_description(); ?>
 			</header><!-- .page-header -->
 
 			<?php
