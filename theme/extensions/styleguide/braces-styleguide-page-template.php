@@ -13,9 +13,9 @@ get_header(); ?>
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-			<h1 class="entry-title">{ Client } Styleguide</h1>
+			<h1 class="entry-title"><?php bloginfo( 'name' ); ?> Styleguide</h1>
 
-			<section class="styleguide-section clearfix">
+			<section class="styleguide-section styleguide-colors clearfix">
 				<h2 class="styleguide-section-title">Colors</h2>
 				<?php for ($i=1; $i < 5; $i++) { ?>
 					<div id="color-block-<?php echo $i; ?>" class="color-block clearfix">
@@ -28,20 +28,28 @@ get_header(); ?>
 				<?php } ?>
 			</section>
 
-			<section class="styleguide-section clearfix">
+			<section class="styleguide-section styleguide-hero clearfix">
 				<h2 class="styleguide-section-title">Hero ( needs a standardized plugin )</h2>
+				<div class="flexslider">
+					<ul class="slides">
+						<li><img src="http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg" /></li>
+						<li><img src="http://flexslider.woothemes.com/images/kitchen_adventurer_cheesecake_brownie.jpg" /></li>
+						<li><img src="http://flexslider.woothemes.com/images/kitchen_adventurer_donut.jpg" /></li>
+						<li><img src="http://flexslider.woothemes.com/images/kitchen_adventurer_lemon.jpg" /></li>
+					</ul>
+				</div>
 			</section>
 
-			<section class="styleguide-section clearfix">
+			<section class="styleguide-section styleguide-typography clearfix">
 				<h2 class="styleguide-section-title">Typography</h2>
-				<h1>h1</h1>
-				<h2>h2</h2>
-				<h3>h3</h3>
-				<h4>h4</h4>
-				<h5>h5</h5>
-				<h6>h6</h6>
-				<p>Pellentesque habitant morbi <strong>tristique senectus et netus et</strong> malesuada <em>fames ac turpis egestas</em>. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-				<blockquote><p>Lorem ipsum dolor sit amet, <del>consectetur adipiscing elit</del>. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
+				<h1>h1.Heading</h1>
+				<h2>h2.Heading</h2>
+				<h3>h3.Heading</h3>
+				<h4>h4.Heading</h4>
+				<h5>h5.Heading</h5>
+				<h6>h6.Heading</h6>
+				<p>Pellentesque habitant morbi <strong>tristique senectus et netus et</strong> malesuada <em>fames ac turpis egestas</em>. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. <del>Donec eu libero sit amet</del> quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+				<blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
 				<ul>
 					<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
 					<li>Aliquam tincidunt mauris eu risus.</li>
@@ -83,7 +91,7 @@ get_header(); ?>
 				</table>
 			</section>
 
-			<section class="styleguide-section clearfix">
+			<section class="styleguide-section styleguide-pagination clearfix">
 				<h2 class="styleguide-section-title">Pagination</h2>
 				<h3>Post & Page Navigation</h3>
 				<nav class="navigation page-navigation post-navigation" role="navigation">
@@ -100,17 +108,17 @@ get_header(); ?>
 				<h3>Pager Navigation ( needs a standardized plugin )</h3>
 			</section>
 
-			<section class="styleguide-section clearfix">
+			<section class="styleguide-section styleguide-breadcrumbs clearfix">
 				<h2 class="styleguide-section-title">Breadcrumbs ( needs a standardized plugin )</h2>
 			</section>
 
-			<section class="styleguide-section clearfix">
+			<section class="styleguide-section styleguide-buttons clearfix">
 				<h2 class="styleguide-section-title">Buttons</h2>
 				<input name="submit" type="submit" id="submit-primary" class="submit primary" value="Primary Button">
 				<input name="submit" type="submit" id="submit-secondary" class="submit secondary" value="Secondary Button">
 			</section>
 
-			<section class="styleguide-section clearfix">
+			<section class="styleguide-section styleguide-gallery clearfix">
 				<h2 class="styleguide-section-title">Gallery ( uses test data :: post-format-gallery-tiled )</h2>
 				<?php
 					$mygalleryslug = 'post-format-gallery-tiled';
@@ -123,7 +131,7 @@ get_header(); ?>
 				?>
 			</section>
 
-			<section class="styleguide-section clearfix">
+			<section class="styleguide-section styleguide-author clearfix">
 				<h2 class="styleguide-section-title">Author Block ( needs to be a braces template tag )</h2>
 				<div class="entry-author">
 					<div class="entry-author-avatar">
@@ -138,7 +146,7 @@ get_header(); ?>
 				</div><!-- .entry-author -->
 			</section>
 
-			<section class="styleguide-section clearfix">
+			<section class="styleguide-section styleguide-comments clearfix">
 				<h2 class="styleguide-section-title">Comments</h2>
 				<h2 class="comments-title">3 thoughts on “<span>Styleguide</span>”</h2>
 				<ol class="comment-list">
@@ -150,7 +158,7 @@ get_header(); ?>
 				<?php comment_form(); ?>
 			</section>
 
-			<section class="styleguide-section clearfix">
+			<section class="styleguide-section styleguide-forms clearfix">
 				<h2 class="styleguide-section-title">Forms</h2>
 				<form action="#" method="post" id="input-form" class="input-form" novalidate="">
 					<div class="input-group">
@@ -194,7 +202,7 @@ get_header(); ?>
 				</form>
 			</section>
 
-			<section class="styleguide-section clearfix">
+			<section class="styleguide-section styleguide-archives clearfix">
 				<h2 class="styleguide-section-title">Archives</h2>
 				<?php
 					$args = array( 'posts_per_page' => 3, 'offset'=> 1 );
@@ -206,7 +214,7 @@ get_header(); ?>
 				?>
 			</section><!-- .styleguide-section -->
 
-			<section class="styleguide-section clearfix">
+			<section class="styleguide-section styleguide-post clearfix">
 				<h2 class="styleguide-section-title">Article - Post</h2>
 				<?php
 					$args = array( 'posts_per_page' => 1 );
@@ -218,7 +226,7 @@ get_header(); ?>
 				?>
 			</section><!-- .styleguide-section -->
 
-			<section class="styleguide-section clearfix">
+			<section class="styleguide-section styleguide-page clearfix">
 				<h2 class="styleguide-section-title">Article - Page</h2>
 				<?php
 					$args = array( 'posts_per_page' => 1, 'post_type' => 'page',  'offset'=> 1 );
