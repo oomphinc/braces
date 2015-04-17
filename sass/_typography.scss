@@ -187,8 +187,17 @@ figure {
 table {
 	margin: 0 0 1.5em;
 	width: 100%;
-}
-
-th {
-	font-weight: bold;
+	border-spacing: 0;
+  border-collapse: collapse;
+  th {
+  	padding: 8px;
+		vertical-align: bottom;
+  	border-bottom: 2px solid #ddd;
+	}
+	td {
+		padding: 8px;
+	  line-height: 1.42857143;
+	  vertical-align: top;
+	  border-top: 1px solid #ddd;
+		}
 }
