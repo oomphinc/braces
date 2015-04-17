@@ -70,7 +70,7 @@ $form-button-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
 $form-button-padding: .6em 1em .4em;
 
 // Search
-$form-search-box-sizing: content-box;
+$form-search-box-sizing: border-box;
 
 // Inputs, Selects, Textareas
 $form-input-color: #666;
@@ -80,6 +80,8 @@ $form-input-border-radius: 3px;
 
 $form-input-color-focus: #111;
 $form-input-padding: 3px;
+$form-input-height: 2em;
+$form-input-line-height: 2em;
 
 //////////////////// Navigation ////////////////////
 $main-navigation-box-shadow-setting: true;

@@ -8,6 +8,7 @@ textarea {
 	margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
 	vertical-align: baseline; /* Improves appearance and consistency in all browsers */
 }
+
 button,
 input[type="button"],
 input[type="reset"],
@@ -29,6 +30,7 @@ input[type="submit"] {
 		text-shadow: $form-button-text-shadow;
 	}
 }
+
 button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
@@ -38,6 +40,7 @@ input[type="submit"]:hover {
 		box-shadow: $form-button-box-shadow-hover;
 	}
 }
+
 button:focus,
 input[type="button"]:focus,
 input[type="reset"]:focus,
@@ -51,24 +54,29 @@ input[type="submit"]:active {
 		box-shadow: $form-button-box-shadow-active;
 	}
 }
+
 input[type="checkbox"],
 input[type="radio"] {
 	padding: 0; /* Addresses excess padding in IE8/9 */
 }
+
 input[type="search"] {
 	-webkit-appearance: textfield; /* Addresses appearance set to searchfield in S5, Chrome */
 	-webkit-box-sizing: $form-search-box-sizing; /* If set to 'content-box', addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
 	-moz-box-sizing:    $form-search-box-sizing;
 	box-sizing:         $form-search-box-sizing;
 }
+
 input[type="search"]::-webkit-search-decoration { /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
 	-webkit-appearance: none;
 }
+
 button::-moz-focus-inner,
 input::-moz-focus-inner { /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
 	border: 0;
 	padding: 0;
 }
+
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -78,7 +86,9 @@ textarea {
 	color: $form-input-color;
 	border: $form-input-border-width solid $form-input-border-color;
 	border-radius: $form-input-border-radius;
+	width: 100%;
 }
+
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="url"]:focus,
@@ -87,16 +97,32 @@ input[type="search"]:focus,
 textarea:focus {
 	color: $form-input-color-focus;
 }
+
 input[type="text"],
 input[type="email"],
 input[type="url"],
 input[type="password"],
 input[type="search"] {
+	height: $form-input-height;
+	line-height: $form-input-line-height;
 	padding: $form-input-padding;
 }
+
 textarea {
 	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
 	padding-left: 3px;
 	vertical-align: top; /* Improves readability and alignment in all browsers */
+	width: 100%;
+}
+
+select {
+	background-color: #fff;
+	background-image: none;
+	border: $form-input-border-width solid $form-input-border-color;
+	border-radius: $form-input-border-radius;
+	color: $form-input-color;
+	height: $form-input-height;
+	line-height: $form-input-line-height;
+	padding: $form-input-padding;
 	width: 100%;
 }
