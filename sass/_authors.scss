@@ -5,15 +5,13 @@
  * Author Elements
  */
 .entry-author {
-	&-avatar {
-		@if $author-avatar == true {
-			border: 1px solid #ccc;
+	@if $author-avatar == true {
+		&-avatar {
+			border: $author-avatar-border-width solid $author-avatar-border-color;
 			float: left;
-			padding: 4px;
+			padding: $author-avatar-padding;
 		}
-	}
-	&-info {
-		@if $author-avatar == true {
+		&-info {
 			margin-left: $author-avatar-size + 20;
 		}
 	}
