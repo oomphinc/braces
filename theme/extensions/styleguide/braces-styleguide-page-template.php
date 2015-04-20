@@ -137,12 +137,14 @@ get_header(); ?>
 					<div class="entry-author-avatar">
 						<?php echo get_avatar( 1, 96 ); ?>
 					</div><!-- .entry-author-avatar -->
-					<p class="entry-author-bio">
-						<?php the_author_meta( 'description', 1 ); ?>
-						<a class="author-link" href="<?php echo esc_url( get_author_posts_url( 1 ) ); ?>" rel="author">
-							<?php printf( __( 'View all posts by admin', 'braces' ) ); ?>
-						</a>
-					</p><!-- .entry-author-bio -->
+					<div class="entry-author-info">
+						<p class="entry-author-bio">
+							<?php the_author_meta( 'description', 1 ); ?>
+							<a class="entry-author-link" href="<?php echo esc_url( get_author_posts_url( 1 ) ); ?>" rel="author">
+								<?php printf( __( 'View all posts by admin', 'braces' ) ); ?>
+							</a>
+						</p><!-- .entry-author-bio -->
+					</div><!-- .entry-author-info -->
 				</div><!-- .entry-author -->
 			</section>
 

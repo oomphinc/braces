@@ -1,0 +1,23 @@
+// @file Author Styles
+
+
+/**
+ * Author Elements
+ */
+.entry-author {
+	&-avatar {
+		@if $author-avatar == true {
+			border: 1px solid #ccc;
+			float: left;
+			padding: 4px;
+		}
+	}
+	&-info {
+		@if $author-avatar == true {
+			margin-left: $author-avatar-size + 20;
+		}
+	}
+	&-link {
+		display: block;
+	}
+}
