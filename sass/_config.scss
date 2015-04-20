@@ -17,13 +17,12 @@ $large: new-breakpoint( min-width 1024px max-width 1279px );
 $xlarge: new-breakpoint( min-width 1280px );
 
 //////////////////// Typography ////////////////////
+// Color Pallette lifted form the "Ocen" option for user admin colors
 // Colors
-$color-1: #337ab7;
-$color-2: #5cb85c;
-$color-3: #5bc0de;
-$color-4: #666666;
-$color-5: #f0ad4e;
-$color-6: #d9534f;
+$color-1: #627c83;
+$color-2: #738e96;
+$color-3: #9ebaa0;
+$color-4: #aa9d88;
 
 $graycale-color-1: #fff;
 $graycale-color-2: #000;
