@@ -67,10 +67,10 @@ $form-button-box-shadow-active: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0
 $form-button-text-color: rgba(0, 0, 0, .8);
 $form-button-text-size: 1.2rem;
 $form-button-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
-$form-button-padding: .6em 1em .4em;
+$form-button-padding: .5em 1em .5em;
 
 // Search
-$form-search-box-sizing: content-box;
+$form-search-box-sizing: border-box;
 
 // Inputs, Selects, Textareas
 $form-input-color: #666;
@@ -80,6 +80,8 @@ $form-input-border-radius: 3px;
 
 $form-input-color-focus: #111;
 $form-input-padding: 3px;
+$form-input-height: 2em;
+$form-input-line-height: 2em;
 
 //////////////////// Navigation ////////////////////
 $main-navigation-box-shadow-setting: true;
@@ -88,3 +90,9 @@ $main-navigation-background-color: $color-4;
 $main-navigation-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 $main-navigation-link-color: $graycale-color-1;
 $main-navigation-link-color-hover: $color-3;
+
+//////////////////// Tables ////////////////////
+$table-border-collapse: true;
+
+$table-border-color: #ddd;
+$table-cell-padding: 8px;

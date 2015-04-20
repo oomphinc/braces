@@ -106,3 +106,49 @@ function braces_setup_author() {
 	}
 }
 add_action( 'wp', 'braces_setup_author' );
+
+/**
+ * Modify the callback of categories / archives widgets to allow us
+ * to filter output markup
+ *
+ * @action dynamic_sidebar_params
+ */
+function braces_alter_widget_callback( $params ) {
+	global $wp_registered_widgets;
+
+	$widget_id = $params[0]['widget_id'];
+
+	if( preg_match( '/^(categories|archives|recent-posts|rss|monster)-\d+$/', $widget_id ) ) {
+		// Squirrel away the original callback in $params['callback'].
+		// Override the callback with our own which will tweak the widget output
+		$params[0]['callback'] = $wp_registered_widgets[$widget_id]['callback'];
+
+		$wp_registered_widgets[$widget_id]['callback'] = 'braces_tweak_widget_markup';
+	}
+
+	return $params;
+}
+add_action( 'dynamic_sidebar_params', 'braces_alter_widget_callback' );
+
+/**
+ * Modify widget outputs to:
+ *
+ * - Remove &nbsp; in output.
+ *
+ * Expects that $widget['callback'] is set
+ */
+function braces_tweak_widget_markup( $widget ) {
+	ob_start();
+	call_user_func_array( $widget['callback'], func_get_args() );
+	$markup = ob_get_clean();
+
+	// Replace non breaking spaces before setting up post count badges,
+	// archives widget places &nbsp; between anchor and post count
+	$markup = str_replace( '&nbsp;', '', $markup );
+	$markup = preg_replace( '#</a>\s*\((\d+)\)\s*</li>#', '</a> <span class="count">$1</span></li>', $markup );
+
+	// the archives dropdown widget
+	$markup = str_replace( 'name="archive-dropdown"', 'name="archive-dropdown" class="form-control"', $markup );
+
+	echo $markup;
+}

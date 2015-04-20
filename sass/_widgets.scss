@@ -9,6 +9,21 @@
 	}
 }
 
+.widget {
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		li {
+			margin-bottom: .25em;
+			.children,
+			.sub-menu {
+				margin-left: 1em;
+			}
+		}
+	}
+}
+
 /**
  * Widget Archive
  */

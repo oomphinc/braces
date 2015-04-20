@@ -185,10 +185,20 @@ figure {
 }
 
 table {
-	margin: 0 0 1.5em;
+	border-spacing: 0;
+	@if $table-border-collapse == true {
+		border-collapse: collapse;
+	}
 	width: 100%;
-}
-
-th {
-	font-weight: bold;
+	th {
+		padding: $table-cell-padding;
+		border-bottom: 2px solid $table-border-color;
+	}
+	td {
+		padding: $table-cell-padding;
+		border-top: 1px solid $table-border-color;
+	}
+	caption {
+		text-align: center;
+	}
 }
