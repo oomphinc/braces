@@ -1,0 +1,20 @@
+// @file Pager Styles
+
+/**
+ * Pager Elements
+ */
+.pager {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	li {
+		display: inline-block;
+		margin: 0 .25em;
+		.first {
+			margin-left: 0;
+		}
+		.last {
+			margin-right: 0;
+		}
+	}
+}

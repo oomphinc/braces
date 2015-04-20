@@ -98,14 +98,24 @@ get_header(); ?>
 					<h1 class="screen-reader-text">Post navigation</h1>
 					<div class="nav-links">
 						<div class="nav-previous">
-							<a href="http://localhost/2010/08/post-format-image/" rel="prev"><span class="meta-nav">&larr;</span> Post Format: Image</a>
+							<a href="http://localhost/2010/08/post-format-image/" rel="prev"><span class="meta-nav">&laquo;</span> Post Format: Image</a>
 						</div>
 						<div class="nav-next">
-							<a href="http://localhost/2010/09/post-format-gallery/" rel="next">Post Format: Gallery <span class="meta-nav">&rarr;</span></a>
+							<a href="http://localhost/2010/09/post-format-gallery/" rel="next">Post Format: Gallery <span class="meta-nav">&raquo;</span></a>
 						</div>
 					</div><!-- .nav-links -->
 				</nav>
 				<h3>Pager Navigation ( needs a standardized plugin )</h3>
+				<ul class="pager">
+					<li class="first"><a href="#">&laquo; First</a></li>
+					<li class="previous"><a href="#">&lsaquo; Previous</a></li>
+					<li><a href="#">1</a></li>
+					<li class="current">2</li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li class="next"><a href="#">Next &rsaquo;</a></li>
+					<li class="last"><a href="#">Last &raquo;</a></li>
+				</ul>
 			</section>
 
 			<section class="styleguide-section styleguide-breadcrumbs clearfix">
