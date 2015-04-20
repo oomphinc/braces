@@ -120,6 +120,12 @@ get_header(); ?>
 
 			<section class="styleguide-section styleguide-breadcrumbs clearfix">
 				<h2 class="styleguide-section-title">Breadcrumbs ( needs a standardized plugin )</h2>
+				<ul class="breadcrumbs">
+					<li><a href="#">Home <span class="pointer">&raquo;</span></a></li>
+					<li><a href="#">Page 1 <span class="pointer">&raquo;</span></a></li>
+					<li><a href="#">Page 2 <span class="pointer">&raquo;</span></a></li>
+					<li class="current">This Page</li>
+				</ul>
 			</section>
 
 			<section class="styleguide-section styleguide-buttons clearfix">
