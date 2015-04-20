@@ -1,0 +1,38 @@
+// @file Comments Styles
+
+/**
+ * Comment Elements
+ */
+.comment-list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+li.comment {
+	border-bottom: 1px solid #ccc;
+	margin: 0 0 1em 0;
+	padding: 0 0 1em 0;
+	@if $comment-avatar == true {
+		.avatar {
+			border: $comment-avatar-border-width solid $comment-avatar-border-color;
+			float: left;
+			padding: $comment-avatar-padding;
+		}
+		.fn {
+			margin-left: $comment-avatar-padding + $comment-avatar-border-width + 10;
+		}
+		.comment-metadata,
+		.comment-content {
+			margin-left: $comment-avatar-size + $comment-avatar-padding + $comment-avatar-border-width + 10;
+		}
+	}
+	.children {
+		list-style-type: none;
+		li.comment {
+			border: none;
+			margin: 1em 0 0 0;
+			padding: 0;
+		}
+	}
+}
