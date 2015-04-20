@@ -185,19 +185,20 @@ figure {
 }
 
 table {
-	margin: 0 0 1.5em;
-	width: 100%;
 	border-spacing: 0;
-  border-collapse: collapse;
-  th {
-  	padding: 8px;
-		vertical-align: bottom;
-  	border-bottom: 2px solid #ddd;
+	@if $table-border-collapse == true {
+		border-collapse: collapse;
+	}
+	width: 100%;
+	th {
+		padding: $table-cell-padding;
+		border-bottom: 2px solid $table-border-color;
 	}
 	td {
-		padding: 8px;
-	  line-height: 1.42857143;
-	  vertical-align: top;
-	  border-top: 1px solid #ddd;
-		}
+		padding: $table-cell-padding;
+		border-top: 1px solid $table-border-color;
+	}
+	caption {
+		text-align: center;
+	}
 }
