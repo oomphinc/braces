@@ -119,16 +119,27 @@ get_header(); ?>
 			</section>
 
 			<section class="styleguide-section styleguide-gallery clearfix">
-				<h2 class="styleguide-section-title">Gallery ( uses test data :: post-format-gallery-tiled )</h2>
+				<h2 class="styleguide-section-title">Gallery <!--( uses test data :: post-format-gallery-tiled )--></h2>
 				<?php
-					$mygalleryslug = 'post-format-gallery-tiled';
-					$args = array( 'posts_per_page' => 1, 'name' => $mygalleryslug );
-					$mygallery = get_posts( $args );
-					foreach ( $mygallery as $post ) : setup_postdata( $post );
-						the_content();
-					endforeach;
-					wp_reset_postdata();
+					// $mygalleryslug = 'post-format-gallery-tiled';
+					// $args = array( 'posts_per_page' => 1, 'name' => $mygalleryslug );
+					// $mygallery = get_posts( $args );
+					// foreach ( $mygallery as $post ) : setup_postdata( $post );
+					// 	the_content();
+					// endforeach;
+					// wp_reset_postdata();
 				?>
+				<div id="gallery" class="gallery clearfix">
+				<?php for ($i=1; $i < 9; $i++) { ?>
+					<figure class="gallery-item">
+						<div class="gallery-icon landscape">
+							<a href="#"><img src="http://placehold.it/150x150" class="attachment-thumbnail" alt="Sydney Harbor Bridge" aria-describedby="gallery-1-760"></a>
+						</div>
+						<figcaption class="wp-caption-text gallery-caption" id="gallery-1-760">
+							Figure Caption
+						</figcaption>
+					</figure>
+				<?php } ?>
 			</section>
 
 			<section class="styleguide-section styleguide-author clearfix">
