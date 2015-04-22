@@ -3,24 +3,13 @@
 	@import "styles";
 
 // @todo: sassify my color variables into a loop
-// @todo: update clearfixes
-// @todo: add fieldsets and ledgends to forms
 
 /**
  * Page Globals
  */
 
-.clearfix:before,
-.clearfix:after {
-	content: " ";
-	display: table;
-}
-
-.clearfix:after {
-	clear: both;
-}
-
 .styleguide-section {
+	@inlcude clearfix();
 	margin-bottom: 2em;
 	&-title {
 		border-top: 1px solid #ccc;

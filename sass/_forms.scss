@@ -134,8 +134,30 @@ fieldset {
 	padding: 1em;
 }
 
+.form-group {
+	@include clearfix();
+}
+
 .input-item,
 .radio-group,
 .checkbox-group {
 	margin-bottom: 1em;
+}
+
+.inline-input-form {
+	.input-item label {
+		@include span-columns(1 of 8);
+	}
+	.input-item input {
+		@include span-columns(7 of 8);
+		@include omega();
+	}
+	.description {
+		@include shift(1 of 8);
+	}
+	.radio-item,
+	.checkbox-item {
+		float: left;
+		margin-right: 1em;
+	}
 }

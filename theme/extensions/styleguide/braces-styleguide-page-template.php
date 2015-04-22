@@ -15,7 +15,7 @@ get_header(); ?>
 
 			<h1 class="entry-title"><?php bloginfo( 'name' ); ?> Styleguide</h1>
 
-			<section class="styleguide-section styleguide-colors clearfix">
+			<section class="styleguide-section styleguide-colors">
 				<h2 class="styleguide-section-title">Colors</h2>
 				<?php for ($i=1; $i < 5; $i++) { ?>
 					<div id="color-block-<?php echo $i; ?>" class="color-block clearfix">
@@ -28,7 +28,7 @@ get_header(); ?>
 				<?php } ?>
 			</section>
 
-			<section class="styleguide-section styleguide-hero clearfix">
+			<section class="styleguide-section styleguide-hero">
 				<h2 class="styleguide-section-title">Hero ( needs a standardized plugin )</h2>
 				<div class="flexslider">
 					<ul class="slides">
@@ -40,7 +40,7 @@ get_header(); ?>
 				</div>
 			</section>
 
-			<section class="styleguide-section styleguide-typography clearfix">
+			<section class="styleguide-section styleguide-typography">
 				<h2 class="styleguide-section-title">Typography</h2>
 				<h1>h1.Heading</h1>
 				<h2>h2.Heading</h2>
@@ -92,7 +92,7 @@ get_header(); ?>
 				<p class="form-allowed-tags" id="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href="" title=""&gt; &lt;abbr title=""&gt; &lt;acronym title=""&gt; &lt;b&gt; &lt;blockquote cite=""&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=""&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=""&gt; &lt;strike&gt; &lt;strong&gt; </code></p>
 			</section>
 
-			<section class="styleguide-section styleguide-pagination clearfix">
+			<section class="styleguide-section styleguide-pagination">
 				<h2 class="styleguide-section-title">Pagination</h2>
 				<h3>Post & Page Navigation</h3>
 				<nav class="navigation page-navigation post-navigation" role="navigation">
@@ -119,7 +119,7 @@ get_header(); ?>
 				</ul>
 			</section>
 
-			<section class="styleguide-section styleguide-breadcrumbs clearfix">
+			<section class="styleguide-section styleguide-breadcrumbs">
 				<h2 class="styleguide-section-title">Breadcrumbs ( needs a standardized plugin )</h2>
 				<ul class="breadcrumbs">
 					<li><a href="#">Home <span class="pointer">&raquo;</span></a></li>
@@ -129,13 +129,13 @@ get_header(); ?>
 				</ul>
 			</section>
 
-			<section class="styleguide-section styleguide-buttons clearfix">
+			<section class="styleguide-section styleguide-buttons">
 				<h2 class="styleguide-section-title">Buttons</h2>
 				<input name="submit" type="submit" id="submit-primary" class="submit primary" value="Primary Button">
 				<input name="submit" type="submit" id="submit-secondary" class="submit secondary" value="Secondary Button">
 			</section>
 
-			<section class="styleguide-section styleguide-gallery clearfix">
+			<section class="styleguide-section styleguide-gallery">
 				<h2 class="styleguide-section-title">Gallery <!--( uses test data :: post-format-gallery-tiled )--></h2>
 				<div id="gallery" class="gallery clearfix">
 				<?php for ($i=1; $i < 9; $i++) { ?>
@@ -150,7 +150,7 @@ get_header(); ?>
 				<?php } ?>
 			</section>
 
-			<section class="styleguide-section styleguide-author clearfix">
+			<section class="styleguide-section styleguide-author">
 				<h2 class="styleguide-section-title">Author Block ( needs to be a braces template tag )</h2>
 				<div class="entry-author">
 					<div class="entry-author-avatar">
@@ -167,7 +167,7 @@ get_header(); ?>
 				</div><!-- .entry-author -->
 			</section>
 
-			<section class="styleguide-section styleguide-comments clearfix">
+			<section class="styleguide-section styleguide-comments">
 				<h2 class="styleguide-section-title">Comments</h2>
 				<h2 class="comments-title">3 thoughts on “<span>Styleguide</span>”</h2>
 				<ol class="comment-list">
@@ -178,8 +178,8 @@ get_header(); ?>
 				</ol>
 			</section>
 
-			<section class="styleguide-section styleguide-forms clearfix">
-				<h2 class="styleguide-section-title">Forms</h2>
+			<section class="styleguide-section styleguide-forms">
+				<h2 class="styleguide-section-title">Forms ( use .inline-input-form on form element for inline forms )</h2>
 				<form action="#" method="post" id="input-form" class="input-form" novalidate="">
 					<fieldset>
 						<legend>Input Group</legend>
@@ -231,49 +231,9 @@ get_header(); ?>
 					<input name="submit" type="submit" id="submit-primary" class="submit primary" value="Primary Button">
 					<input name="reset" type="reset" id="reset-primary" class="reset primary" value="Reset Button">
 				</form>
-				<!--
-				<form action="#" method="post">
-    <div>
-         <label for="name">Text Input:</label>
-         <input type="text" name="name" id="name" value="" tabindex="1" />
-    </div>
-
-    <div>
-         <h4>Radio Button Choice</h4>
-
-         <label for="radio-choice-1">Choice 1</label>
-         <input type="radio" name="radio-choice-1" id="radio-choice-1" tabindex="2" value="choice-1" />
-
-		 <label for="radio-choice-2">Choice 2</label>
-         <input type="radio" name="radio-choice-2" id="radio-choice-2" tabindex="3" value="choice-2" />
-    </div>
-
-	<div>
-		<label for="select-choice">Select Dropdown Choice:</label>
-		<select name="select-choice" id="select-choice">
-			<option value="Choice 1">Choice 1</option>
-			<option value="Choice 2">Choice 2</option>
-			<option value="Choice 3">Choice 3</option>
-		</select>
-	</div>
-
-	<div>
-		<label for="textarea">Textarea:</label>
-		<textarea cols="40" rows="8" name="textarea" id="textarea"></textarea>
-	</div>
-
-	<div>
-	    <label for="checkbox">Checkbox:</label>
-		<input type="checkbox" name="checkbox" id="checkbox" />
-    </div>
-
-	<div>
-	    <input type="submit" value="Submit" />
-    </div>
-</form>-->
 			</section>
 
-			<section class="styleguide-section styleguide-archives clearfix">
+			<section class="styleguide-section styleguide-archives">
 				<h2 class="styleguide-section-title">Archives</h2>
 				<?php
 					$args = array( 'posts_per_page' => 3, 'offset'=> 1 );
@@ -285,7 +245,7 @@ get_header(); ?>
 				?>
 			</section><!-- .styleguide-section -->
 
-			<section class="styleguide-section styleguide-post clearfix">
+			<section class="styleguide-section styleguide-post">
 				<h2 class="styleguide-section-title">Article - Post</h2>
 				<?php
 					$args = array( 'posts_per_page' => 1 );
@@ -297,7 +257,7 @@ get_header(); ?>
 				?>
 			</section><!-- .styleguide-section -->
 
-			<section class="styleguide-section styleguide-page clearfix">
+			<section class="styleguide-section styleguide-page">
 				<h2 class="styleguide-section-title">Article - Page</h2>
 				<?php
 					$args = array( 'posts_per_page' => 1, 'post_type' => 'page',  'offset'=> 1 );
