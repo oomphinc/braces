@@ -89,6 +89,7 @@ get_header(); ?>
 						</tr>
 					</tbody>
 				</table>
+				<p class="form-allowed-tags" id="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href="" title=""&gt; &lt;abbr title=""&gt; &lt;acronym title=""&gt; &lt;b&gt; &lt;blockquote cite=""&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=""&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=""&gt; &lt;strike&gt; &lt;strong&gt; </code></p>
 			</section>
 
 			<section class="styleguide-section styleguide-pagination clearfix">
@@ -136,15 +137,6 @@ get_header(); ?>
 
 			<section class="styleguide-section styleguide-gallery clearfix">
 				<h2 class="styleguide-section-title">Gallery <!--( uses test data :: post-format-gallery-tiled )--></h2>
-				<?php
-					// $mygalleryslug = 'post-format-gallery-tiled';
-					// $args = array( 'posts_per_page' => 1, 'name' => $mygalleryslug );
-					// $mygallery = get_posts( $args );
-					// foreach ( $mygallery as $post ) : setup_postdata( $post );
-					// 	the_content();
-					// endforeach;
-					// wp_reset_postdata();
-				?>
 				<div id="gallery" class="gallery clearfix">
 				<?php for ($i=1; $i < 9; $i++) { ?>
 					<figure class="gallery-item">
@@ -184,51 +176,101 @@ get_header(); ?>
 						wp_list_comments( array( 'per_page' => 3 ), $comments );
 					?>
 				</ol>
-				<?php comment_form(); ?>
 			</section>
 
 			<section class="styleguide-section styleguide-forms clearfix">
 				<h2 class="styleguide-section-title">Forms</h2>
 				<form action="#" method="post" id="input-form" class="input-form" novalidate="">
-					<div class="input-group">
-						<div class="input-item">
-							<label for="input">Name <span class="required">*</span></label>
-							<input id="input-text" name="input-text" type="text" value="" size="30" aria-required="true">
+					<fieldset>
+						<legend>Input Group</legend>
+						<div class="form-group">
+							<div class="input-item">
+								<label for="input">Name <span class="required">*</span></label>
+								<input id="input-text" name="input-text" type="text" value="" placeholder="Name" size="30" aria-required="true">
+								<span class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+							</div>
+							<div class="input-item">
+								<label for="input">Email <span class="required">*</span></label>
+								<input id="input-email" name="input-email" type="email" value="" placeholder="Email" size="30" aria-required="true">
+								<span class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+							</div>
+							<div class="input-item">
+								<label for="input">Url <span class="required">*</span></label>
+								<input id="input-url" name="input-url" type="url" value="" placeholder="Url" size="30" aria-required="true">
+								<span class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+							</div>
 						</div>
-						<div class="input-item">
-							<label for="input">Email <span class="required">*</span></label>
-							<input id="input-email" name="input-email" type="email" value="" size="30" aria-required="true">
+					</fieldset>
+					<fieldset>
+						<legend>Option Group</legend>
+						<div class="form-group radio-group">
+							<div class="radio-item">
+								<input type="radio" name="animal" value="Cat" />
+								<label for="radio-item">Cat</label>
+							</div>
+							<div class="radio-item">
+								<input type="radio" name="animal" value="Dog" />
+								<label for="radio-item">Dog</label>
+							</div>
 						</div>
-						<div class="input-item">
-							<label for="input">Url <span class="required">*</span></label>
-							<input id="input-url" name="input-url" type="url" value="" size="30" aria-required="true">
+						<div class="form-group checkbox-group">
+							<div class="checkbox-item">
+								<input type="checkbox" name="animal" value="Cat" />
+								<label for="checkbox-item">Cat</label>
+							</div>
+							<div class="checkbox-item">
+								<input type="checkbox" name="animal" value="Dog" />
+								<label for="checkbox-item">Dog</label>
+							</div>
+							<div class="checkbox-item">
+								<input type="checkbox" name="animal" value="Bird" />
+								<label for="checkbox-item">Bird</label>
+							</div>
 						</div>
-					</div>
-					<div class="radio-group">
-						<div class="radio-item">
-							<input type="radio" name="animal" value="Cat" />
-							<label for="radio-item">Cat</label>
-						</div>
-						<div class="radio-item">
-							<input type="radio" name="animal" value="Dog" />
-							<label for="radio-item">Dog</label>
-						</div>
-					</div>
-					<div class="checkbox-group">
-						<div class="checkbox-item">
-							<input type="checkbox" name="animal" value="Cat" />
-							<label for="checkbox-item">Cat</label>
-						</div>
-						<div class="checkbox-item">
-							<input type="checkbox" name="animal" value="Dog" />
-							<label for="checkbox-item">Dog</label>
-						</div>
-						<div class="checkbox-item">
-							<input type="checkbox" name="animal" value="Bird" />
-							<label for="checkbox-item">Bird</label>
-						</div>
-					</div>
+					</fieldset>
+					<input name="submit" type="submit" id="submit-primary" class="submit primary" value="Primary Button">
+					<input name="reset" type="reset" id="reset-primary" class="reset primary" value="Reset Button">
 				</form>
+				<!--
+				<form action="#" method="post">
+    <div>
+         <label for="name">Text Input:</label>
+         <input type="text" name="name" id="name" value="" tabindex="1" />
+    </div>
+
+    <div>
+         <h4>Radio Button Choice</h4>
+
+         <label for="radio-choice-1">Choice 1</label>
+         <input type="radio" name="radio-choice-1" id="radio-choice-1" tabindex="2" value="choice-1" />
+
+		 <label for="radio-choice-2">Choice 2</label>
+         <input type="radio" name="radio-choice-2" id="radio-choice-2" tabindex="3" value="choice-2" />
+    </div>
+
+	<div>
+		<label for="select-choice">Select Dropdown Choice:</label>
+		<select name="select-choice" id="select-choice">
+			<option value="Choice 1">Choice 1</option>
+			<option value="Choice 2">Choice 2</option>
+			<option value="Choice 3">Choice 3</option>
+		</select>
+	</div>
+
+	<div>
+		<label for="textarea">Textarea:</label>
+		<textarea cols="40" rows="8" name="textarea" id="textarea"></textarea>
+	</div>
+
+	<div>
+	    <label for="checkbox">Checkbox:</label>
+		<input type="checkbox" name="checkbox" id="checkbox" />
+    </div>
+
+	<div>
+	    <input type="submit" value="Submit" />
+    </div>
+</form>-->
 			</section>
 
 			<section class="styleguide-section styleguide-archives clearfix">

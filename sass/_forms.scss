@@ -126,3 +126,16 @@ select {
 	padding: $form-input-padding;
 	width: 100%;
 }
+
+fieldset {
+	border: $form-input-border-width solid $form-input-border-color;
+	border-radius: $form-input-border-radius;
+	margin-bottom: 1em;
+	padding: 1em;
+}
+
+.input-item,
+.radio-group,
+.checkbox-group {
+	margin-bottom: 1em;
+}
