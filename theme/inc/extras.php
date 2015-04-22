@@ -118,7 +118,7 @@ function braces_alter_widget_callback( $params ) {
 
 	$widget_id = $params[0]['widget_id'];
 
-	if( preg_match( '/^(categories|archives|recent-posts|rss|monster)-\d+$/', $widget_id ) ) {
+	if( preg_match( '/^(categories|archives|monster)-\d+$/', $widget_id ) ) {
 		// Squirrel away the original callback in $params['callback'].
 		// Override the callback with our own which will tweak the widget output
 		$params[0]['callback'] = $wp_registered_widgets[$widget_id]['callback'];
@@ -146,9 +146,6 @@ function braces_tweak_widget_markup( $widget ) {
 	// archives widget places &nbsp; between anchor and post count
 	$markup = str_replace( '&nbsp;', '', $markup );
 	$markup = preg_replace( '#</a>\s*\((\d+)\)\s*</li>#', '</a> <span class="count">$1</span></li>', $markup );
-
-	// the archives dropdown widget
-	$markup = str_replace( 'name="archive-dropdown"', 'name="archive-dropdown" class="form-control"', $markup );
 
 	echo $markup;
 }
