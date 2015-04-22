@@ -7,6 +7,12 @@
 	.widget-title {
 
 	}
+	.count {
+		background-color: $color-1;
+		border-radius: $form-input-border-radius;
+		color: #fff;
+		padding: 0 .5em;
+	}
 }
 
 .widget {
