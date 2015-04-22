@@ -145,7 +145,7 @@ function braces_tweak_widget_markup( $widget ) {
 	// Replace non breaking spaces before setting up post count badges,
 	// archives widget places &nbsp; between anchor and post count
 	$markup = str_replace( '&nbsp;', '', $markup );
-	$markup = preg_replace( '#</a>\s*\((\d+)\)\s*</li>#', '</a> <span class="count">$1</span></li>', $markup );
+	$markup = preg_replace( '#<\/a>\s*\((\d+)\)\s*#', '</a> <span class="count">$1</span>', $markup );
 
 	echo $markup;
 }

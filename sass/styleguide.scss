@@ -10,7 +10,7 @@
  */
 
 .styleguide-section {
-	@inlcude clearfix();
+	@include clearfix();
 	margin-bottom: 2em;
 	&-title {
 		border-top: 1px solid #ccc;
