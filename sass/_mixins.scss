@@ -1,95 +1,33 @@
 // @file Preprocess Mixins
 // @link krasimirtsonev.com/blog/article/SASS-mixins-extends-and-placeholders-differences-use-cases
 
-// =Table of Contents
-//
-// Clearfix
-// Zero
-// Zero-list
-// Text-decoration
-// Gradient
-// Border-radius
+/*
+ * Provide a hover effect for non-touch devices, turn it into an Active state for mobile, and maintain a fallback.
+ * @requires Modernizr as a JS dependency to get .no-touch classes
+ * Adds styles via @content
+ * @jhouge
+ */
+	@mixin touch-hover( $disabled: false ) {
 
-// Clearfix
-// @link http://nicolasgallagher.com/micro-clearfix-hack/
-@mixin clearfix() {
-	&:before,
-	&:after {
-		content: " ";
-		display: table;
+	@if $disabled {
+		.no-js &,
+		.no-js &:hover, // the fallback
+		.no-js &:focus,
+		.js.no-touchevents &,
+		.js.no-touchevents &:hover, // enhanced for no-touch
+		.js.no-touchevents &:focus,
+		.js.touchevents &,
+		.js.touchevents &:active { // relay same styles to active for touch devices
+				@content;
+		}
+
+	} @else {
+		.no-js &:hover, // the fallback
+		.no-js &:focus,
+		.js.no-touchevents &:hover, // enhanced for no-touch
+		.js.no-touchevents &:focus,
+		.js.touchevents &:active { // relay same styles to active for touch devices
+				@content;
+		}
 	}
-	&:after {
-		content: "";
-		display: table;
-		clear: both;
-	}
-}
-
-// Zero
-// Remove all padding & margins
-@mixin zero() {
-	margin: 0;
-	padding: 0;
-}
-
-// Zero List
-// Remove list styles
-@mixin zero-list() {
-	@include zero;
-	list-style: none;
-	li {
-		@include zero;
-		list-style: none;
-	}
-}
-
-// Text Decorations
-// Supply a base link color and a hover link color
-// Remove the underline, until hover
-//
-// @param1 - $link_color - the initial link color
-// @param2 - $hover_color - the links hover color
-//
-// @usage a {
-// 	@include text-decoration(#fff,#000);
-// }
-@mixin text-decoration($link_color, $hover_color) {
-	color: $link_color;
-	text-decoration: none;
-	&:hover {
-		color: $hover_color;
-		text-decoration: underline;
-	}
-}
-
-// Gradients with the IE filter
-@mixin gradient($from, $to) {
-	background-color: $from; // fallback/image non-cover color
-	background-image: -moz-linear-gradient($from, $to); // Firefox 3.6+
-	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($from), to($to)); // Safari 4+, Chrome 1+
-	background-image: -webkit-linear-gradient($from, $to); // Safari 5.1+, Chrome 10+
-	background-image: -o-linear-gradient($from, $to); // Opera 11.10+
-	// extras from http://www.colorzilla.com/gradient-editor/
-	background: -ms-linear-gradient(top,  $from 0%,$to 100%); // IE10+
-	background: linear-gradient(to bottom,  $from 0%,$to 100%); // W3C
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=#{$from}, endColorstr=#{$to},GradientType=0 ); // IE6-9
-	.ie7 &,
-	.ie8 &,
-	.ie9 & {
-		filter: none;
-	}
-}
-
-// Border Radius
-// Simple border-radius mixin with browser prefixes
-//
-// @usage .box {
-// 	@include border-radius(10px);
-// }
-@mixin border-radius($radius) {
-	-webkit-border-radius: $radius;
-	-moz-border-radius: $radius;
-	-ms-border-radius: $radius;
-	-o-border-radius: $radius;
-	border-radius: $radius;
 }

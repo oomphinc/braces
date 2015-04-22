@@ -11,16 +11,15 @@ textarea {
 	line-height: 1.5;
 }
 
-a {
+a:link,
+a:visited {
 	color: $color-1;
-	&:visited {
-		color: $color-3;
-	}
-	&:hover,
-	&:focus,
-	&:active {
-		color: $color-3;
-	}
+	text-decoration: none;
+}
+a:hover,
+a:active {
+	color: $color-2;
+	text-decoration: underline;
 }
 
 a[href^=tel]{
@@ -192,10 +191,10 @@ figure {
 
 table {
 	border-spacing: 0;
+	width: 100%;
 	@if $table-border-collapse == true {
 		border-collapse: collapse;
 	}
-	width: 100%;
 	th {
 		padding: $table-cell-padding;
 		border-bottom: 2px solid $table-border-color;
@@ -206,5 +205,13 @@ table {
 	}
 	caption {
 		text-align: center;
+	}
+	// zebra striping pattern
+	&.striped {
+		tbody {
+			tr:nth-of-type(odd) {
+				background-color: $table-border-color;
+			}
+		}
 	}
 }
