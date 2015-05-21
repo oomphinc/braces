@@ -33,7 +33,7 @@
 <div id="page" class="hfeed site">
 	<header id="masthead" class="site-header" role="banner">
 
-		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'braces' ); ?></a>
+		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'braces' ); ?></a>
 
 		<div class="site-branding">
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
@@ -41,7 +41,7 @@
 		</div>
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle"><?php _e( 'Primary Menu', 'braces' ); ?></button>
+			<button class="menu-toggle"><?php esc_html_e( 'Primary Menu', 'braces' ); ?></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
