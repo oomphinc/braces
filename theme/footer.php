@@ -18,7 +18,7 @@
 			<?php if ( defined( 'WPCOM_IS_VIP_ENV' ) && true === WPCOM_IS_VIP_ENV ) {
 				echo vip_powered_wpcom( 4 );
 			} else { ?>
-				<p class="attribution">&copy; <?php echo date( 'Y' ); ?> <a href="http://www.oomphinc.com"><?php _e( 'Oomph, Inc.', 'braces' ); ?></a></p>
+				<p class="attribution">&copy; <?php echo date( 'Y' ); ?> <a href="<?php esc_url( __( 'http://www.oomphinc.com', 'braces' ) ); ?>"><?php esc_html__( 'Oomph, Inc.', 'braces' ); ?></a></p>
 			<?php } ?>
 		</div>
 	</footer><!-- #colophon -->
