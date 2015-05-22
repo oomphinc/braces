@@ -27,11 +27,11 @@ class Braces_Custom_Post_Type {
 	 */
 	function action_init() {
 		$labels = array(
-			'name'               => _x( self::POST_TYPE_NAME, 'post type general name', 'braces' ),
-			'singular_name'      => _x( self::POST_TYPE_SINGULAR, 'post type singular name', 'braces' ),
-			'menu_name'          => _x( self::POST_TYPE_NAME, 'admin menu', 'braces' ),
-			'name_admin_bar'     => _x( self::POST_TYPE_SINGULAR, 'add new on admin bar', 'braces' ),
-			'add_new'            => _x( 'Add New '. self::POST_TYPE_SINGULAR, 'post type', 'braces' ),
+			'name'               => esc_html_x( self::POST_TYPE_NAME, 'post type general name', 'braces' ),
+			'singular_name'      => esc_html_x( self::POST_TYPE_SINGULAR, 'post type singular name', 'braces' ),
+			'menu_name'          => esc_html_x( self::POST_TYPE_NAME, 'admin menu', 'braces' ),
+			'name_admin_bar'     => esc_html_x( self::POST_TYPE_SINGULAR, 'add new on admin bar', 'braces' ),
+			'add_new'            => esc_html_x( 'Add New '. self::POST_TYPE_SINGULAR, 'post type', 'braces' ),
 			'add_new_item'       => __( 'Add New '. self::POST_TYPE_SINGULAR, 'braces' ),
 			'new_item'           => __( 'New '. self::POST_TYPE_SINGULAR, 'braces' ),
 			'edit_item'          => __( 'Edit '. self::POST_TYPE_SINGULAR, 'braces' ),

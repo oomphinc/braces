@@ -280,14 +280,14 @@ get_header(); ?>
 			</aside>
 
 			<aside id="archives" class="widget">
-				<h1 class="widget-title"><?php _e( 'Archives', 'braces' ); ?></h1>
+				<h1 class="widget-title"><?php esc_html_e( 'Archives', 'braces' ); ?></h1>
 				<ul>
 					<?php wp_get_archives( array( 'type' => 'monthly' ) ); ?>
 				</ul>
 			</aside>
 
 			<aside id="meta" class="widget">
-				<h1 class="widget-title"><?php _e( 'Meta', 'braces' ); ?></h1>
+				<h1 class="widget-title"><?php esc_html_e( 'Meta', 'braces' ); ?></h1>
 				<ul>
 					<?php wp_register(); ?>
 					<li><?php wp_loginout(); ?></li>

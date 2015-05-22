@@ -20,7 +20,7 @@ function braces_paging_nav() {
 	}
 	?>
 	<nav class="navigation paging-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'braces' ); ?></h1>
+		<h1 class="screen-reader-text"><?php esc_html_e( 'Posts navigation', 'braces' ); ?></h1>
 		<div class="nav-links">
 
 			<?php if ( get_next_posts_link() ) { ?>
@@ -49,11 +49,11 @@ function braces_post_nav() {
 	}
 	?>
 	<nav class="navigation post-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'braces' ); ?></h1>
+		<h1 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'braces' ); ?></h1>
 		<div class="nav-links">
 			<?php
-				previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&laquo;</span> %title', 'Previous post link', 'braces' ) );
-				next_post_link(     '<div class="nav-next">%link</div>',     _x( '%title <span class="meta-nav">&raquo;</span>', 'Next post link',     'braces' ) );
+				previous_post_link( '<div class="nav-previous">%link</div>', esc_html_x( '<span class="meta-nav">&laquo;</span> %title', 'Previous post link', 'braces' ) );
+				next_post_link(     '<div class="nav-next">%link</div>',     esc_html_x( '%title <span class="meta-nav">&raquo;</span>', 'Next post link',     'braces' ) );
 			?>
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->
@@ -129,12 +129,12 @@ function braces_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		_x( 'Posted on %s', 'post date', 'braces' ),
+		esc_html_x( 'Posted on %s', 'post date', 'braces' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
 	$byline = sprintf(
-		_x( 'by %s', 'post author', 'braces' ),
+		esc_html_x( 'by %s', 'post author', 'braces' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
