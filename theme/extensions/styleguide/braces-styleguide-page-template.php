@@ -96,7 +96,7 @@ get_header(); ?>
 				<h2 class="styleguide-section-title">Pagination</h2>
 				<h3>Post & Page Navigation</h3>
 				<nav class="navigation page-navigation post-navigation" role="navigation">
-					<h1 class="screen-reader-text">Post navigation</h1>
+					<h2 class="screen-reader-text">Post navigation</h2>
 					<div class="nav-links">
 						<div class="nav-previous">
 							<a href="http://localhost/2010/08/post-format-image/" rel="prev"><span class="meta-nav">&laquo;</span> Post Format: Image</a>

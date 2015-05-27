@@ -20,7 +20,7 @@ function braces_paging_nav() {
 	}
 	?>
 	<nav class="navigation paging-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php esc_html_e( 'Posts navigation', 'braces' ); ?></h1>
+		<h2 class="screen-reader-text"><?php esc_html_e( 'Posts navigation', 'braces' ); ?></h2>
 		<div class="nav-links">
 
 			<?php if ( get_next_posts_link() ) { ?>
@@ -55,7 +55,7 @@ function braces_post_nav() {
 	}
 	?>
 	<nav class="navigation post-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'braces' ); ?></h1>
+		<h2 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'braces' ); ?></h2>
 		<div class="nav-links">
 			<?php
 				previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&laquo;</span> %title', 'Previous post link', 'braces' ) );
