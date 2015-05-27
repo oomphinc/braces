@@ -24,11 +24,17 @@ function braces_paging_nav() {
 		<div class="nav-links">
 
 			<?php if ( get_next_posts_link() ) { ?>
-				<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&laquo;</span> Older posts', 'braces' ) ); ?></div>
+				<div class="nav-previous">
+					<span class="meta-nav">&laquo;</span>
+					<?php next_posts_link( esc_html__( 'Older posts', 'braces' ) ); ?>
+				</div>
 			<?php } ?>
 
 			<?php if ( get_previous_posts_link() ) { ?>
-				<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&raquo;</span>', 'braces' ) ); ?></div>
+				<div class="nav-next">
+					<?php previous_posts_link( esc_html__( 'Newer posts', 'braces' ) ); ?>
+					<span class="meta-nav">&raquo;</span>
+				</div>
 			<?php } ?>
 
 		</div><!-- .nav-links -->
@@ -52,8 +58,8 @@ function braces_post_nav() {
 		<h1 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'braces' ); ?></h1>
 		<div class="nav-links">
 			<?php
-				previous_post_link( '<div class="nav-previous">%link</div>', esc_html_x( '<span class="meta-nav">&laquo;</span> %title', 'Previous post link', 'braces' ) );
-				next_post_link(     '<div class="nav-next">%link</div>',     esc_html_x( '%title <span class="meta-nav">&raquo;</span>', 'Next post link',     'braces' ) );
+				previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&laquo;</span> %title', 'Previous post link', 'braces' ) );
+				next_post_link(     '<div class="nav-next">%link</div>',     _x( '%title <span class="meta-nav">&raquo;</span>', 'Next post link',     'braces' ) );
 			?>
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->

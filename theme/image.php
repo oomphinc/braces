@@ -78,7 +78,7 @@ get_header();
 									printf( __( 'Comments are closed, but you can leave a trackback: <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">Trackback URL</a>.', 'braces' ), esc_url( get_trackback_url() ) );
 								}
 								elseif ( comments_open() && ! pings_open() ) { // Only comments open
-									esc_html_e( 'Trackbacks are closed, but you can <a class="comment-link" href="#respond" title="Post a comment">post a comment</a>.', 'braces' );
+									_e( 'Trackbacks are closed, but you can <a class="comment-link" href="#respond" title="Post a comment">post a comment</a>.', 'braces' );
 								}
 								elseif ( ! comments_open() && ! pings_open() ) { // Comments and trackbacks closed
 									_e( 'Both comments and trackbacks are currently closed.', 'braces' );
