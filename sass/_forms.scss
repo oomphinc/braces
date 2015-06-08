@@ -87,6 +87,9 @@ textarea {
 	border: $form-input-border-width solid $form-input-border-color;
 	border-radius: $form-input-border-radius;
 	width: 100%;
+	@include placeholder {
+		color: $form-input-border-color;
+	}
 }
 
 input[type="text"]:focus,
