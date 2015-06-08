@@ -4,6 +4,9 @@
  * Global Widget Styles
  */
 .widget {
+	#secondary & {
+		margin-bottom: $vert-line-height;
+	}
 	.widget-title {
 
 	}
@@ -89,12 +92,16 @@
 		}
 		thead {
 			th {
-
+				text-align: center;
 			}
 		}
 		tbody {
 			td {
-
+				text-align: center;
+				&#today {
+					background-color: $color-3;
+					color: #fff;
+				}
 			}
 		}
 		tfoot {

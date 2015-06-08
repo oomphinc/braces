@@ -164,3 +164,9 @@ fieldset {
 		margin-right: 1em;
 	}
 }
+
+.form-allowed-tags {
+	background: #eee;
+	border: $form-input-border-width solid $form-input-border-color;
+	padding: 1em;
+}
