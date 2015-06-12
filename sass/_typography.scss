@@ -8,7 +8,7 @@ textarea {
 	color: $graycale-color-2;
 	font-family: $font-stack-1;
 	font-size: $paragraph-size-1;
-	line-height: 1.5;
+	line-height: $line-height;
 }
 
 a:link,

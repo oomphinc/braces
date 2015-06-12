@@ -49,6 +49,13 @@ $heading-size-6: $base-font-size * 1.4rem;
 
 $paragraph-size-1: $heading-size-6;
 
+// Line-Heights
+$line-height: 1.5;
+
+// establishing some vertical rythm for no type elements
+// use this on margin bottom etc.
+$vert-line-height: $line-height + em;
+
 //////////////////// Forms ////////////////////
 // Button, Reset, Submit
 $form-button-box-shadow-setting: true;
