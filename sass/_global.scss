@@ -26,6 +26,12 @@ body {
  */
 .edit-link {
 	display: block;
+	a {
+		color: $color-1;
+		&:hover {
+			color: $color-2;
+		}
+	}
 }
 
 /**
