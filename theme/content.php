@@ -18,7 +18,11 @@
 		<?php } ?>
 	</header><!-- .entry-header -->
 
-	<?php braces_post_thumbnail(); ?>
+	<?php if ( has_post_thumbnail() ) { ?>
+		<div class="entry-thumbnail">
+			<?php the_post_thumbnail(); ?>
+		</div>
+	<?php } ?>
 
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>

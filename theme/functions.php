@@ -158,13 +158,5 @@ require BRACES_TEMPLATE . '/inc/jetpack.php';
 require BRACES_TEMPLATE . '/inc/widgets.php';
 
 /**
- * Include WordPress core functionality Extensions.
- */
-
-/* Picturefill */
-//require BRACES_TEMPLATE . '/extensions/picturefill/braces-picturefill.php';
-require BRACES_TEMPLATE . '/extensions/styleguide/braces-styleguide.php';
-
-/**
- * Include WordPress core functionality Features.
+ * Try to keep this file clean, only includes, no logic!
  */

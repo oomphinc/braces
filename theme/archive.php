@@ -18,8 +18,10 @@ get_header(); ?>
 		<?php if ( have_posts() ) { ?>
 
 			<header class="page-header">
-				<h1 class="page-title"><?php braces_archive_title(); ?></h1>
-				<?php braces_archive_description(); ?>
+				<?php
+					the_archive_title( '<h1 class="page-title">', '</h1>' );
+					the_archive_description( '<div class="taxonomy-description">', '</div>' );
+				?>
 			</header><!-- .page-header -->
 
 			<?php
@@ -33,7 +35,7 @@ get_header(); ?>
 					get_template_part( 'content', get_post_format() );
 				}
 
-				braces_paging_nav();
+				the_posts_navigation();
 			}
 			else {
 				get_template_part( 'content', 'none' );
