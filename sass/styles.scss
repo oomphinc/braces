@@ -17,9 +17,9 @@
 // Use inline IE styles
 
 // Requirements
-	@import "bourbon/bourbon";
+	@import "../sass/libraries/bourbon/app/assets/stylesheets/bourbon";
 	@import "grid_settings";
-	@import "neat/neat";
+	@import "../sass/libraries/neat/app/assets/stylesheets/neat";
 
 	@import "_config";
 
