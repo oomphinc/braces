@@ -118,19 +118,20 @@ add_action( 'after_setup_theme', 'braces_setup' );
  * Enqueue scripts and styles
  */
 function braces_scripts() {
+	$version_buster = '0.0.1';
 	wp_enqueue_style( 'braces', BRACES_STYLESHEET );
-	wp_enqueue_style( 'braces-theme', BRACES_STYLESHEET_URI . '/css/styles.css', null, false, 'all' );
+	wp_enqueue_style( 'braces-theme', BRACES_STYLESHEET_URI . '/css/styles.css', null, $version_buster, 'all' );
 
-	wp_enqueue_script( 'braces-modernizr', BRACES_STYLESHEET_URI . '/js/modernizr.js', array(), '20140113', true );
-	wp_enqueue_script( 'braces-navigation', BRACES_STYLESHEET_URI . '/js/navigation.js', array(), '20120206', true );
-	wp_enqueue_script( 'braces-skip-link-focus-fix', BRACES_STYLESHEET_URI . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	wp_enqueue_script( 'braces-modernizr', BRACES_STYLESHEET_URI . '/js/modernizr.js', array(), $version_buster, true );
+	wp_enqueue_script( 'braces-navigation', BRACES_STYLESHEET_URI . '/js/navigation.js', array(), $version_buster, true );
+	wp_enqueue_script( 'braces-skip-link-focus-fix', BRACES_STYLESHEET_URI . '/js/skip-link-focus-fix.js', array(), $version_buster, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
 	if ( is_singular() && wp_attachment_is_image() ) {
-		wp_enqueue_script( 'braces-keyboard-image-navigation', BRACES_STYLESHEET_URI . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
+		wp_enqueue_script( 'braces-keyboard-image-navigation', BRACES_STYLESHEET_URI . '/js/keyboard-image-navigation.js', array( 'jquery' ), $version_buster );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'braces_scripts' );
