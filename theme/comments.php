@@ -2,8 +2,10 @@
 /**
  * The template for displaying comments.
  *
- * The area of the page that contains both current comments
+ * This is the template that displays the area of the page that contains both the current comments
  * and the comment form.
+ *
+ * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
  * @subpackage braces
@@ -27,16 +29,23 @@ if ( post_password_required() ) {
 	<?php if ( have_comments() ) { ?>
 		<h2 class="comments-title">
 			<?php
-				printf( esc_html( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'braces' ) ),
-					number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
+				printf( // WPCS: XSS OK.
+					esc_html( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'braces' ) ),
+					number_format_i18n( get_comments_number() ),
+					'<span>' . get_the_title() . '</span>'
+				);
 			?>
 		</h2>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) { // are there comments to navigate through ?>
 		<nav id="comment-nav-above" class="comment-navigation" role="navigation">
 			<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'braces' ); ?></h2>
-			<div class="nav-previous"><?php previous_comments_link( esc_html__( '&laquo; Older Comments', 'braces' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments &raquo;', 'braces' ) ); ?></div>
+
+			<div class="nav-links">
+				<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'braces' ) ); ?></div>
+				<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'braces' ) ); ?></div>
+			</div><!-- .nav-links -->
+
 		</nav><!-- #comment-nav-above -->
 		<?php } // check for comment navigation ?>
 
@@ -52,8 +61,12 @@ if ( post_password_required() ) {
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) { // are there comments to navigate through ?>
 		<nav id="comment-nav-below" class="comment-navigation" role="navigation">
 			<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'braces' ); ?></h2>
-			<div class="nav-previous"><?php previous_comments_link( esc_html__( '&laquo; Older Comments', 'braces' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments &raquo;', 'braces' ) ); ?></div>
+			<div class="nav-links">
+
+				<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'braces' ) ); ?></div>
+				<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'braces' ) ); ?></div>
+
+			</div><!-- .nav-links -->
 		</nav><!-- #comment-nav-below -->
 		<?php } // check for comment navigation ?>
 

@@ -18,21 +18,17 @@ define( 'BRACES_TEMPLATE',            get_template_directory() );
 define( 'BRACES_TEMPLATE_URI',        get_template_directory_uri() );
 
 /**
- * Initialize & Load VIP Plugins
- * We check to see if we are on a VIP environment, if so, we load the required plugins from their repo.
- * If not, we load an activation class to display notices of the required plugins.
- * @author johncionci
- */
-// require_once( WP_CONTENT_DIR . '/themes/vip/plugins/vip-init.php' );
-// if ( defined( 'WPCOM_IS_VIP_ENV' ) && true === WPCOM_IS_VIP_ENV ) {}
-
-/**
- * Set the content width based on the theme's design and stylesheet.
+ * Set the content width in pixels, based on the theme's design and stylesheet.
+ *
+ * Priority 0 to make it available to lower priority callbacks.
+ *
  * @link https://codex.wordpress.org/Content_Width
+ * @global int $content_width
  */
-if ( ! isset( $content_width ) ) {
-	$content_width = 640; /* pixels */
+function _s_content_width() {
+	$GLOBALS['content_width'] = apply_filters( '_s_content_width', 640 );
 }
+add_action( 'after_setup_theme', '_s_content_width', 0 );
 
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -48,6 +44,7 @@ function braces_setup() {
 	 * Translations can be filed in the /languages/ directory
 	 * If you're building a theme based on braces_theme, use a find and replace
 	 * to change 'braces' to the name of your theme in all the template files
+	 * These rarely get used so only enable if you need them.
 	 *
 	 * load_theme_textdomain( 'braces', BRACES_TEMPLATE . '/languages' );
 	 */
@@ -60,14 +57,21 @@ function braces_setup() {
 	) );
 
 	/**
+	 * Let WordPress manage the document title.
+	 * By adding theme support, we declare that this theme does not use a
+	 * hard-coded <title> tag in the document head, and expect WordPress to
+	 * provide it for us.
+	 */
+	add_theme_support( 'title-tag' );
+
+	/**
 	 * Add default posts and comments RSS feed links to head
 	 */
 	add_theme_support( 'automatic-feed-links' );
 
 	/**
 	 * Enable support for Post Thumbnails on posts and pages
-	 *
-	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
+	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
 
@@ -76,7 +80,11 @@ function braces_setup() {
 	 * to output valid HTML5.
 	 */
 	add_theme_support( 'html5', array(
-		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
+		'search-form',
+		'comment-form',
+		'comment-list',
+		'gallery',
+		'caption'
 	) );
 
 	/**
@@ -84,20 +92,24 @@ function braces_setup() {
 	 * See http://codex.wordpress.org/Post_Formats
 	 * These rarely get used so only enable if you need them.
 	 *
-	 * @author johncionci
-	 *
 	 * add_theme_support( 'post-formats', array(
-	 * 'aside', 'image', 'video', 'quote', 'link'
+	 * 'aside',
+	 * 'image',
+	 * 'video',
+	 * 'quote',
+	 * 'link'
 	 * ) );
 	 * /
 
 	/**
 	 * Setup the WordPress core custom background feature.
+	 * These rarely get used so only enable if you need them.
+	 *
+	 * add_theme_support( 'custom-background', apply_filters( 'braces_custom_background_args', array(
+	 * 	'default-color' => 'ffffff',
+	 * 	'default-image' => '',
+	 * ) ) );
 	 */
-	add_theme_support( 'custom-background', apply_filters( 'braces_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
 
 }
 add_action( 'after_setup_theme', 'braces_setup' );
@@ -128,7 +140,7 @@ add_action( 'wp_enqueue_scripts', 'braces_scripts' );
  */
 
 /* Custom Header */
-require BRACES_TEMPLATE . '/inc/custom-header.php';
+// require BRACES_TEMPLATE . '/inc/custom-header.php';
 
 /* Custom template tags for this theme. */
 require BRACES_TEMPLATE . '/inc/template-tags.php';

@@ -1,8 +1,9 @@
 <?php
 /**
  * The template for displaying the footer.
+ * Contains the closing of the #content div and all content after.
  *
- * Contains the closing of the #content div and all content after
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @package WordPress
  * @subpackage braces
@@ -15,11 +16,7 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<?php if ( defined( 'WPCOM_IS_VIP_ENV' ) && true === WPCOM_IS_VIP_ENV ) {
-				echo vip_powered_wpcom( 4 );
-			} else { ?>
-				<p class="attribution">&copy; <?php echo date( 'Y' ); ?> <a href="<?php esc_url( __( 'http://www.oomphinc.com', 'braces' ) ); ?>"><?php esc_html__( 'Oomph, Inc.', 'braces' ); ?></a></p>
-			<?php } ?>
+			<p class="attribution">&copy; <?php echo date( 'Y' ); ?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
