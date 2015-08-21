@@ -1,0 +1,18 @@
+// @file Sass Functions
+
+// Getter function for color palettes using SASS maps
+// Link: http://erskinedesign.com/blog/friendlier-colour-names-sass-maps/
+// Usage: color: palette(brand,tan);
+//
+@function colors( $palette, $tone ) {
+	@return map-get( map-get( $palettes, $palette ), $tone );
+}
+
+$palettes: (
+	brand: (
+		// need to move brand color palettes here
+	),
+	mono: (
+		// need to move mono color palettes here
+	)
+);
