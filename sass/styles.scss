@@ -17,9 +17,9 @@
 // Use inline IE styles
 
 // Requirements
-	@import "bourbon/bourbon";
+	@import "../sass/libraries/bourbon/app/assets/stylesheets/bourbon";
 	@import "grid_settings";
-	@import "neat/neat";
+	@import "../sass/libraries/neat/app/assets/stylesheets/neat";
 
 	@import "_config";
 
@@ -49,20 +49,11 @@
 	// Widget Styles
 	@import "_widgets";
 
-	// Author Styles
-	@import "_authors";
-
 	// Comments Styles
 	@import "_comments";
 
 	// Gallery Styles
 	@import "_galleries";
 
-	// Pager Styles
-	@import "_pager";
-
-	// Breadcrumbs Styles
-	@import "_breadcrumbs";
-
 	// Print Styles
-	// @import "_print";
+	@import "_print";

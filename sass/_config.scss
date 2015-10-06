@@ -33,8 +33,8 @@ $graycale-color-6: lighten(#000, 46.7%); // #777
 $graycale-color-7: lighten(#000, 93.5%); // #eee
 
 // Font Stacks
-$font-stack-1: Arial, Helvetica, sans-serif;
-$font-stack-2: Georgia, serif;
+$font-stack-1: $helvetica;
+$font-stack-2: $georgia;
 
 // Font Sizes
 $base-font-size: 1;

@@ -1,17 +1,35 @@
 // @file Content Styles
 
 /**
- * Single Posts
+ * Content Globals
  */
+.hentry {
+	@include clearfix;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 1em;
+	padding-bottom: 1em;
+	.entry-footer {
+		clear: both;
+	}
+}
 
 /**
- * Single Post Comments
+ * Post Archives
+ */
+.archive,
+.blog {
+	.has-post-thumbnail {
+		.entry-thumbnail {
+			@include span-columns( 3 of 8 );
+		}
+	}
+}
+
+/**
+ * Single Posts
  */
 
 /**
  * Single Pages
  */
 
-/**
- * Post Archives
- */

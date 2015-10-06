@@ -25,7 +25,7 @@ get_header(); ?>
 				 		the_post();
 						get_template_part( 'content', 'search' );
 					}
-					braces_paging_nav();
+					the_posts_navigation();
 				?>
 
 		<?php }

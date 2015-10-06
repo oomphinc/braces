@@ -31,7 +31,7 @@ get_header(); ?>
 					get_template_part( 'content', get_post_format() );
 				}
 
-				braces_paging_nav();
+				the_posts_navigation();
 			}
 			else {
 				get_template_part( 'content', 'none' );

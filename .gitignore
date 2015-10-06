@@ -1,7 +1,6 @@
 # Compiled source #
 ###################
 .sass-cache/
-javascripts/*-ck.js
 *.map
 
 # Packages #
@@ -10,10 +9,9 @@ node_modules/
 *.log
 *.lock
 
-# CSS Frameworks #
+# Various Libraries #
 ##################
-bourbon
-neat
+sass/libraries/*
 
 # OS generated files #
 ######################
