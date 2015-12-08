@@ -31,3 +31,36 @@
 		}
 	}
 }
+
+// rt = Responsive Typography
+// @params = Each of the params are synced up with the breakpoints that are defined in the _config.scss file.
+// Feel free to add/remove on per project basis.
+// @usage h1 { @include rt(12px, '', 16px, 4rem, 20px); }
+
+@mixin rt($default:null, $sm:null, $md:null, $lg:null, $xl:null) {
+	@if $default == null {
+		@error "You must provide at least one value.";
+	} @else {
+		font-size: $default;
+	}
+	@if $sm != null and $sm != '' {
+		@include media($small) {
+			font-size: $sm;
+		}
+	}
+	@if $md != null and $md != '' {
+		@include media($medium) {
+			font-size: $md;
+		}
+	}
+	@if $lg != null and $lg != '' {
+		@include media($large) {
+			font-size: $lg;
+		}
+	}
+	@if $xl != null and $xl != '' {
+		@include media($xlarge) {
+			font-size: $xl;
+		}
+	}
+}
