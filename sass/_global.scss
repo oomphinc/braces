@@ -4,9 +4,9 @@
 $base-type-size: 1;
 $base-type-pixel-size: 10px;
 
-/**
- * Root Elements
- */
+//
+// Root Elements
+//
 html {
 	font-size: $base-type-pixel-size;
 	-webkit-font-smoothing: antialiased;
@@ -17,17 +17,17 @@ body {
 	height: 100%;
 }
 
-/**
- * Header Elements
- */
+//
+// Header Elements
+//
 
-/**
- * Footer Elements
- */
+//
+// Footer Elements
+///
 
-/**
- * Meta Elements
- */
+//
+// Meta Elements
+//
 .edit-link {
 	display: block;
 	a {
@@ -38,9 +38,9 @@ body {
 	}
 }
 
-/**
- * Media Elements
- */
+//
+// Media Elements
+//
 img {
 	display: block;
 	height: auto;
