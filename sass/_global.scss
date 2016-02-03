@@ -1,10 +1,14 @@
 // @file Global Styles
 
+// Type Sizes
+$base-type-size: 1;
+$base-type-pixel-size: 10px;
+
 /**
  * Root Elements
  */
 html {
-	font-size: $base-font-pixel-size;
+	font-size: $base-type-pixel-size;
 	-webkit-font-smoothing: antialiased;
 }
 

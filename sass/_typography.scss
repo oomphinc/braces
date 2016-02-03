@@ -1,8 +1,33 @@
 // @file Typography Styles
 
-/**
- * Typography
- */
+//
+// Typography Variables
+//
+
+// Font Stacks
+$font-stack-sans: $helvetica;
+$font-stack-serif: $georgia;
+
+// Heading Sizes
+$heading-size-1: $base-type-size * 2.4rem;
+$heading-size-2: $base-type-size * 2.2rem;
+$heading-size-3: $base-type-size * 2.0rem;
+$heading-size-4: $base-type-size * 1.8rem;
+$heading-size-5: $base-type-size * 1.6rem;
+$heading-size-6: $base-type-size * 1.4rem;
+
+$paragraph-size-1: $heading-size-6;
+
+// Line-Heights
+$line-height: 1.5;
+
+// establishing some vertical rythm for no type elements
+// use this on margin bottom etc.
+$vert-line-height: $line-height + em;
+
+//
+// Typography
+//
 
 body,
 button,
@@ -10,7 +35,7 @@ input,
 select,
 textarea {
 	color: #000;
-	font-family: $font-stack-1;
+	font-family: $font-stack-sans;
 	font-size: $paragraph-size-1;
 	line-height: $line-height;
 }
