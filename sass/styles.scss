@@ -10,18 +10,10 @@
 // themselves but instead contain mixins and define base variables used by other
 // stylesheets.
 
-// CSS Philosophies
-//
-// Use rems for font sizes
-// Use inline media queries
-// Use inline IE styles
-
 // Requirements
 	@import "../sass/libraries/bourbon/app/assets/stylesheets/bourbon";
 	@import "grid_settings";
 	@import "../sass/libraries/neat/app/assets/stylesheets/neat";
-
-	@import "_config";
 
 // CSS preprocess logic
 	@import "_mixins";

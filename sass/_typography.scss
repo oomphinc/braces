@@ -25,6 +25,12 @@ $line-height: 1.5;
 // use this on margin bottom etc.
 $vert-line-height: $line-height + em;
 
+// Tables
+$table-border-collapse: true;
+
+$table-border-color: #ddd;
+$table-cell-padding: 8px;
+
 //
 // Typography
 //

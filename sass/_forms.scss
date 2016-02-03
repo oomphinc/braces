@@ -1,8 +1,40 @@
 // @file Form Styles
 
 //
-// Forms
+// Forms Variables
 //
+
+// Button, Reset, Submit
+$form-button-box-shadow-setting: true;
+$form-button-text-shadow-setting: true;
+
+$form-button-background: #e6e6e6;
+$form-button-border-colors: #ccc #ccc #bbb;
+$form-button-border-colors-hover: #ccc #bbb #aaa;
+$form-button-border-colors-active: #aaa #bbb #bbb;
+$form-button-border-width: 1px;
+$form-button-border-radius: 3px;
+$form-button-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
+$form-button-box-shadow-hover: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
+$form-button-box-shadow-active: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
+$form-button-text-color: rgba(0, 0, 0, .8);
+$form-button-text-size: 1.2rem;
+$form-button-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+$form-button-padding: .5em 1em .5em;
+
+// Search
+$form-search-box-sizing: border-box;
+
+// Inputs, Selects, Textareas
+$form-input-color: #666;
+$form-input-border-color: #ccc;
+$form-input-border-width: 1px;
+$form-input-border-radius: 3px;
+
+$form-input-color-focus: #111;
+$form-input-padding: 3px;
+$form-input-height: 2em;
+$form-input-line-height: 2em;
 
 button,
 input,
@@ -13,14 +45,12 @@ textarea {
 	vertical-align: baseline; /* Improves appearance and consistency in all browsers */
 }
 
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+#{$all-buttons} {
 	border: $form-button-border-width solid;
 	border-color: $form-button-border-colors;
 	border-radius: $form-button-border-radius;
 	background: $form-button-background;
+
 	@if $form-button-box-shadow-setting == true {
 		box-shadow: $form-button-box-shadow
 	}
@@ -30,30 +60,24 @@ input[type="submit"] {
 	font-size: $form-button-text-size;
 	line-height: 1;
 	padding: $form-button-padding;
+
 	@if $form-button-text-shadow-setting == true {
 		text-shadow: $form-button-text-shadow;
 	}
 }
 
-button:hover,
-input[type="button"]:hover,
-input[type="reset"]:hover,
-input[type="submit"]:hover {
+#{$all-buttons-hover} {
 	border-color: $form-button-border-colors-hover;
+
 	@if $form-button-box-shadow-setting == true {
 		box-shadow: $form-button-box-shadow-hover;
 	}
 }
 
-button:focus,
-input[type="button"]:focus,
-input[type="reset"]:focus,
-input[type="submit"]:focus,
-button:active,
-input[type="button"]:active,
-input[type="reset"]:active,
-input[type="submit"]:active {
+#{$all-buttons-focus},
+#{$all-buttons-active} {
 	border-color: $form-button-border-colors-active;
+
 	@if $form-button-box-shadow-setting == true {
 		box-shadow: $form-button-box-shadow-active;
 	}
@@ -81,38 +105,22 @@ input::-moz-focus-inner { /* Corrects inner padding and border displayed oddly i
 	padding: 0;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
-textarea {
+#{$all-text-inputs} {
 	color: $form-input-color;
 	border: $form-input-border-width solid $form-input-border-color;
 	border-radius: $form-input-border-radius;
+	height: $form-input-height;
+	line-height: $form-input-line-height;
+	padding: $form-input-padding;
 	width: 100%;
+
 	@include placeholder {
 		color: $form-input-border-color;
 	}
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus,
-input[type="password"]:focus,
-input[type="search"]:focus,
-textarea:focus {
+#{$all-text-inputs-focus} {
 	color: $form-input-color-focus;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"] {
-	height: $form-input-height;
-	line-height: $form-input-line-height;
-	padding: $form-input-padding;
 }
 
 textarea {
