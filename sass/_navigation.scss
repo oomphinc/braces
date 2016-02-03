@@ -1,10 +1,21 @@
 // @file Navigation Styles
 
-/**
- * Menu Navigation
- */
+//
+// Navigation Variables
+//
+$main-navigation-box-shadow-setting: true;
+$main-navigation-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+
+$main-navigation-background-color: colors(brand, 40);
+
+$main-navigation-link-color: #fff;
+$main-navigation-link-color-hover: colors(brand, 30);
+
+//
+// Menu Navigation
+//
 .main-navigation {
-	background: $main-navigation-background-color;
+	background-color: $main-navigation-background-color;
 	clear: both;
 	display: block;
 	float: left;
@@ -95,9 +106,9 @@
 }
 
 
-/**
- * Content Navigation(s)
- */
+//
+// Content Navigation(s)
+//
 .site-main .comment-navigation,
 .site-main .paging-navigation,
 .site-main .post-navigation {

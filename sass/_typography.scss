@@ -9,7 +9,7 @@ button,
 input,
 select,
 textarea {
-	color: $graycale-color-2;
+	color: #000;
 	font-family: $font-stack-1;
 	font-size: $paragraph-size-1;
 	line-height: $line-height;
@@ -17,12 +17,12 @@ textarea {
 
 a:link,
 a:visited {
-	color: $color-1;
+	color: colors(brand, 10);
 	text-decoration: none;
 }
 a:hover,
 a:active {
-	color: $color-2;
+	color: colors(brand, 20);
 	text-decoration: underline;
 }
 

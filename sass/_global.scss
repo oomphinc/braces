@@ -27,9 +27,9 @@ body {
 .edit-link {
 	display: block;
 	a {
-		color: $color-1;
+		color: colors(brand, 10);
 		&:hover {
-			color: $color-2;
+			color: colors(brand, 20);
 		}
 	}
 }

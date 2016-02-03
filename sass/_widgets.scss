@@ -11,7 +11,7 @@
 
 	}
 	.count {
-		background-color: $color-1;
+		background-color: colors(brand, 10);
 		border-radius: $form-input-border-radius;
 		color: #fff;
 		padding: 0 .5em;
@@ -99,7 +99,7 @@
 			td {
 				text-align: center;
 				&#today {
-					background-color: $color-3;
+					background-color: colors(brand, 30);
 					color: #fff;
 				}
 			}

@@ -17,15 +17,6 @@ $large: new-breakpoint( min-width 1024px max-width 1279px );
 $xlarge: new-breakpoint( min-width 1280px );
 
 //////////////////// Typography ////////////////////
-// Color Pallette lifted form the "Ocean" option for user admin colors
-// Colors
-$color-1: #627c83;
-$color-2: #738e96;
-$color-3: #9ebaa0;
-$color-4: #aa9d88;
-
-$graycale-color-1: #fff;
-$graycale-color-2: #000;
 $graycale-color-3: lighten(#000, 13.5%); // #222
 $graycale-color-4: lighten(#000, 20%);   // #333
 $graycale-color-5: lighten(#000, 33.5%); // #555
@@ -88,14 +79,6 @@ $form-input-color-focus: #111;
 $form-input-padding: 3px;
 $form-input-height: 2em;
 $form-input-line-height: 2em;
-
-//////////////////// Navigation ////////////////////
-$main-navigation-box-shadow-setting: true;
-
-$main-navigation-background-color: $color-4;
-$main-navigation-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-$main-navigation-link-color: $graycale-color-1;
-$main-navigation-link-color-hover: $color-3;
 
 //////////////////// Tables ////////////////////
 $table-border-collapse: true;
