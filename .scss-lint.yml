@@ -1,4 +1,5 @@
 # Default application configuration that all configurations inherit from.
+# https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md
 
 scss_files: '**/sass/*.scss'
 exclude: '**/sass/libraries/**'
@@ -22,7 +23,7 @@ linters:
     max_elements: 1
 
   BorderZero:
-    enabled: true
+    enabled: false
     convention: zero # or `none`
 
   ChainedClasses:
@@ -45,7 +46,7 @@ linters:
     enabled: true
 
   DisableLinterReason:
-    enabled: false
+    enabled: true
 
   DuplicateProperty:
     enabled: true
@@ -97,7 +98,7 @@ linters:
     width: 2
 
   LeadingZero:
-    enabled: true
+    enabled: false
     style: exclude_zero # or 'include_zero'
 
   MergeableSelector:
@@ -106,7 +107,7 @@ linters:
 
   NameFormat:
     enabled: true
-    allow_leading_underscore: true
+    allow_leading_underscore: false
     convention: hyphenated_lowercase # or 'camel_case', or 'snake_case', or a regex pattern
 
   NestingDepth:
@@ -202,7 +203,7 @@ linters:
     spaces: 0
 
   StringQuotes:
-    enabled: true
+    enabled: false
     style: single_quotes # or double_quotes
 
   TrailingSemicolon:
@@ -215,7 +216,7 @@ linters:
     enabled: false
 
   TransitionAll:
-    enabled: false
+    enabled: true
 
   UnnecessaryMantissa:
     enabled: true
