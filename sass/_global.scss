@@ -30,8 +30,10 @@ body {
 //
 .edit-link {
 	display: block;
+
 	a {
 		color: colors(brand, 10);
+
 		&:hover {
 			color: colors(brand, 20);
 		}

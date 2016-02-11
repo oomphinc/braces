@@ -94,8 +94,8 @@ linters:
   Indentation:
     enabled: true
     allow_non_nested_indentation: false
-    character: space # or 'tab'
-    width: 2
+    character: tab # or 'space'
+    width: 1
 
   LeadingZero:
     enabled: false
@@ -199,7 +199,7 @@ linters:
     allow_single_line_padding: false
 
   SpaceBetweenParens:
-    enabled: true
+    enabled: false
     spaces: 0
 
   StringQuotes:
@@ -236,7 +236,7 @@ linters:
 
   VendorPrefix:
     enabled: true
-    identifier_list: base
+    identifier_list: bourbon
     additional_identifiers: []
     excluded_identifiers: []
 

@@ -38,6 +38,7 @@ $main-navigation-link-color-hover: colors(brand, 30);
 	display: block;
 	padding: 1em;
 	text-decoration: none;
+
 	&:hover {
 		color: $main-navigation-link-color-hover;
 	}
@@ -45,13 +46,15 @@ $main-navigation-link-color-hover: colors(brand, 30);
 
 .main-navigation ul ul {
 	background: $main-navigation-background-color;
+
 	@if $main-navigation-box-shadow-setting == true {
 		box-shadow: $main-navigation-box-shadow;
 	}
+
 	float: left;
+	left: -999em;
 	position: absolute;
 	top: 3.5em;
-	left: -999em;
 	z-index: 99999;
 }
 
@@ -90,10 +93,11 @@ $main-navigation-link-color-hover: colors(brand, 30);
 	color: $main-navigation-link-color-hover;
 }
 
-/* Small menu */
+// Small menu
 .menu-toggle {
 	display: none;
 }
+
 @media screen and (max-width: 600px) {
 	.menu-toggle,
 	.main-navigation.toggled .nav-menu {

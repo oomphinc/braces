@@ -11,7 +11,7 @@ $font-stack-serif: $georgia;
 // Heading Sizes
 $heading-size-1: $base-type-size * 2.4rem;
 $heading-size-2: $base-type-size * 2.2rem;
-$heading-size-3: $base-type-size * 2.0rem;
+$heading-size-3: $base-type-size * 2rem;
 $heading-size-4: $base-type-size * 1.8rem;
 $heading-size-5: $base-type-size * 1.6rem;
 $heading-size-6: $base-type-size * 1.4rem;
@@ -51,29 +51,38 @@ a:visited {
 	color: colors(brand, 10);
 	text-decoration: none;
 }
+
 a:hover,
 a:active {
 	color: colors(brand, 20);
 	text-decoration: underline;
 }
 
-a[href^=tel]{
+a[href^=tel] {
 	color: inherit;
 	text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	clear: both;
 }
 
 h1 {
 	font-size: $heading-size-1;
+
 	&.site-title {
 		font-size: $heading-size-1 * 1.5;
 	}
+
 	&.entry-title {
 
 	}
+
 	&.widget-title {
 
 	}
@@ -81,6 +90,7 @@ h1 {
 
 h2 {
 	font-size: $heading-size-2;
+
 	&.comments-title {
 
 	}
@@ -88,6 +98,7 @@ h2 {
 
 h3 {
 	font-size: $heading-size-3;
+
 	&.reply-title {
 
 	}
@@ -109,22 +120,26 @@ p {
 	margin-bottom: 1.5em;
 }
 
-b, strong {
+b,
+strong {
 	font-weight: bold;
 }
 
-dfn, cite, em, i {
+dfn,
+cite,
+em,
+i {
 	font-style: italic;
 }
 
 blockquote {
-	padding: 1em 2em;
 	border-left: 5px solid #eee;
 	margin: 0 1.5em 1.5em;
-}
+	padding: 1em 2em;
 
-blockquote p:last-child {
-	margin-bottom: 0;
+	p:last-child {
+		margin-bottom: 0;
+	}
 }
 
 address {
@@ -134,7 +149,6 @@ address {
 pre {
 	background: #eee;
 	font-family: "Courier 10 Pitch", Courier, monospace;
-	font-size: 15px;
 	font-size: 1.5rem;
 	line-height: 1.6;
 	margin-bottom: 1.6em;
@@ -143,16 +157,21 @@ pre {
 	padding: 1.6em;
 }
 
-code, kbd, tt, var {
+code,
+kbd,
+tt,
+var {
 	font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 }
 
-abbr, acronym {
+abbr,
+acronym {
 	border-bottom: 1px dotted #666;
 	cursor: help;
 }
 
-mark, ins {
+mark,
+ins {
 	background: #fff9c0;
 	text-decoration: none;
 }
@@ -189,7 +208,8 @@ hr {
 	margin-bottom: 1.5em;
 }
 
-ul, ol {
+ul,
+ol {
 	margin: 0 0 1.5em 3em;
 }
 
@@ -216,8 +236,8 @@ dd {
 }
 
 img {
-	height: auto; /* Make sure images are scaled correctly. */
-	max-width: 100%; /* Adhere to container width. */
+	height: auto; // Make sure images are scaled correctly.
+	max-width: 100%; // Adhere to container width.
 }
 
 figure {
@@ -227,20 +247,25 @@ figure {
 table {
 	border-spacing: 0;
 	width: 100%;
+
 	@if $table-border-collapse == true {
 		border-collapse: collapse;
 	}
+
 	th {
-		padding: $table-cell-padding;
 		border-bottom: 2px solid $table-border-color;
-	}
-	td {
 		padding: $table-cell-padding;
-		border-top: 1px solid $table-border-color;
 	}
+
+	td {
+		border-top: 1px solid $table-border-color;
+		padding: $table-cell-padding;
+	}
+
 	caption {
 		text-align: center;
 	}
+
 	// zebra striping pattern
 	&.striped {
 		tbody {

@@ -11,44 +11,44 @@
 // stylesheets.
 
 // Requirements
-	@import "../sass/libraries/bourbon/app/assets/stylesheets/bourbon";
-	@import "grid_settings";
-	@import "../sass/libraries/neat/app/assets/stylesheets/neat";
+@import "../sass/libraries/bourbon/app/assets/stylesheets/bourbon";
+@import "grid_settings";
+@import "../sass/libraries/neat/app/assets/stylesheets/neat";
 
 // CSS preprocess logic
-	@import "_mixins";
+@import "mixins";
 
 // Component Styles
 
-	// Colors Styles
-	@import "_colors";
+// Colors Styles
+@import "colors";
 
-	// Global Styles
-	@import "_global";
+// Global Styles
+@import "global";
 
-	// Layout Styles
-	@import "_layout";
+// Layout Styles
+@import "layout";
 
-	// Typography Styles
-	@import "_typography";
+// Typography Styles
+@import "typography";
 
-	// Form Styles
-	@import "_forms";
+// Form Styles
+@import "forms";
 
-	// Navigation Styles
-	@import "_navigation";
+// Navigation Styles
+@import "navigation";
 
-	// Content Styles
-	@import "_content";
+// Content Styles
+@import "content";
 
-	// Widget Styles
-	@import "_widgets";
+// Widget Styles
+@import "widgets";
 
-	// Comments Styles
-	@import "_comments";
+// Comments Styles
+@import "comments";
 
-	// Gallery Styles
-	@import "_galleries";
+// Gallery Styles
+@import "galleries";
 
-	// Print Styles
-	@import "_print";
+// Print Styles
+@import "print";

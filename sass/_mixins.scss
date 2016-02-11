@@ -7,7 +7,7 @@
 // Adds styles via @content
 // @jhouge
 //
-	@mixin touch-hover( $disabled: false ) {
+@mixin touch-hover( $disabled: false ) {
 
 	@if $disabled {
 		.no-js &,
