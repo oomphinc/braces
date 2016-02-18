@@ -3,7 +3,7 @@
 // Comment Variables
 $comment-avatar: true;
 
-$comment-avatar-border-color: #ccc;
+$comment-avatar-border-color: palette(mono, silver-bullet);
 $comment-avatar-border-width: 1px;
 $comment-avatar-padding: 2px;
 $comment-avatar-size: 32px;
@@ -17,10 +17,11 @@ $comment-avatar-size: 32px;
 	padding: 0;
 }
 
-li.comment {
-	border-bottom: 1px solid #ccc;
+.comment {
+	border-bottom: 1px solid $comment-avatar-border-color;
 	margin: 0 0 1em;
 	padding: 0 0 1em;
+
 	@if $comment-avatar == true {
 		.avatar {
 			border: $comment-avatar-border-width solid $comment-avatar-border-color;
@@ -41,7 +42,7 @@ li.comment {
 	.children {
 		list-style-type: none;
 
-		li.comment {
+		.comment {
 			border: none;
 			margin: 1em 0 0;
 			padding: 0;

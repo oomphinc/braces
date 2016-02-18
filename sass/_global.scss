@@ -1,14 +1,13 @@
 // @file Global Styles
 
 // Type Sizes
-$base-type-size: 1;
-$base-type-pixel-size: 10px;
+$base-type-size: 1em;
 
 //
 // Root Elements
 //
 html {
-	font-size: $base-type-pixel-size;
+	font-size: $base-type-size;
 	-webkit-font-smoothing: antialiased;
 }
 
@@ -32,10 +31,10 @@ body {
 	display: block;
 
 	a {
-		color: colors(brand, 10);
+		color: palette(brand, pale-sky);
 
 		&:hover {
-			color: colors(brand, 20);
+			color: palette(brand, juniper);
 		}
 	}
 }

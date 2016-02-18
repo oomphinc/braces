@@ -7,14 +7,15 @@
 // Font Stacks
 $font-stack-sans: $helvetica;
 $font-stack-serif: $georgia;
+$font-stack-mono: $monospace;
 
 // Heading Sizes
-$heading-size-1: $base-type-size * 2.4rem;
-$heading-size-2: $base-type-size * 2.2rem;
-$heading-size-3: $base-type-size * 2rem;
-$heading-size-4: $base-type-size * 1.8rem;
-$heading-size-5: $base-type-size * 1.6rem;
-$heading-size-6: $base-type-size * 1.4rem;
+$heading-size-1: em(26);
+$heading-size-2: em(24);
+$heading-size-3: em(22);
+$heading-size-4: em(20);
+$heading-size-5: em(18);
+$heading-size-6: em(16);
 
 $paragraph-size-1: $heading-size-6;
 
@@ -28,7 +29,7 @@ $vert-line-height: $line-height + em;
 // Tables
 $table-border-collapse: true;
 
-$table-border-color: #ddd;
+$table-border-color: palette(mono, alto);
 $table-cell-padding: 8px;
 
 //
@@ -40,7 +41,7 @@ button,
 input,
 select,
 textarea {
-	color: #000;
+	color: palette(mono, black-hole);
 	font-family: $font-stack-sans;
 	font-size: $paragraph-size-1;
 	line-height: $line-height;
@@ -48,13 +49,13 @@ textarea {
 
 a:link,
 a:visited {
-	color: colors(brand, 10);
+	color: palette(brand, pale-sky);
 	text-decoration: none;
 }
 
 a:hover,
 a:active {
-	color: colors(brand, 20);
+	color: palette(brand, juniper);
 	text-decoration: underline;
 }
 
@@ -133,7 +134,7 @@ i {
 }
 
 blockquote {
-	border-left: 5px solid #eee;
+	border-left: 5px solid palette(mono, gallery);
 	margin: 0 1.5em 1.5em;
 	padding: 1em 2em;
 
@@ -147,8 +148,8 @@ address {
 }
 
 pre {
-	background: #eee;
-	font-family: "Courier 10 Pitch", Courier, monospace;
+	background: palette(mono, gallery);
+	font-family: $font-stack-mono;
 	font-size: 1.5rem;
 	line-height: 1.6;
 	margin-bottom: 1.6em;
@@ -161,24 +162,24 @@ code,
 kbd,
 tt,
 var {
-	font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	font: em(14) $font-stack-mono;
 }
 
 abbr,
 acronym {
-	border-bottom: 1px dotted #666;
+	border-bottom: 1px dotted palette(mono, dove-gray);
 	cursor: help;
 }
 
 mark,
 ins {
-	background: #fff9c0;
+	background: palette(brand, shalimar);
 	text-decoration: none;
 }
 
 sup,
 sub {
-	font-size: 75%;
+	font-size: em(14);
 	height: 0;
 	line-height: 0;
 	position: relative;
@@ -194,15 +195,15 @@ sub {
 }
 
 small {
-	font-size: 75%;
+	font-size: em(14);
 }
 
 big {
-	font-size: 125%;
+	font-size: em(20);
 }
 
 hr {
-	background-color: #ccc;
+	background-color: palette(mono, silver-bullet);
 	border: 0;
 	height: 1px;
 	margin-bottom: 1.5em;

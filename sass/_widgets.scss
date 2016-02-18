@@ -5,23 +5,13 @@
 //
 .widget {
 
-	#secondary & {
+	.widget-area & {
 		margin-bottom: $vert-line-height;
 	}
 
 	.widget-title {
 
 	}
-
-	.count {
-		background-color: colors(brand, 10);
-		border-radius: $form-input-border-radius;
-		color: #fff;
-		padding: 0 .5em;
-	}
-}
-
-.widget {
 
 	ul {
 		list-style-type: none;
@@ -37,21 +27,28 @@
 			}
 		}
 	}
+
+	.count {
+		background-color: palette(brand, pale-sky);
+		border-radius: $form-input-border-radius;
+		color: palette(brand, 90);
+		padding: 0 .5em;
+	}
 }
 
 //
 // Widget Archive
 //
+
+// scss-lint:disable SelectorFormat
 .widget_archive {
+// scss-lint:enable SelectorFormat
 
 	.widget-title {
 
 	}
-}
 
-// List
-.widget_archive {
-
+	// List
 	ul {
 
 		li {
@@ -61,11 +58,8 @@
 			}
 		}
 	}
-}
 
-// Dropdown
-.widget_archive {
-
+	// Dropdown
 	select {
 
 		option {
@@ -77,14 +71,14 @@
 //
 // Widget Calendar
 //
+
+// scss-lint:disable SelectorFormat
 .widget_calendar {
+// scss-lint:enable SelectorFormat
 
 	.widget-title {
 
 	}
-}
-
-.widget_calendar {
 
 	table {
 
@@ -102,6 +96,8 @@
 
 			}
 
+// core wp widget output
+// scss-lint:disable IdSelector
 			#prev {
 
 			}
@@ -109,6 +105,7 @@
 			#next {
 
 			}
+// scss-lint:enable IdSelector
 		}
 
 		thead {
@@ -123,10 +120,13 @@
 			td {
 				text-align: center;
 
+// core wp widget output
+// scss-lint:disable IdSelector
 				&#today {
-					background-color: colors(brand, 30);
-					color: #fff;
+					background-color: palette(brand, norway);
+					color: palette(brand, 90);
 				}
+// scss-lint:enable IdSelector
 			}
 		}
 
@@ -142,16 +142,16 @@
 //
 // Widget Categories
 //
+
+// scss-lint:disable SelectorFormat
 .widget_categories {
+// scss-lint:enable SelectorFormat
 
 	.widget-title {
 
 	}
-}
 
-// List
-.widget_categories {
-
+	// List
 	ul {
 
 		li {
@@ -165,11 +165,8 @@
 			}
 		}
 	}
-}
 
-// Dropdown
-.widget_categories {
-
+	// Dropdown
 	select {
 
 		option {
@@ -181,20 +178,24 @@
 //
 // Widget Pages
 //
+
+// scss-lint:disable SelectorFormat
 .widget_pages {
+// scss-lint:enable SelectorFormat
 
 	.widget-title {
 
 	}
-}
 
-.widget_pages {
-
+	// List
 	ul {
 
 		li {
 
+			// core wp widget output
+			// scss-lint:disable SelectorFormat
 			&.page_item {
+			// scss-lint:enable SelectorFormat
 
 			}
 
@@ -208,15 +209,17 @@
 //
 // Widget Meta
 //
+
+// scss-lint:disable SelectorFormat
 .widget_meta {
+// scss-lint:enable SelectorFormat
 
 	.widget-title {
 
 	}
-}
 
-.widget_meta {
 
+	// List
 	ul {
 
 		li {
@@ -231,16 +234,17 @@
 //
 // Widget Recent Comments
 //
+
+// scss-lint:disable SelectorFormat
 .widget_recent_comments {
+// scss-lint:enable SelectorFormat
 
 	.widget-title {
 
 	}
-}
 
-.widget_recent_comments {
-
-	ul#recentcomments {
+	// List
+	ul {
 
 		li {
 
@@ -254,15 +258,16 @@
 //
 // Widget Recent Entries
 //
+
+// scss-lint:disable SelectorFormat
 .widget_recent_entries {
+// scss-lint:enable SelectorFormat
 
 	.widget-title {
 
 	}
-}
 
-.widget_recent_entries {
-
+	// List
 	ul {
 
 		li {
@@ -277,20 +282,21 @@
 //
 // Widget RSS
 //
+
+// scss-lint:disable SelectorFormat
 .widget_rss {
+// scss-lint:enable SelectorFormat
 
 	.widget-title {
 
 	}
-}
 
-.widget_rss {
-
+	// List
 	ul {
 
 		li {
 
-			a.rsswidget {
+			a {
 
 			}
 
@@ -298,7 +304,10 @@
 
 			}
 
+			// core wp widget output
+			// scss-lint:disable SelectorFormat
 			.rssSummary {
+			// scss-lint:enable SelectorFormat
 
 			}
 
@@ -312,7 +321,10 @@
 //
 // Widget Search
 //
+
+// scss-lint:disable SelectorFormat
 .widget_search {
+// scss-lint:enable SelectorFormat
 
 	.widget-title {
 
@@ -340,14 +352,14 @@
 //
 // Widget Text
 //
+
+// scss-lint:disable SelectorFormat
 .widget_text {
+// scss-lint:enable SelectorFormat
 
 	.widget-title {
 
 	}
-}
-
-.widget_text {
 
 	.textwidget {
 
@@ -360,14 +372,14 @@
 //
 // Widget Tag Cloud
 //
+
+// scss-lint:disable SelectorFormat
 .widget_tag_cloud {
+// scss-lint:enable SelectorFormat
 
 	.widget-title {
 
 	}
-}
-
-.widget_tag_cloud {
 
 	.tagcloud {
 
@@ -377,15 +389,16 @@
 //
 // Widget Nav Menu
 //
+
+// scss-lint:disable SelectorFormat
 .widget_nav_menu {
+// scss-lint:enable SelectorFormat
 
 	.widget-title {
 
 	}
-}
 
-.widget_nav_menu {
-
+	// List
 	ul {
 
 		li {

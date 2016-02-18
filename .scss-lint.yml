@@ -60,7 +60,7 @@ linters:
     ignore_single_line_blocks: true
 
   EmptyRule:
-    enabled: true
+    enabled: false
 
   ExtendDirective:
     enabled: false
@@ -152,7 +152,7 @@ linters:
 
   QualifyingElement:
     enabled: true
-    allow_element_with_attribute: false
+    allow_element_with_attribute: true
     allow_element_with_class: false
     allow_element_with_id: false
 

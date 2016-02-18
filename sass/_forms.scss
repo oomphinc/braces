@@ -8,30 +8,30 @@
 $form-button-box-shadow-setting: true;
 $form-button-text-shadow-setting: true;
 
-$form-button-background: palette(brand, 50);
-$form-button-border-colors: palette(mono, 80) palette(mono, 80) palette(mono, 70);
-$form-button-border-colors-hover: palette(mono, 80) palette(mono, 70) palette(mono, 60);
-$form-button-border-colors-active: palette(mono, 60) palette(mono, 70) palette(mono, 70);
+$form-button-background: palette(brand, mercury);
+$form-button-border-colors: palette(mono, silver-bullet) palette(mono, silver-bullet) palette(mono, silver-light);
+$form-button-border-colors-hover: palette(mono, silver-bullet) palette(mono, silver-light) palette(mono, silver-chalice);
+$form-button-border-colors-active: palette(mono, silver-chalice) palette(mono, silver-light) palette(mono, silver-light);
 $form-button-border-width: 1px;
 $form-button-border-radius: 3px;
-$form-button-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-$form-button-box-shadow-hover: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
-$form-button-box-shadow-active: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
-$form-button-text-color: rgba(0, 0, 0, .8);
+$form-button-box-shadow: inset 0 1px 0 rgba(palette(mono, snow-white), 0.5), inset 0 15px 17px rgba(palette(mono, snow-white), 0.5), inset 0 -5px 12px rgba(palette(mono, black-hole), 0.05);
+$form-button-box-shadow-hover: inset 0 1px 0 rgba(palette(mono, snow-white), 0.5), inset 0 15px 17px rgba(palette(mono, snow-white), 0.5), inset 0 -5px 12px rgba(palette(mono, black-hole), 0.02);
+$form-button-box-shadow-active: inset 0 -1px 0 rgba(palette(mono, snow-white), 0.5), inset 0 2px 5px rgba(palette(mono, black-hole), 0.15);
+$form-button-text-color: rgba(palette(mono, black-hole), .8);
 $form-button-text-size: 1.2rem;
-$form-button-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+$form-button-text-shadow: 0 1px 0 rgba(palette(mono, snow-white), 0.8);
 $form-button-padding: .5em 1em .5em;
 
 // Search
 $form-search-box-sizing: border-box;
 
 // Inputs, Selects, Textareas
-$form-input-color: #666;
-$form-input-border-color: palette(mono, 80);
+$form-input-color: palette(mono, dove-gray);
+$form-input-border-color: palette(mono, silver-bullet);
 $form-input-border-width: 1px;
 $form-input-border-radius: 3px;
 
-$form-input-color-focus: #111;
+$form-input-color-focus: palette(mono, cod-gray);
 $form-input-padding: 3px;
 $form-input-height: 2em;
 $form-input-line-height: 2em;
@@ -46,7 +46,7 @@ textarea {
 }
 
 #{$all-buttons} {
-	-webkit-appearance: button; // Corrects inability to style clickable 'input' types in iOS
+	@include appearance(button); // Corrects inability to style clickable 'input' types in iOS
 	background: $form-button-background;
 	border: $form-button-border-width solid;
 	border-color: $form-button-border-colors;
@@ -90,14 +90,12 @@ input[type="radio"] {
 }
 
 input[type="search"] {
-	-webkit-appearance: textfield; // Addresses appearance set to searchfield in S5, Chrome
-	-moz-box-sizing: $form-search-box-sizing;
-	-webkit-box-sizing: $form-search-box-sizing; // If set to 'content-box', addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof)
-	box-sizing: $form-search-box-sizing;
+	@include appearance(textfield); // Addresses appearance set to searchfield in S5, Chrome
+	box-sizing: $form-search-box-sizing; // If set to 'content-box', addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof)
 }
 
 input[type="search"]::-webkit-search-decoration { // Corrects inner padding displayed oddly in S5, Chrome on OSX
-	-webkit-appearance: none;
+	@include appearance(none);
 }
 
 button::-moz-focus-inner,
@@ -132,7 +130,7 @@ textarea {
 }
 
 select {
-	background-color: #fff;
+	background-color: palette(mono, snow-white);
 	background-image: none;
 	border: $form-input-border-width solid $form-input-border-color;
 	border-radius: $form-input-border-radius;
@@ -183,7 +181,7 @@ fieldset {
 }
 
 .form-allowed-tags {
-	background: #eee;
+	background: palette(mono, gallery);
 	border: $form-input-border-width solid $form-input-border-color;
 	padding: 1em;
 }

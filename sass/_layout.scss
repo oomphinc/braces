@@ -16,21 +16,21 @@ $xlarge: new-breakpoint( min-width 1280px );
 //
 // Layout Elements
 //
-#page {
+.site {
 	@include outer-container;
 }
 
-#content {
+.site-content {
 	@include clearfix;
 
-	#primary {
+	.content-area {
 		@include span-columns(12);
 		@include media($medium-up) {
 			@include span-columns(8);
 		}
 	}
 
-	#secondary {
+	.widget-area {
 		@include span-columns(12);
 		@include media($medium-up) {
 			@include span-columns(4);
@@ -38,6 +38,6 @@ $xlarge: new-breakpoint( min-width 1280px );
 	}
 }
 
-#footer {
+.site-footer {
 
 }
