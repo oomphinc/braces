@@ -1,5 +1,5 @@
 {
-  "name": "braces-fork",
+  "name": "Braces",
   "version": "0.0.0",
   "description": "Braces is a starter theme that is meant for getting development teams up and running on WordPress projects quickly. Braces is derived from [Automattic _s project] (https://github.com/Automattic/_s). _s which is truly fantastic. As you'll likely notice, much of the core beliefs behind _s will be reflected in this project as well.",
   "main": "gulpfile.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/johncionci/braces.git"
+    "url": "https://github.com/oomphinc/braces.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/johncionci/braces/issues"
+    "url": "https://github.com/oomphinc/braces/issues"
   },
-  "homepage": "https://github.com/johncionci/braces",
+  "homepage": "https://github.com/oomphinc/braces",
   "devDependencies": {
     "gulp": "^3.8.10",
     "gulp-plumber": "^0.6.6",
