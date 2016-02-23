@@ -1,21 +1,22 @@
 // @file Content Styles
 
-/**
- * Content Globals
- */
+//
+// Content Globals
+//
 .hentry {
 	@include clearfix;
-	border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid palette(mono, silver-bullet);
 	margin-bottom: 1em;
 	padding-bottom: 1em;
+
 	.entry-footer {
 		clear: both;
 	}
 }
 
-/**
- * Post Archives
- */
+//
+// Post Archives
+//
 .archive,
 .blog {
 	.has-post-thumbnail {
@@ -25,11 +26,10 @@
 	}
 }
 
-/**
- * Single Posts
- */
+//
+// Single Posts
+//
 
-/**
- * Single Pages
- */
-
+//
+// Single Pages
+//

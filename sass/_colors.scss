@@ -1,0 +1,42 @@
+// @file Colors
+
+// Getter function for color palettes using SASS maps
+// Link: http://erskinedesign.com/blog/friendlier-colour-names-sass-maps/
+// Link: http://chir.ag/projects/name-that-color/
+// Usage: color: palette(brand,tan);
+
+@function palette( $palette, $tone ) {
+	@return map-get( map-get( $palettes, $palette ), $tone );
+}
+
+$palettes: (
+	brand: (
+		pale-sky: #627c83,
+		juniper: #738e96,
+		norway: #9ebaa0,
+		hillary: #aa9d88,
+		mercury: #e6e6e6,
+		shalimar: #fff9c0,
+	),
+	mono: (
+		gallery: #eee,
+		silver-chalice: #aaa,
+		silver-light: #bbb,
+		silver-bullet: #ccc,
+		snow-white: #fff,
+		black-hole: #000,
+		dove-gray: #666,
+		cod-gray: #111,
+		alto: #ddd,
+	),
+	wordpress: (
+		jelly-bean: #21759b,
+		piper: #d54e21,
+		tundora: #464646,
+	),
+	drupal: (
+		lochmara: #0077c0,
+		anakiwa: #81ceff,
+		orient: #00598e,
+	),
+);

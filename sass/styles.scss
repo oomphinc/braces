@@ -10,50 +10,45 @@
 // themselves but instead contain mixins and define base variables used by other
 // stylesheets.
 
-// CSS Philosophies
-//
-// Use rems for font sizes
-// Use inline media queries
-// Use inline IE styles
-
 // Requirements
-	@import "../sass/libraries/bourbon/app/assets/stylesheets/bourbon";
-	@import "grid_settings";
-	@import "../sass/libraries/neat/app/assets/stylesheets/neat";
-
-	@import "_config";
+@import "../sass/libraries/bourbon/app/assets/stylesheets/bourbon";
+@import "grid_settings";
+@import "../sass/libraries/neat/app/assets/stylesheets/neat";
 
 // CSS preprocess logic
-	@import "_mixins";
+@import "mixins";
 
 // Component Styles
 
-	// Global Styles
-	@import "_global";
+// Colors Styles
+@import "colors";
 
-	// Layout Styles
-	@import "_layout";
+// Global Styles
+@import "global";
 
-	// Typography Styles
-	@import "_typography";
+// Layout Styles
+@import "layout";
 
-	// Form Styles
-	@import "_forms";
+// Typography Styles
+@import "typography";
 
-	// Navigation Styles
-	@import "_navigation";
+// Form Styles
+@import "forms";
 
-	// Content Styles
-	@import "_content";
+// Navigation Styles
+@import "navigation";
 
-	// Widget Styles
-	@import "_widgets";
+// Content Styles
+@import "content";
 
-	// Comments Styles
-	@import "_comments";
+// Widget Styles
+@import "widgets";
 
-	// Gallery Styles
-	@import "_galleries";
+// Comments Styles
+@import "comments";
 
-	// Print Styles
-	@import "_print";
+// Gallery Styles
+@import "galleries";
+
+// Print Styles
+@import "print";

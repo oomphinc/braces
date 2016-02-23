@@ -1,10 +1,13 @@
 // @file Global Styles
 
-/**
- * Root Elements
- */
+// Type Sizes
+$base-type-size: 1em;
+
+//
+// Root Elements
+//
 html {
-	font-size: $base-font-pixel-size;
+	font-size: $base-type-size;
 	-webkit-font-smoothing: antialiased;
 }
 
@@ -13,30 +16,32 @@ body {
 	height: 100%;
 }
 
-/**
- * Header Elements
- */
+//
+// Header Elements
+//
 
-/**
- * Footer Elements
- */
+//
+// Footer Elements
+///
 
-/**
- * Meta Elements
- */
+//
+// Meta Elements
+//
 .edit-link {
 	display: block;
+
 	a {
-		color: $color-1;
+		color: palette(brand, pale-sky);
+
 		&:hover {
-			color: $color-2;
+			color: palette(brand, juniper);
 		}
 	}
 }
 
-/**
- * Media Elements
- */
+//
+// Media Elements
+//
 img {
 	display: block;
 	height: auto;

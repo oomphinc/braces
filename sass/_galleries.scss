@@ -1,21 +1,25 @@
 // @file Galleries Styles
 
-/**
- * Gallery Elements
- */
+//
+// Gallery Elements
+//
 .gallery {
+
 	.gallery-item {
 		@include span-columns(3);
 		@include omega(4n);
 		margin-bottom: 2em;
+
 		a {
 			display: block;
 		}
+
 		img {
-			border: 1px solid #ccc;
+			border: 1px solid palette(mono, silver-bullet);
 			margin: 0 auto;
 			padding: 6px;
 		}
+
 		.gallery-caption {
 			text-align: center;
 		}

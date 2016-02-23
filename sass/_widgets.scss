@@ -1,110 +1,137 @@
 // @file Widget Styles
 
-/**
- * Global Widget Styles
- */
+//
+// Global Widget Styles
+//
 .widget {
-	#secondary & {
+
+	.widget-area & {
 		margin-bottom: $vert-line-height;
 	}
+
 	.widget-title {
 
 	}
-	.count {
-		background-color: $color-1;
-		border-radius: $form-input-border-radius;
-		color: #fff;
-		padding: 0 .5em;
-	}
-}
 
-.widget {
 	ul {
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
+
 		li {
 			margin-bottom: .25em;
+
 			.children,
 			.sub-menu {
 				margin-left: 1em;
 			}
 		}
 	}
-}
 
-/**
- * Widget Archive
- */
-.widget_archive {
-	.widget-title {
-
+	.count {
+		background-color: palette(brand, pale-sky);
+		border-radius: $form-input-border-radius;
+		color: palette(brand, 90);
+		padding: 0 .5em;
 	}
 }
 
-/* List */
+//
+// Widget Archive
+//
+
+// scss-lint:disable SelectorFormat
 .widget_archive {
+// scss-lint:enable SelectorFormat
+
+	.widget-title {
+
+	}
+
+	// List
 	ul {
+
 		li {
+
 			a {
 
 			}
 		}
 	}
-}
 
-/* Dropdown */
-.widget_archive {
+	// Dropdown
 	select {
+
 		option {
 
 		}
 	}
 }
 
-/**
- * Widget Calendar
- */
+//
+// Widget Calendar
+//
+
+// scss-lint:disable SelectorFormat
 .widget_calendar {
+// scss-lint:enable SelectorFormat
+
 	.widget-title {
 
 	}
-}
 
-.widget_calendar {
 	table {
+
 		caption {
 
 		}
+
 		tr {
 
 		}
+
 		td {
+
 			.pad {
 
 			}
+
+// core wp widget output
+// scss-lint:disable IdSelector
 			#prev {
 
 			}
+
 			#next {
 
 			}
+// scss-lint:enable IdSelector
 		}
+
 		thead {
+
 			th {
 				text-align: center;
 			}
 		}
+
 		tbody {
+
 			td {
 				text-align: center;
+
+// core wp widget output
+// scss-lint:disable IdSelector
 				&#today {
-					background-color: $color-3;
-					color: #fff;
+					background-color: palette(brand, norway);
+					color: palette(brand, 90);
 				}
+// scss-lint:enable IdSelector
 			}
 		}
+
 		tfoot {
+
 			td {
 
 			}
@@ -112,53 +139,66 @@
 	}
 }
 
-/**
- * Widget Categories
- */
+//
+// Widget Categories
+//
+
+// scss-lint:disable SelectorFormat
 .widget_categories {
+// scss-lint:enable SelectorFormat
+
 	.widget-title {
 
 	}
-}
 
-/* List */
-.widget_categories {
+	// List
 	ul {
+
 		li {
+
 			&.cat-item {
 
 			}
+
 			a {
 
 			}
 		}
 	}
-}
 
-/* Dropdown */
-.widget_categories {
+	// Dropdown
 	select {
+
 		option {
 
 		}
 	}
 }
 
-/**
- * Widget Pages
- */
+//
+// Widget Pages
+//
+
+// scss-lint:disable SelectorFormat
 .widget_pages {
+// scss-lint:enable SelectorFormat
+
 	.widget-title {
 
 	}
-}
 
-.widget_pages {
+	// List
 	ul {
+
 		li {
+
+			// core wp widget output
+			// scss-lint:disable SelectorFormat
 			&.page_item {
+			// scss-lint:enable SelectorFormat
 
 			}
+
 			a {
 
 			}
@@ -166,18 +206,24 @@
 	}
 }
 
-/**
- * Widget Meta
- */
+//
+// Widget Meta
+//
+
+// scss-lint:disable SelectorFormat
 .widget_meta {
+// scss-lint:enable SelectorFormat
+
 	.widget-title {
 
 	}
-}
 
-.widget_meta {
+
+	// List
 	ul {
+
 		li {
+
 			a {
 
 			}
@@ -185,18 +231,23 @@
 	}
 }
 
-/**
- * Widget Recent Comments
- */
+//
+// Widget Recent Comments
+//
+
+// scss-lint:disable SelectorFormat
 .widget_recent_comments {
+// scss-lint:enable SelectorFormat
+
 	.widget-title {
 
 	}
-}
 
-.widget_recent_comments {
-	ul#recentcomments {
+	// List
+	ul {
+
 		li {
+
 			a {
 
 			}
@@ -204,18 +255,23 @@
 	}
 }
 
-/**
- * Widget Recent Entries
- */
+//
+// Widget Recent Entries
+//
+
+// scss-lint:disable SelectorFormat
 .widget_recent_entries {
+// scss-lint:enable SelectorFormat
+
 	.widget-title {
 
 	}
-}
 
-.widget_recent_entries {
+	// List
 	ul {
+
 		li {
+
 			a {
 
 			}
@@ -223,27 +279,38 @@
 	}
 }
 
-/**
- * Widget RSS
- */
+//
+// Widget RSS
+//
+
+// scss-lint:disable SelectorFormat
 .widget_rss {
+// scss-lint:enable SelectorFormat
+
 	.widget-title {
 
 	}
-}
 
-.widget_rss {
+	// List
 	ul {
+
 		li {
-			a.rsswidget {
+
+			a {
 
 			}
+
 			.rss-date {
 
 			}
+
+			// core wp widget output
+			// scss-lint:disable SelectorFormat
 			.rssSummary {
+			// scss-lint:enable SelectorFormat
 
 			}
+
 			cite {
 
 			}
@@ -251,73 +318,91 @@
 	}
 }
 
-/**
- * Widget Search
- */
+//
+// Widget Search
+//
+
+// scss-lint:disable SelectorFormat
 .widget_search {
+// scss-lint:enable SelectorFormat
+
 	.widget-title {
 
 	}
 }
 
 .search-form {
+
 	label {
+
 		span {
 
 		}
+
 		input {
 
 		}
 	}
+
 	.search-submit {
 		display: none;
 	}
 }
 
-/**
- * Widget Text
- */
+//
+// Widget Text
+//
+
+// scss-lint:disable SelectorFormat
 .widget_text {
+// scss-lint:enable SelectorFormat
+
 	.widget-title {
 
 	}
-}
 
-.widget_text {
 	.textwidget {
+
 		p {
 
 		}
 	}
 }
 
-/**
- * Widget Tag Cloud
- */
+//
+// Widget Tag Cloud
+//
+
+// scss-lint:disable SelectorFormat
 .widget_tag_cloud {
+// scss-lint:enable SelectorFormat
+
 	.widget-title {
 
 	}
-}
 
-.widget_tag_cloud {
 	.tagcloud {
 
 	}
 }
 
-/**
- * Widget Nav Menu
- */
+//
+// Widget Nav Menu
+//
+
+// scss-lint:disable SelectorFormat
 .widget_nav_menu {
+// scss-lint:enable SelectorFormat
+
 	.widget-title {
 
 	}
-}
 
-.widget_nav_menu {
+	// List
 	ul {
+
 		li {
+
 			a {
 
 			}

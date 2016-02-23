@@ -1,59 +1,84 @@
 // @file Form Styles
 
-/**
- * Forms
- */
+//
+// Forms Variables
+//
+
+// Button, Reset, Submit
+$form-button-box-shadow-setting: true;
+$form-button-text-shadow-setting: true;
+
+$form-button-background: palette(brand, mercury);
+$form-button-border-colors: palette(mono, silver-bullet) palette(mono, silver-bullet) palette(mono, silver-light);
+$form-button-border-colors-hover: palette(mono, silver-bullet) palette(mono, silver-light) palette(mono, silver-chalice);
+$form-button-border-colors-active: palette(mono, silver-chalice) palette(mono, silver-light) palette(mono, silver-light);
+$form-button-border-width: 1px;
+$form-button-border-radius: 3px;
+$form-button-box-shadow: inset 0 1px 0 rgba(palette(mono, snow-white), 0.5), inset 0 15px 17px rgba(palette(mono, snow-white), 0.5), inset 0 -5px 12px rgba(palette(mono, black-hole), 0.05);
+$form-button-box-shadow-hover: inset 0 1px 0 rgba(palette(mono, snow-white), 0.5), inset 0 15px 17px rgba(palette(mono, snow-white), 0.5), inset 0 -5px 12px rgba(palette(mono, black-hole), 0.02);
+$form-button-box-shadow-active: inset 0 -1px 0 rgba(palette(mono, snow-white), 0.5), inset 0 2px 5px rgba(palette(mono, black-hole), 0.15);
+$form-button-text-color: rgba(palette(mono, black-hole), .8);
+$form-button-text-size: 1.2rem;
+$form-button-text-shadow: 0 1px 0 rgba(palette(mono, snow-white), 0.8);
+$form-button-padding: .5em 1em .5em;
+
+// Search
+$form-search-box-sizing: border-box;
+
+// Inputs, Selects, Textareas
+$form-input-color: palette(mono, dove-gray);
+$form-input-border-color: palette(mono, silver-bullet);
+$form-input-border-width: 1px;
+$form-input-border-radius: 3px;
+
+$form-input-color-focus: palette(mono, cod-gray);
+$form-input-padding: 3px;
+$form-input-height: 2em;
+$form-input-line-height: 2em;
 
 button,
 input,
 select,
 textarea {
-	font-size: 100%; /* Corrects font size not being inherited in all browsers */
-	margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
-	vertical-align: baseline; /* Improves appearance and consistency in all browsers */
+	font-size: 100%; // Corrects font size not being inherited in all browsers
+	margin: 0; // Addresses margins set differently in IE6/7, F3/4, S5, Chrome
+	vertical-align: baseline; // Improves appearance and consistency in all browsers
 }
 
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+#{$all-buttons} {
+	@include appearance(button); // Corrects inability to style clickable 'input' types in iOS
+	background: $form-button-background;
 	border: $form-button-border-width solid;
 	border-color: $form-button-border-colors;
 	border-radius: $form-button-border-radius;
-	background: $form-button-background;
+
 	@if $form-button-box-shadow-setting == true {
-		box-shadow: $form-button-box-shadow
+		box-shadow: $form-button-box-shadow;
 	}
+
 	color: $form-button-text-color;
-	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
-	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
+	cursor: pointer; // Improves usability and consistency of cursor style between image-type 'input' and others
 	font-size: $form-button-text-size;
 	line-height: 1;
 	padding: $form-button-padding;
+
 	@if $form-button-text-shadow-setting == true {
 		text-shadow: $form-button-text-shadow;
 	}
 }
 
-button:hover,
-input[type="button"]:hover,
-input[type="reset"]:hover,
-input[type="submit"]:hover {
+#{$all-buttons-hover} {
 	border-color: $form-button-border-colors-hover;
+
 	@if $form-button-box-shadow-setting == true {
 		box-shadow: $form-button-box-shadow-hover;
 	}
 }
 
-button:focus,
-input[type="button"]:focus,
-input[type="reset"]:focus,
-input[type="submit"]:focus,
-button:active,
-input[type="button"]:active,
-input[type="reset"]:active,
-input[type="submit"]:active {
+#{$all-buttons-focus},
+#{$all-buttons-active} {
 	border-color: $form-button-border-colors-active;
+
 	@if $form-button-box-shadow-setting == true {
 		box-shadow: $form-button-box-shadow-active;
 	}
@@ -61,69 +86,51 @@ input[type="submit"]:active {
 
 input[type="checkbox"],
 input[type="radio"] {
-	padding: 0; /* Addresses excess padding in IE8/9 */
+	padding: 0; // Addresses excess padding in IE8/9
 }
 
 input[type="search"] {
-	-webkit-appearance: textfield; /* Addresses appearance set to searchfield in S5, Chrome */
-	-webkit-box-sizing: $form-search-box-sizing; /* If set to 'content-box', addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
-	-moz-box-sizing:    $form-search-box-sizing;
-	box-sizing:         $form-search-box-sizing;
+	@include appearance(textfield); // Addresses appearance set to searchfield in S5, Chrome
+	box-sizing: $form-search-box-sizing; // If set to 'content-box', addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof)
 }
 
-input[type="search"]::-webkit-search-decoration { /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
-	-webkit-appearance: none;
+input[type="search"]::-webkit-search-decoration { // Corrects inner padding displayed oddly in S5, Chrome on OSX
+	@include appearance(none);
 }
 
 button::-moz-focus-inner,
-input::-moz-focus-inner { /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
+input::-moz-focus-inner { // Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
 	border: 0;
 	padding: 0;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
-textarea {
-	color: $form-input-color;
+#{$all-text-inputs} {
 	border: $form-input-border-width solid $form-input-border-color;
 	border-radius: $form-input-border-radius;
+	color: $form-input-color;
+	height: $form-input-height;
+	line-height: $form-input-line-height;
+	padding: $form-input-padding;
 	width: 100%;
+
 	@include placeholder {
 		color: $form-input-border-color;
 	}
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus,
-input[type="password"]:focus,
-input[type="search"]:focus,
-textarea:focus {
+#{$all-text-inputs-focus} {
 	color: $form-input-color-focus;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"] {
-	height: $form-input-height;
-	line-height: $form-input-line-height;
-	padding: $form-input-padding;
-}
-
 textarea {
-	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
+	overflow: auto; // Removes default vertical scrollbar in IE6/7/8/9
 	padding-left: 3px;
-	vertical-align: top; /* Improves readability and alignment in all browsers */
+	vertical-align: top; // Improves readability and alignment in all browsers
 	width: 100%;
 }
 
 select {
-	background-color: #fff;
+	background-color: palette(mono, snow-white);
 	background-image: none;
 	border: $form-input-border-width solid $form-input-border-color;
 	border-radius: $form-input-border-radius;
@@ -152,16 +159,20 @@ fieldset {
 }
 
 .inline-input-form {
+
 	.input-item label {
 		@include span-columns(1 of 8);
 	}
+
 	.input-item input {
 		@include span-columns(7 of 8);
 		@include omega();
 	}
+
 	.description {
 		@include shift(1 of 8);
 	}
+
 	.radio-item,
 	.checkbox-item {
 		float: left;
@@ -170,7 +181,7 @@ fieldset {
 }
 
 .form-allowed-tags {
-	background: #eee;
+	background: palette(mono, gallery);
 	border: $form-input-border-width solid $form-input-border-color;
 	padding: 1em;
 }
